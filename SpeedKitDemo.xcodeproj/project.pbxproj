@@ -12,6 +12,9 @@
 		285C8C24196D85410058C8E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285C8C22196D85410058C8E2 /* Main.storyboard */; };
 		285C8C26196D85410058C8E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285C8C25196D85410058C8E2 /* Images.xcassets */; };
 		285C8C32196D85410058C8E2 /* SpeedKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C8C31196D85410058C8E2 /* SpeedKitDemoTests.swift */; };
+		287AC6AF1972987D0096BCD3 /* SPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6AE1972987D0096BCD3 /* SPTableViewController.swift */; };
+		287AC6B11972A4070096BCD3 /* SampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287AC6B01972A4070096BCD3 /* SampleTableViewCell.xib */; };
+		287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 		285C8C2B196D85410058C8E2 /* SpeedKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		285C8C30196D85410058C8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285C8C31196D85410058C8E2 /* SpeedKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedKitDemoTests.swift; sourceTree = "<group>"; };
+		287AC6AE1972987D0096BCD3 /* SPTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewController.swift; sourceTree = "<group>"; };
+		287AC6B01972A4070096BCD3 /* SampleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleTableViewCell.xib; sourceTree = "<group>"; };
+		287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,7 @@
 		285C8C10196D85410058C8E2 = {
 			isa = PBXGroup;
 			children = (
+				285C8C3B196D85540058C8E2 /* SpeedKit */,
 				285C8C1B196D85410058C8E2 /* SpeedKitDemo */,
 				285C8C2E196D85410058C8E2 /* SpeedKitDemoTests */,
 				285C8C1A196D85410058C8E2 /* Products */,
@@ -78,6 +85,8 @@
 				285C8C1E196D85410058C8E2 /* AppDelegate.swift */,
 				285C8C20196D85410058C8E2 /* ViewController.swift */,
 				285C8C22196D85410058C8E2 /* Main.storyboard */,
+				287AC6B01972A4070096BCD3 /* SampleTableViewCell.xib */,
+				287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */,
 				285C8C25196D85410058C8E2 /* Images.xcassets */,
 				285C8C1C196D85410058C8E2 /* Supporting Files */,
 			);
@@ -107,6 +116,15 @@
 				285C8C30196D85410058C8E2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		285C8C3B196D85540058C8E2 /* SpeedKit */ = {
+			isa = PBXGroup;
+			children = (
+				287AC6AE1972987D0096BCD3 /* SPTableViewController.swift */,
+			);
+			name = SpeedKit;
+			path = ../SpeedKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				285C8C24196D85410058C8E2 /* Main.storyboard in Resources */,
+				287AC6B11972A4070096BCD3 /* SampleTableViewCell.xib in Resources */,
 				285C8C26196D85410058C8E2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				285C8C21196D85410058C8E2 /* ViewController.swift in Sources */,
+				287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */,
+				287AC6AF1972987D0096BCD3 /* SPTableViewController.swift in Sources */,
 				285C8C1F196D85410058C8E2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +420,7 @@
 				285C8C37196D85410058C8E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		285C8C38196D85410058C8E2 /* Build configuration list for PBXNativeTarget "SpeedKitDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +429,7 @@
 				285C8C3A196D85410058C8E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
