@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, SPTableViewControllerProtocol {
     
     @IBOutlet var tableView : UITableView
-    var tableViewDataSource : AnyObject[] = []
+    var spTableViewDataSource : SPTableViewDataSource = SPTableViewDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
         
         self.tableView.dataSource = self
         
-        tableViewDataSource = [
+        spTableViewDataSource.datasource = [
             // Section 0
             [
                 [
@@ -28,14 +28,14 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
                 ],
                 [
                     kCellIdKey : kCellIdSampleTableViewCell,
-                    kCellCountKey : 3
+                    kCellCountKey : 1
                 ]
             ],
             // Section 1
             [
                 [
                     kCellIdKey : kCellIdSampleTableViewCell,
-                    kCellCountKey : 5
+                    kCellCountKey : 2
                 ]
             ]];
     }
@@ -48,7 +48,6 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
     func sayHello(){
         println("Pradip")
     }
-    
     
 }
 
