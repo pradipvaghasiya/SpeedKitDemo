@@ -24,18 +24,18 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
             [
                 [
                     kCellIdKey : kCellIdSampleTableViewCell,
-                    kCellCountKey : 2
+                    kCellCountKey : 1
                 ],
                 [
                     kCellIdKey : kCellIdSampleTableViewCell,
-                    kCellCountKey : 1
+                    kCellCountKey : 2
                 ]
             ],
             // Section 1
             [
                 [
                     kCellIdKey : kCellIdSampleTableViewCell,
-                    kCellCountKey : 2
+                    kCellCountKey : 3
                 ]
             ]];
     }
