@@ -27,7 +27,8 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
                     kCellCountKey : 1
                 ],
                 [
-                    kCellIdKey : kCellIdSampleTableViewCell,
+                    kCellViewTypeKey : kCellViewTypePrototypeCell,
+                    kCellIdKey : "Prototype Cell",
                     kCellCountKey : 2
                 ]
             ],
