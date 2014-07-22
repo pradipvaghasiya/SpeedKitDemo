@@ -22,23 +22,19 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
         spTableViewDataSource.datasource = [
             // Section 0
             [
-                SPTableViewCellData(cellId: kCellIdSampleTableViewCell,cellCount: 1),
-                SPTableViewCellData(cellId: "Prototype Cell",cellCount: 20000, cellViewType:SPCellViewType.FromPrototypeCell)
+                SPTableViewCellData(cellId: kCellIdSampleTableViewCell,cellCount: 1000),
+                SPTableViewCellData(cellId: "Prototype Cell",cellCount: 20, cellViewType:SPCellViewType.FromPrototypeCell)
             ],
             // Section 1
             [
-                SPTableViewCellData(cellId: kCellIdSampleTableViewCell, cellCount: 2),
+                SPTableViewCellData(cellId: kCellIdSampleTableViewCell, cellCount: 200),
             ]];
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        println("didReceiveMemoryWarning")
     }
-    
-    func sayHello(){
-        println("Pradip")
-    }
-    
 }
 
