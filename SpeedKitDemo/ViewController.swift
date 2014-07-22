@@ -22,22 +22,12 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
         spTableViewDataSource.datasource = [
             // Section 0
             [
-                [
-                    kCellIdKey : kCellIdSampleTableViewCell,
-                    kCellCountKey : 1
-                ],
-                [
-                    kCellViewTypeKey : kCellViewTypePrototypeCell,
-                    kCellIdKey : "Prototype Cell",
-                    kCellCountKey : 2
-                ]
+                SPTableViewCellData(cellId: kCellIdSampleTableViewCell,cellCount: 1),
+                SPTableViewCellData(cellId: "Prototype Cell",cellCount: 20000, cellViewType:SPCellViewType.FromPrototypeCell)
             ],
             // Section 1
             [
-                [
-                    kCellIdKey : kCellIdSampleTableViewCell,
-                    kCellCountKey : 3
-                ]
+                SPTableViewCellData(cellId: kCellIdSampleTableViewCell, cellCount: 2),
             ]];
     }
     
