@@ -29,7 +29,7 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
             ],
             // Section 1
             [
-                SPTableViewCellData(cellId: kCellIdSampleTableViewCell, cellCount: 2),
+                SPTableViewCellData(cellId: kCellIdSampleTableViewCell, cellCount: 2, cellModelCommon:SampleTableViewCellModel(TitleText: "Hello"))
             ]];
     }
     

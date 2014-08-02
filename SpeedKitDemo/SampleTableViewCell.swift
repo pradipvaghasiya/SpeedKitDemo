@@ -32,7 +32,7 @@ class SampleTableViewCell: UITableViewCell,SPTableViewCellProtocol {
     }
     
     // SPTableViewCellProtocol
-    func configureCellUsing(model: AnyObject?){
+    func configureCellUsing(model: AnyObject){
         if let myModel = model as? SampleTableViewCellModel{
             self.titleLabel.text = myModel.titleText
         }else{
