@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController, SPTableViewControllerProtocol {
     
     @IBOutlet var tableView : UITableView
+    
+//    SPTableViewControllerProtocol
     var spTableViewDataSource : SPTableViewDataSource = SPTableViewDataSource()
     
     override func viewDidLoad() {
@@ -22,12 +24,12 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
         spTableViewDataSource.datasource = [
             // Section 0
             [
-                SPTableViewCellData(cellId: kCellIdSampleTableViewCell,cellCount: 1000),
-                SPTableViewCellData(cellId: "Prototype Cell",cellCount: 20, cellViewType:SPCellViewType.FromPrototypeCell)
+                SPTableViewCellData(cellId: kCellIdSampleTableViewCell,cellCount: 1, cellModel:[SampleTableViewCellModel(TitleText: "Hello")]),
+                SPTableViewCellData(cellId: "Prototype Cell",cellCount: 2, cellViewType:SPCellViewType.FromPrototypeCell)
             ],
             // Section 1
             [
-                SPTableViewCellData(cellId: kCellIdSampleTableViewCell, cellCount: 200),
+                SPTableViewCellData(cellId: kCellIdSampleTableViewCell, cellCount: 2),
             ]];
     }
     

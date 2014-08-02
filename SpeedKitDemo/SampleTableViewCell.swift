@@ -10,8 +10,16 @@ import UIKit
 
 let kCellIdSampleTableViewCell = "SampleTableViewCell"
 
-class SampleTableViewCell: UITableViewCell {
+class SampleTableViewCellModel{
+    var titleText:String
+    init(TitleText text:String){
+        self.titleText = text
+    }
+}
 
+class SampleTableViewCell: UITableViewCell,SPTableViewCellProtocol {
+
+    @IBOutlet var titleLabel: UILabel
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,4 +31,12 @@ class SampleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // SPTableViewCellProtocol
+    func configureCellUsing(model: AnyObject?){
+        if let myModel = model as? SampleTableViewCellModel{
+            self.titleLabel.text = myModel.titleText
+        }else{
+            println("Please pass correct model")
+        }
+    }
 }
