@@ -15,6 +15,10 @@
 		287AC6AF1972987D0096BCD3 /* SPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6AE1972987D0096BCD3 /* SPTableViewController.swift */; };
 		287AC6B11972A4070096BCD3 /* SampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287AC6B01972A4070096BCD3 /* SampleTableViewCell.xib */; };
 		287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */; };
+		28C528FC198F42E100F19438 /* SPTableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C528FB198F42E100F19438 /* SPTableViewHelper.swift */; };
+		28C528FE198F434500F19438 /* SPTableViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C528FD198F434500F19438 /* SPTableViewControllerProtocol.swift */; };
+		28C52900198F437400F19438 /* SPTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C528FF198F437400F19438 /* SPTableViewCellProtocol.swift */; };
+		28C52902198F43B800F19438 /* SPTableViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C52901198F43B800F19438 /* SPTableViewCellData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		287AC6AE1972987D0096BCD3 /* SPTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewController.swift; sourceTree = "<group>"; };
 		287AC6B01972A4070096BCD3 /* SampleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleTableViewCell.xib; sourceTree = "<group>"; };
 		287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
+		28C528FB198F42E100F19438 /* SPTableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewHelper.swift; sourceTree = "<group>"; };
+		28C528FD198F434500F19438 /* SPTableViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewControllerProtocol.swift; sourceTree = "<group>"; };
+		28C528FF198F437400F19438 /* SPTableViewCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewCellProtocol.swift; sourceTree = "<group>"; };
+		28C52901198F43B800F19438 /* SPTableViewCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewCellData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,10 @@
 			isa = PBXGroup;
 			children = (
 				287AC6AE1972987D0096BCD3 /* SPTableViewController.swift */,
+				28C528FB198F42E100F19438 /* SPTableViewHelper.swift */,
+				28C52901198F43B800F19438 /* SPTableViewCellData.swift */,
+				28C528FF198F437400F19438 /* SPTableViewCellProtocol.swift */,
+				28C528FD198F434500F19438 /* SPTableViewControllerProtocol.swift */,
 			);
 			name = SpeedKit;
 			path = ../SpeedKit;
@@ -228,7 +240,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				285C8C21196D85410058C8E2 /* ViewController.swift in Sources */,
+				28C52900198F437400F19438 /* SPTableViewCellProtocol.swift in Sources */,
 				287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */,
+				28C528FE198F434500F19438 /* SPTableViewControllerProtocol.swift in Sources */,
+				28C52902198F43B800F19438 /* SPTableViewCellData.swift in Sources */,
+				28C528FC198F42E100F19438 /* SPTableViewHelper.swift in Sources */,
 				287AC6AF1972987D0096BCD3 /* SPTableViewController.swift in Sources */,
 				285C8C1F196D85410058C8E2 /* AppDelegate.swift in Sources */,
 			);

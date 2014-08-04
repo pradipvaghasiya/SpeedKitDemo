@@ -13,7 +13,7 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
     @IBOutlet var tableView : UITableView
     
 //    SPTableViewControllerProtocol
-    var spTableViewDataSource : SPTableViewDataSource = SPTableViewDataSource()
+    var spTableDatasource : [[SPTableViewCellData]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
         
         self.tableView.dataSource = self
         
-        spTableViewDataSource.datasource = [
+        spTableDatasource = [
             // Section 0
             [
                 SPTableViewCellData(cellId: kCellIdSampleTableViewCell,cellCount: 1, cellModel:[SampleTableViewCellModel(TitleText: "Hello")]),
