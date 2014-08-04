@@ -24,12 +24,22 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
         spTableDatasource = [
             // Section 0
             [
-                SPTableViewCellData(cellId: kCellIdSampleTableViewCell,cellCount: 1, cellModel:[SampleTableViewCellModel(TitleText: "Hello")]),
-                SPTableViewCellData(cellId: "Prototype Cell",cellCount: 2, cellViewType:SPCellViewType.FromPrototypeCell)
+                SPTableViewCellData(
+                    cellId: kCellIdSampleTableViewCell,
+                    cellCount: 1,
+                    cellModel:[SampleTableViewCellModel(TitleText: "Hello")]),
+                
+                SPTableViewCellData(
+                    cellId: "Prototype Cell",
+                    cellCount: 2,
+                    cellViewType:SPCellViewType.FromPrototypeCell)
             ],
             // Section 1
             [
-                SPTableViewCellData(cellId: kCellIdSampleTableViewCell, cellCount: 2, cellModelCommon:SampleTableViewCellModel(TitleText: "Hello"))
+                SPTableViewCellData(
+                    cellId: kCellIdSampleTableViewCell,
+                    cellCount: 2,
+                    cellModelCommon:SampleTableViewCellModel(TitleText: "Hello"))
             ]];
     }
     
