@@ -18,20 +18,20 @@ class CollectionVC: UIViewController,SPListingViewControllerProtocol{
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        var horizontalVCObj : SPListingCollection = SPListingCollection()
+        var listingCollectionObj : SPListingCollection = SPListingCollection()
         
-        var optHorizontalVC =  horizontalVCObj.collectionViewController(using: [SPListingSectionData(Rows: [
+        var optListingCVC =  listingCollectionObj.collectionViewController(using: [SPListingSectionData(Rows: [
             SPListingCellData(
                 cellId: kCellIdSampleCollectionViewCell,
                 cellCount: 35,
                 cellModelCommon:SampleCollectionCellModel(Title: "Super!"))])])
         
         
-        if let horizontalVC = optHorizontalVC{
-            self.addChildViewController(horizontalVC)
-            horizontalVC.view.frame = self.view.frame
-            self.view.addSubview(horizontalVC.view)
-            horizontalVC.didMoveToParentViewController(self)
+        if let listingCVC = optListingCVC{
+            self.addChildViewController(listingCVC)
+            listingCVC.view.frame = self.view.frame
+            self.view.addSubview(listingCVC.view)
+            listingCVC.didMoveToParentViewController(self)
         }
         
     }
