@@ -23,6 +23,8 @@ class SampleTableViewCell: UITableViewCell,SPTableViewCellProtocol {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        println("AwakeFromNib")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

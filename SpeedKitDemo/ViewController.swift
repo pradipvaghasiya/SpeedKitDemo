@@ -39,7 +39,7 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
             [
                 SPTableViewCellData(
                     cellId: kCellIdSampleTableViewCell,
-                    cellCount: 2,
+                    cellCount: 50,
                     cellModelCommon:SampleTableViewCellModel(TitleText: "Hello"))
             ]];
     }
