@@ -17,14 +17,14 @@ class SampleTableViewCellModel{
     }
 }
 
-class SampleTableViewCell: UITableViewCell,SPTableViewCellProtocol {
+class SampleTableViewCell: UITableViewCell,SPListingCellProtocol {
 
     @IBOutlet var titleLabel: UILabel?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        println("AwakeFromNib")
+        //println("AwakeFromNib")
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

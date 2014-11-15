@@ -17,11 +17,11 @@ class SampleCollectionCellModel{
     }
 }
 
-class SampleCollectionViewCell : UICollectionViewCell,SPTableViewCellProtocol{
+class SampleCollectionViewCell : UICollectionViewCell,SPListingCellProtocol{
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        println("AwakeFromNib")
+        //println("AwakeFromNib")
     }
 
     

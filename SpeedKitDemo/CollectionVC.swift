@@ -8,24 +8,24 @@
 
 import UIKit
 
-class CollectionVC: UIViewController,SPTableViewControllerProtocol{
+class CollectionVC: UIViewController,SPListingViewControllerProtocol{
     
-    // SPTableViewControllerProtocol
-    var spTableDatasource : [[SPTableViewCellData]] = []
+    // SPListingViewControllerProtocol
+    var spListingSectionDataArray : [SPListingSectionData] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        var horizontalVCObj : SPHorizontalCollectionMainController = SPHorizontalCollectionMainController()
+        var horizontalVCObj : SPListingCollection = SPListingCollection()
         
-        var optHorizontalVC =  horizontalVCObj.horizontalCollection(using: [// Section 0
-            [
-                SPTableViewCellData(
-                    cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 15,
-                    cellModelCommon:[SampleCollectionCellModel(Title: "Collection")])]])
+        var optHorizontalVC =  horizontalVCObj.collectionViewController(using: [SPListingSectionData(Rows: [
+            SPListingCellData(
+                cellId: kCellIdSampleCollectionViewCell,
+                cellCount: 35,
+                cellModelCommon:SampleCollectionCellModel(Title: "Super!"))])])
+        
         
         if let horizontalVC = optHorizontalVC{
             self.addChildViewController(horizontalVC)

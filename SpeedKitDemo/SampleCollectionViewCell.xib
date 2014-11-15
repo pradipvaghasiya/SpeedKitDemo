@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-b0-bFP">
-                        <rect key="frame" x="44.5" y="19" width="77" height="20.5"/>
+                        <rect key="frame" x="44" y="19" width="77" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -22,6 +22,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" red="0.39605571908227433" green="0.60303588161985577" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="NQd-b0-bFP" secondAttribute="centerY" id="Bcv-ml-fNc"/>
                 <constraint firstAttribute="centerX" secondItem="NQd-b0-bFP" secondAttribute="centerX" id="DyE-xC-fmj"/>

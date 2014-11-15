@@ -8,12 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, SPTableViewControllerProtocol {
+class ViewController: UIViewController, SPListingViewControllerProtocol {
     
     @IBOutlet var tableView : UITableView!
     
-//    SPTableViewControllerProtocol
-    var spTableDatasource : [[SPTableViewCellData]] = []
+//    SPListingViewControllerProtocol
+    var spListingSectionDataArray : [SPListingSectionData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,26 +22,27 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
         self.tableView.dataSource = self
         self.tableView.registerNib(UINib(nibName: kCellIdSampleTableViewCell, bundle: nil),forCellReuseIdentifier: kCellIdSampleTableViewCell)
         
-        spTableDatasource = [
+        spListingSectionDataArray = [
             // Section 0
-            [
-                SPTableViewCellData(
+            SPListingSectionData(Rows: [
+                SPListingCellData(
                     cellId: kCellIdSampleTableViewCell,
                     cellCount: 1,
                     cellModel:[SampleTableViewCellModel(TitleText: "Hello")]),
                 
-                SPTableViewCellData(
+                SPListingCellData(
                     cellId: "Prototype Cell",
                     cellCount: 2,
                     cellViewType:SPCellViewType.FromPrototypeCell)
-            ],
+                ])
+            ,
             // Section 1
-            [
-                SPTableViewCellData(
+            SPListingSectionData(Rows: [
+                SPListingCellData(
                     cellId: kCellIdSampleTableViewCell,
                     cellCount: 50,
                     cellModelCommon:SampleTableViewCellModel(TitleText: "Hello"))
-            ]];
+            ])];
     }
     
     override func didReceiveMemoryWarning() {
