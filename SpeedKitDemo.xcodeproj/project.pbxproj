@@ -161,8 +161,7 @@
 				286D93FA1A0DEF0600C63224 /* ReadMe.txt */,
 				286D93FD1A0DEF0600C63224 /* Listing Automation */,
 			);
-			name = SpeedKit;
-			path = ../SpeedKit;
+			path = SpeedKit;
 			sourceTree = "<group>";
 		};
 		286D93F41A0DEF0600C63224 /* Generic Collection */ = {
