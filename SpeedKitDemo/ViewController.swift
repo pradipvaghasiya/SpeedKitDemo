@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, SPTableViewControllerProtocol {
     
-    @IBOutlet var tableView : UITableView
+    @IBOutlet var tableView : UITableView!
     
 //    SPTableViewControllerProtocol
     var spTableDatasource : [[SPTableViewCellData]] = []
@@ -20,6 +20,7 @@ class ViewController: UIViewController, SPTableViewControllerProtocol {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.tableView.dataSource = self
+        self.tableView.registerNib(UINib(nibName: kCellIdSampleTableViewCell, bundle: nil),forCellReuseIdentifier: kCellIdSampleTableViewCell)
         
         spTableDatasource = [
             // Section 0

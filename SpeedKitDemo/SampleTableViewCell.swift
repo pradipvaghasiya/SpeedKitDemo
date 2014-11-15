@@ -19,7 +19,7 @@ class SampleTableViewCellModel{
 
 class SampleTableViewCell: UITableViewCell,SPTableViewCellProtocol {
 
-    @IBOutlet var titleLabel: UILabel
+    @IBOutlet var titleLabel: UILabel?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,7 +34,7 @@ class SampleTableViewCell: UITableViewCell,SPTableViewCellProtocol {
     // SPTableViewCellProtocol
     func configureCellUsing(model: AnyObject){
         if let myModel = model as? SampleTableViewCellModel{
-            self.titleLabel.text = myModel.titleText
+            self.titleLabel?.text = myModel.titleText
         }else{
             println("Please pass correct model")
         }
