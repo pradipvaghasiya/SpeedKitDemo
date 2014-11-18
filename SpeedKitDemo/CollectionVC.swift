@@ -16,11 +16,8 @@ class CollectionVC: UIViewController,SPListingViewControllerProtocol{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        var listingCollectionObj : SPListingCollection = SPListingCollection()
-        
-        var optListingCVC =  listingCollectionObj.collectionViewController(using: [SPListingSectionData(Rows: [
+
+        var optListingCVC =  SPListingCollectionVC.collectionViewController(using: [SPListingSectionData(Rows: [
             SPListingCellData(
                 cellId: kCellIdSampleCollectionViewCell,
                 cellCount: 35,
