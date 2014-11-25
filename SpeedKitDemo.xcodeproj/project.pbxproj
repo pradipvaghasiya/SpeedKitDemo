@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */; };
 		282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */; };
 		282337271A1733F90003F3C4 /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282337261A1733F90003F3C4 /* SampleCollectionViewCell.xib */; };
 		28351B741A19C1EC005C56D8 /* SPListingColumnBasedLayoutDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28351B731A19C1EC005C56D8 /* SPListingColumnBasedLayoutDatasource.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnBasedLayoutDatasource.swift; sourceTree = "<group>"; };
 		282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		282337261A1733F90003F3C4 /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
 		28351B731A19C1EC005C56D8 /* SPListingColumnBasedLayoutDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingColumnBasedLayoutDatasource.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				285C8C1E196D85410058C8E2 /* AppDelegate.swift */,
 				285C8C20196D85410058C8E2 /* ViewController.swift */,
 				285CA8401A172AED00E5093E /* CollectionVC.swift */,
+				282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */,
 				285C8C22196D85410058C8E2 /* Main.storyboard */,
 				282337231A1733D40003F3C4 /* Views */,
 				285C8C25196D85410058C8E2 /* Images.xcassets */,
@@ -343,6 +346,7 @@
 				286D94101A0DEF0600C63224 /* SPUIViewController+TableDatasource.swift in Sources */,
 				286D94081A0DEF0600C63224 /* SPListingColumnBasedLayout.swift in Sources */,
 				286D940C1A0DEF0600C63224 /* SPListingCellData.swift in Sources */,
+				282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */,
 				286D940D1A0DEF0600C63224 /* SPListingCellProtocol.swift in Sources */,
 				285C8C1F196D85410058C8E2 /* AppDelegate.swift in Sources */,
 				285CA8411A172AED00E5093E /* CollectionVC.swift in Sources */,

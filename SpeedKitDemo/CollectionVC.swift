@@ -8,28 +8,18 @@
 
 import UIKit
 
-class CollectionVC: UIViewController,SPListingViewControllerProtocol{
+class CollectionVC: UIViewController{
     
     // SPListingViewControllerProtocol
-    var spListingSectionDataArray : [SPListingSectionData] = []
+    var sectionDataArray : [SPListingSectionData] = []
+    var collectionLayout = SPListingColumnBasedLayout()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        var optListingCVC =  SPListingCollectionVC.collectionViewController(using: [SPListingSectionData(Rows: [
-            SPListingCellData(
-                cellId: kCellIdSampleCollectionViewCell,
-                cellCount: 35,
-                cellModelCommon:SampleCollectionCellModel(Title: "Super!"))])])
-        
-        
-        if let listingCVC = optListingCVC{
-            self.addChildViewController(listingCVC)
-            listingCVC.view.frame = self.view.frame
-            self.view.addSubview(listingCVC.view)
-            listingCVC.didMoveToParentViewController(self)
-        }
+        // Add Child view controller
+        self.addCollectionViewController()
         
     }
     
@@ -40,4 +30,45 @@ class CollectionVC: UIViewController,SPListingViewControllerProtocol{
     }
 }
 
+
+extension CollectionVC{
+    func addCollectionViewController(){
+        if let listingCVC = SPListingCollectionVC.getNewInstance(){
+            
+            // Layout Setup
+            collectionLayout.datasource = ColumnBasedLayoutDatasource()
+            //collectionLayout.scrollDirection = .Horizontal
+            
+//            collectionLayout.sectionInset = UIEdgeInsetsZero
+//            collectionLayout.noOfLinesShouldFit = 4
+//            collectionLayout.noOfScrollingLines = 4
+//            collectionLayout.lineSpacing = 5
+//            collectionLayout.interitemSpacing = 5
+//            collectionLayout.lengthOfItem = 100
+            
+            listingCVC.collectionViewLayout = collectionLayout
+            
+            // Section Data Array
+            var section0 = SPListingSectionData(Rows: [
+                SPListingCellData(
+                    cellId: kCellIdSampleCollectionViewCell,
+                    cellCount: 8,
+                    cellModelCommon:SampleCollectionCellModel(Title: "0"))])
+            
+            var section1 = SPListingSectionData(Rows: [
+                SPListingCellData(
+                    cellId: kCellIdSampleCollectionViewCell,
+                    cellCount: 6,
+                    cellModelCommon:SampleCollectionCellModel(Title: "1"))])
+            
+            sectionDataArray = [section0,section1]
+            listingCVC.spListingSectionDataArray = sectionDataArray
+            
+            self.addChildViewController(listingCVC)
+            listingCVC.view.frame = self.view.frame
+            self.view.addSubview(listingCVC.view)
+            listingCVC.didMoveToParentViewController(self)
+        }
+    }
+}
 
