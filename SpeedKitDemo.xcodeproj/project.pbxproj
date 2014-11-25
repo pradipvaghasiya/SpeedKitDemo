@@ -20,7 +20,6 @@
 		28650DB31A177F6C003DEEAF /* SPListingSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28650DB21A177F6C003DEEAF /* SPListingSectionData.swift */; };
 		286D94071A0DEF0600C63224 /* SPListingCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D93F71A0DEF0600C63224 /* SPListingCollectionVC.swift */; };
 		286D94081A0DEF0600C63224 /* SPListingColumnBasedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D93F81A0DEF0600C63224 /* SPListingColumnBasedLayout.swift */; };
-		286D94091A0DEF0600C63224 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 286D93FA1A0DEF0600C63224 /* ReadMe.txt */; };
 		286D940A1A0DEF0600C63224 /* SPListing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286D93FC1A0DEF0600C63224 /* SPListing.storyboard */; };
 		286D940B1A0DEF0600C63224 /* SPUIViewController+CollectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D93FF1A0DEF0600C63224 /* SPUIViewController+CollectionDatasource.swift */; };
 		286D940C1A0DEF0600C63224 /* SPListingCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94001A0DEF0600C63224 /* SPListingCellData.swift */; };
@@ -59,7 +58,6 @@
 		28650DB21A177F6C003DEEAF /* SPListingSectionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingSectionData.swift; sourceTree = "<group>"; };
 		286D93F71A0DEF0600C63224 /* SPListingCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingCollectionVC.swift; sourceTree = "<group>"; };
 		286D93F81A0DEF0600C63224 /* SPListingColumnBasedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingColumnBasedLayout.swift; sourceTree = "<group>"; };
-		286D93FA1A0DEF0600C63224 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		286D93FC1A0DEF0600C63224 /* SPListing.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SPListing.storyboard; sourceTree = "<group>"; };
 		286D93FF1A0DEF0600C63224 /* SPUIViewController+CollectionDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPUIViewController+CollectionDatasource.swift"; sourceTree = "<group>"; };
 		286D94001A0DEF0600C63224 /* SPListingCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingCellData.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 		286D93F31A0DEF0600C63224 /* SpeedKit */ = {
 			isa = PBXGroup;
 			children = (
-				286D93FA1A0DEF0600C63224 /* ReadMe.txt */,
 				286D93FD1A0DEF0600C63224 /* Listing Automation */,
 			);
 			path = SpeedKit;
@@ -316,7 +313,6 @@
 				285C8C24196D85410058C8E2 /* Main.storyboard in Resources */,
 				287AC6B11972A4070096BCD3 /* SampleTableViewCell.xib in Resources */,
 				282337271A1733F90003F3C4 /* SampleCollectionViewCell.xib in Resources */,
-				286D94091A0DEF0600C63224 /* ReadMe.txt in Resources */,
 				286D940A1A0DEF0600C63224 /* SPListing.storyboard in Resources */,
 				285C8C26196D85410058C8E2 /* Images.xcassets in Resources */,
 			);
