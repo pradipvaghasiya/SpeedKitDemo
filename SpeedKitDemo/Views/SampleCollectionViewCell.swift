@@ -33,6 +33,12 @@ class SampleCollectionViewCell : UICollectionViewCell,SPListingCellProtocol{
         }
         
     }
+    
+    override func preferredLayoutAttributesFittingAttributes(layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes! {
+        var attr = super.preferredLayoutAttributesFittingAttributes(layoutAttributes)
+        attr.frame.size.height = 100
+        return attr
+    }
 }
 
 

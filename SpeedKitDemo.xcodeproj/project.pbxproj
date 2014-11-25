@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */; };
+		28217D861A2439C500D37C3D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 28217D851A2439C500D37C3D /* README.md */; };
 		282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */; };
 		282337271A1733F90003F3C4 /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282337261A1733F90003F3C4 /* SampleCollectionViewCell.xib */; };
 		28351B741A19C1EC005C56D8 /* SPListingColumnBasedLayoutDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28351B731A19C1EC005C56D8 /* SPListingColumnBasedLayoutDatasource.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnBasedLayoutDatasource.swift; sourceTree = "<group>"; };
+		28217D851A2439C500D37C3D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		282337261A1733F90003F3C4 /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
 		28351B731A19C1EC005C56D8 /* SPListingColumnBasedLayoutDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingColumnBasedLayoutDatasource.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		286D93F31A0DEF0600C63224 /* SpeedKit */ = {
 			isa = PBXGroup;
 			children = (
+				28217D851A2439C500D37C3D /* README.md */,
 				286D93FD1A0DEF0600C63224 /* Listing Automation */,
 			);
 			path = SpeedKit;
@@ -338,6 +341,7 @@
 				28650DB31A177F6C003DEEAF /* SPListingSectionData.swift in Sources */,
 				286D940E1A0DEF0600C63224 /* SPListingViewControllerProtocol.swift in Sources */,
 				286D940B1A0DEF0600C63224 /* SPUIViewController+CollectionDatasource.swift in Sources */,
+				28217D861A2439C500D37C3D /* README.md in Sources */,
 				282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */,
 				286D94101A0DEF0600C63224 /* SPUIViewController+TableDatasource.swift in Sources */,
 				286D94081A0DEF0600C63224 /* SPListingColumnBasedLayout.swift in Sources */,

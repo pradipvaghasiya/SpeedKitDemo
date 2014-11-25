@@ -30,14 +30,10 @@ class ColumnBasedLayoutDatasource :SPListingColumnBasedLayoutDatasource {
         }
     }
     
-    func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, lengthOfItemAtIndexPath indexPath: NSIndexPath) -> CGFloat{
+    func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, lengthOfItemAtIndexPath indexPath: NSIndexPath, forGivenWidthOrHeight itemWidthOrHeight:CGFloat) -> CGFloat{
         
         if indexPath.item == 0{
             return 110
-        }
-        
-        if indexPath.item == 7{
-            return 270
         }
         
         return 50

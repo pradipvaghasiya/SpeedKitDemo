@@ -38,7 +38,7 @@ extension CollectionVC{
             // Layout Setup
             collectionLayout.datasource = ColumnBasedLayoutDatasource()
             //collectionLayout.scrollDirection = .Horizontal
-            
+
 //            collectionLayout.sectionInset = UIEdgeInsetsZero
 //            collectionLayout.noOfLinesShouldFit = 4
 //            collectionLayout.noOfScrollingLines = 4
@@ -58,7 +58,7 @@ extension CollectionVC{
             var section1 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 6,
+                    cellCount: 26,
                     cellModelCommon:SampleCollectionCellModel(Title: "1"))])
             
             sectionDataArray = [section0,section1]
