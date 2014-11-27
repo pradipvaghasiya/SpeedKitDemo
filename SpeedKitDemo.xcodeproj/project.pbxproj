@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282078A21A258C1900B7B80C /* SPListingColumnBasedLayoutInvalidationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282078A11A258C1900B7B80C /* SPListingColumnBasedLayoutInvalidationContext.swift */; };
 		282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */; };
 		28217D861A2439C500D37C3D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 28217D851A2439C500D37C3D /* README.md */; };
 		282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		282078A11A258C1900B7B80C /* SPListingColumnBasedLayoutInvalidationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingColumnBasedLayoutInvalidationContext.swift; sourceTree = "<group>"; };
 		282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnBasedLayoutDatasource.swift; sourceTree = "<group>"; };
 		28217D851A2439C500D37C3D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				286D93F81A0DEF0600C63224 /* SPListingColumnBasedLayout.swift */,
+				282078A11A258C1900B7B80C /* SPListingColumnBasedLayoutInvalidationContext.swift */,
 				28351B731A19C1EC005C56D8 /* SPListingColumnBasedLayoutDatasource.swift */,
 			);
 			name = Layouts;
@@ -339,6 +342,7 @@
 				287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */,
 				28351B741A19C1EC005C56D8 /* SPListingColumnBasedLayoutDatasource.swift in Sources */,
 				28650DB31A177F6C003DEEAF /* SPListingSectionData.swift in Sources */,
+				282078A21A258C1900B7B80C /* SPListingColumnBasedLayoutInvalidationContext.swift in Sources */,
 				286D940E1A0DEF0600C63224 /* SPListingViewControllerProtocol.swift in Sources */,
 				286D940B1A0DEF0600C63224 /* SPUIViewController+CollectionDatasource.swift in Sources */,
 				28217D861A2439C500D37C3D /* README.md in Sources */,

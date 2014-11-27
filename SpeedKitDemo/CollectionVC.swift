@@ -44,8 +44,9 @@ extension CollectionVC{
 //            collectionLayout.noOfScrollingLines = 4
 //            collectionLayout.lineSpacing = 5
 //            collectionLayout.interitemSpacing = 5
-//            collectionLayout.lengthOfItem = 100
-            
+//            collectionLayout.lengthOfItem = 50
+//            collectionLayout.estimatedLengthOfItem = 50
+
             listingCVC.collectionViewLayout = collectionLayout
             
             // Section Data Array

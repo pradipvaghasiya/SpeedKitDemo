@@ -36,7 +36,10 @@ class SampleCollectionViewCell : UICollectionViewCell,SPListingCellProtocol{
     
     override func preferredLayoutAttributesFittingAttributes(layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes! {
         var attr = super.preferredLayoutAttributesFittingAttributes(layoutAttributes)
-        attr.frame.size.height = 100
+        attr.frame.size.width = layoutAttributes.frame.size.width
+        if attr.indexPath.item == 4{
+            attr.frame.size.width = 200
+        }
         return attr
     }
 }

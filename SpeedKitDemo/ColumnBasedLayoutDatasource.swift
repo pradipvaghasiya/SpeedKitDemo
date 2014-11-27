@@ -30,14 +30,14 @@ class ColumnBasedLayoutDatasource :SPListingColumnBasedLayoutDatasource {
         }
     }
     
-    func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, lengthOfItemAtIndexPath indexPath: NSIndexPath, forGivenWidthOrHeight itemWidthOrHeight:CGFloat) -> CGFloat{
-        
-        if indexPath.item == 0{
-            return 110
-        }
-        
-        return 50
-    }
+//    func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, lengthOfItemAtIndexPath indexPath: NSIndexPath, forGivenWidthOrHeight itemWidthOrHeight:CGFloat) -> CGFloat{
+//        
+//        if indexPath.item == 0{
+//            return 110
+//        }
+//        
+//        return 50
+//    }
     
 //    func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets{
 //        switch section{
