@@ -26,21 +26,15 @@ class SampleCollectionViewCell : UICollectionViewCell,SPListingCellProtocol{
 
     
     func configureCellUsing(model: AnyObject) {
+        self.titleLabel.preferredMaxLayoutWidth = 300
         if let myModel = model as? SampleCollectionCellModel{
             self.titleLabel.text = myModel.titleText
+            self.setNeedsLayout()
+            self.layoutIfNeeded()
         }else{
             println("Please pass correct model (SampleCollectionCellModel)")
         }
         
-    }
-    
-    override func preferredLayoutAttributesFittingAttributes(layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes! {
-        var attr = super.preferredLayoutAttributesFittingAttributes(layoutAttributes)
-        attr.frame.size.width = layoutAttributes.frame.size.width
-        if attr.indexPath.item == 4{
-            attr.frame.size.width = 200
-        }
-        return attr
     }
 }
 

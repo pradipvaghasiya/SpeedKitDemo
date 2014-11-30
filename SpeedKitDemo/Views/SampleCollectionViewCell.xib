@@ -7,14 +7,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SampleCollectionViewCell" id="PXg-4S-EjP" customClass="SampleCollectionViewCell" customModule="SpeedKitDemo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="166" height="58"/>
+            <rect key="frame" x="0.0" y="0.0" width="208" height="58"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="166" height="58"/>
+                <rect key="frame" x="0.0" y="0.0" width="208" height="58"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-b0-bFP">
-                        <rect key="frame" x="44" y="19" width="77" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Collection" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-b0-bFP">
+                        <rect key="frame" x="5" y="5" width="198" height="48"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -24,14 +24,22 @@
             </view>
             <color key="backgroundColor" red="0.39605571908227433" green="0.60303588161985577" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="NQd-b0-bFP" secondAttribute="centerY" id="Bcv-ml-fNc"/>
-                <constraint firstAttribute="centerX" secondItem="NQd-b0-bFP" secondAttribute="centerX" id="DyE-xC-fmj"/>
+                <constraint firstAttribute="bottom" secondItem="NQd-b0-bFP" secondAttribute="bottom" constant="5" id="7Ql-46-0qi"/>
+                <constraint firstItem="NQd-b0-bFP" firstAttribute="top" secondItem="PXg-4S-EjP" secondAttribute="top" constant="5" id="OHw-NY-Xgj"/>
+                <constraint firstItem="NQd-b0-bFP" firstAttribute="leading" secondItem="PXg-4S-EjP" secondAttribute="leading" constant="5" id="YYv-4x-vHw"/>
+                <constraint firstAttribute="centerX" secondItem="NQd-b0-bFP" secondAttribute="centerX" id="gDD-Qh-puF"/>
+                <constraint firstAttribute="trailing" secondItem="NQd-b0-bFP" secondAttribute="trailing" constant="5" id="yrp-rI-Bbh"/>
             </constraints>
-            <size key="customSize" width="166" height="58"/>
+            <size key="customSize" width="208" height="58"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="gDD-Qh-puF"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="titleLabel" destination="NQd-b0-bFP" id="lH1-HF-pUM"/>
             </connections>
-            <point key="canvasLocation" x="-11" y="322"/>
+            <point key="canvasLocation" x="10" y="322"/>
         </collectionViewCell>
     </objects>
 </document>

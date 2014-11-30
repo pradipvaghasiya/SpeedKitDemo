@@ -45,22 +45,26 @@ extension CollectionVC{
 //            collectionLayout.lineSpacing = 5
 //            collectionLayout.interitemSpacing = 5
 //            collectionLayout.lengthOfItem = 50
-//            collectionLayout.estimatedLengthOfItem = 50
-
+            
+            //collectionLayout.cellAutoResizingOn = true
+            //collectionLayout.estimatedLengthOfItem = 20
+            
+            var flow = UICollectionViewFlowLayout()
+            flow.estimatedItemSize = CGSizeMake(300, 3)
             listingCVC.collectionViewLayout = collectionLayout
             
             // Section Data Array
             var section0 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 8,
+                    cellCount: 6,
                     cellModelCommon:SampleCollectionCellModel(Title: "0"))])
             
             var section1 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
                     cellCount: 26,
-                    cellModelCommon:SampleCollectionCellModel(Title: "1"))])
+                    cellModelCommon:SampleCollectionCellModel(Title: "1 g sfg s safg as ga g afsgas fgagasfgfsgasg as gas g asg  sags f vf v f vasf vsa dv sda vads"))])
             
             sectionDataArray = [section0,section1]
             listingCVC.spListingSectionDataArray = sectionDataArray

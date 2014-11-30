@@ -12,9 +12,9 @@ class ColumnBasedLayoutDatasource :SPListingColumnBasedLayoutDatasource {
     func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, numberOfScrollingLinesAtSection section: Int) -> Int{
         switch section{
         case 0:
-            return 2
+            return 1
         case 1:
-            return 3
+            return 1
         default:
             return 1
         }
