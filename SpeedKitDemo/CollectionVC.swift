@@ -45,9 +45,10 @@ extension CollectionVC{
 //            collectionLayout.lineSpacing = 5
 //            collectionLayout.interitemSpacing = 5
 //            collectionLayout.lengthOfItem = 50
-            
+            collectionLayout.lineSpacing = 20
             //collectionLayout.cellAutoResizingOn = true
             //collectionLayout.estimatedLengthOfItem = 20
+            //collectionLayout.debug = true
             
             var flow = UICollectionViewFlowLayout()
             flow.estimatedItemSize = CGSizeMake(300, 3)

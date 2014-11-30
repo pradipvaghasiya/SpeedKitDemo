@@ -12,9 +12,9 @@ class ColumnBasedLayoutDatasource :SPListingColumnBasedLayoutDatasource {
     func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, numberOfScrollingLinesAtSection section: Int) -> Int{
         switch section{
         case 0:
-            return 1
+            return 2
         case 1:
-            return 1
+            return 3
         default:
             return 1
         }
@@ -27,6 +27,24 @@ class ColumnBasedLayoutDatasource :SPListingColumnBasedLayoutDatasource {
             return 6
         default:
             return 3
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, lineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        switch section{
+        case 0:
+            return 5
+        default:
+            return 10
+        }
+    }
+    
+    func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, interitemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        switch section{
+        case 0:
+            return 5
+        default:
+            return 5
         }
     }
     

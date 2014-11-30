@@ -34,7 +34,6 @@ class SampleCollectionViewCell : UICollectionViewCell,SPListingCellProtocol{
         }else{
             println("Please pass correct model (SampleCollectionCellModel)")
         }
-        
     }
 }
 
