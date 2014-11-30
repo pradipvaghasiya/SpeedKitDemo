@@ -65,7 +65,7 @@ extension CollectionVC{
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
                     cellCount: 26,
-                    cellModelCommon:SampleCollectionCellModel(Title: "1 g sfg s safg as ga g afsgas fgagasfgfsgasg as gas g asg  sags f vf v f vasf vsa dv sda vads"))])
+                    cellModelCommon:SampleCollectionCellModel(Title: "1 Pradip Vaghasiya"))])
             
             sectionDataArray = [section0,section1]
             listingCVC.spListingSectionDataArray = sectionDataArray
