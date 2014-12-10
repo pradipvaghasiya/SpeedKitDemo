@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColumnBasedLayoutDatasource :SPListingColumnBasedLayoutDelegate {
+class ColumnBasedLayoutDelegate :SPListingColumnBasedLayoutDelegate {
     func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, numberOfScrollingLinesAtSection section: Int) -> Int{
         switch section{
         case 0:

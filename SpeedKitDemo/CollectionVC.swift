@@ -36,7 +36,7 @@ extension CollectionVC{
         if let listingCVC = SPListingCollectionVC.getNewInstance(){
             
             // Layout Setup
-            collectionLayout.datasource = ColumnBasedLayoutDatasource()
+            collectionLayout.delegate = ColumnBasedLayoutDelegate()
             //collectionLayout.scrollDirection = .Horizontal
 
 //            collectionLayout.sectionInset = UIEdgeInsetsZero
@@ -58,13 +58,13 @@ extension CollectionVC{
             var section0 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 6,
+                    cellCount: 60,
                     cellModelCommon:SampleCollectionCellModel(Title: "0"))])
             
             var section1 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 26,
+                    cellCount: 260,
                     cellModelCommon:SampleCollectionCellModel(Title: "1 Pradip Vaghasiya"))])
             
             sectionDataArray = [section0,section1]
@@ -74,6 +74,10 @@ extension CollectionVC{
             listingCVC.view.frame = self.view.frame
             self.view.addSubview(listingCVC.view)
             listingCVC.didMoveToParentViewController(self)
+            
+            // Segment Controller
+            var segmentController = SPSegmentControllerHolderController(viewControllers: [listingCVC])
+            
         }
     }
 }
