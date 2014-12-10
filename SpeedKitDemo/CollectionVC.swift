@@ -38,7 +38,7 @@ extension CollectionVC{
             // Layout Setup
             collectionLayout.delegate = ColumnBasedLayoutDelegate()
             //collectionLayout.scrollDirection = .Horizontal
-
+            collectionLayout.isSpaceOptimized = true
 //            collectionLayout.sectionInset = UIEdgeInsetsZero
 //            collectionLayout.noOfLinesShouldFit = 4
 //            collectionLayout.noOfScrollingLines = 4
@@ -58,13 +58,13 @@ extension CollectionVC{
             var section0 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 60,
+                    cellCount: 8,
                     cellModelCommon:SampleCollectionCellModel(Title: "0"))])
             
             var section1 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 260,
+                    cellCount: 16,
                     cellModelCommon:SampleCollectionCellModel(Title: "1 Pradip Vaghasiya"))])
             
             sectionDataArray = [section0,section1]
