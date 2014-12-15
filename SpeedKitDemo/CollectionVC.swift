@@ -58,13 +58,13 @@ extension CollectionVC{
             var section0 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 8,
+                    cellCount: 0,
                     cellModelCommon:SampleCollectionCellModel(Title: "0"))])
             
             var section1 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 16,
+                    cellCount: 0,
                     cellModelCommon:SampleCollectionCellModel(Title: "1 Pradip Vaghasiya"))])
             
             sectionDataArray = [section0,section1]
