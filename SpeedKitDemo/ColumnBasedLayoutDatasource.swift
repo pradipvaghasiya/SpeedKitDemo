@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColumnBasedLayoutDelegate :SPListingColumnBasedLayoutDelegate {
+class ColumnBasedLayoutDatasource : NSObject, SPListingColumnBasedLayoutDelegate {
     func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, numberOfScrollingLinesAtSection section: Int) -> Int{
         switch section{
         case 0:
@@ -49,7 +49,7 @@ class ColumnBasedLayoutDelegate :SPListingColumnBasedLayoutDelegate {
     }
     
     func collectionView(collectionView: UICollectionView?, layout collectionViewLayout: UICollectionViewLayout, lengthOfItemAtIndexPath indexPath: NSIndexPath, forGivenWidthOrHeight itemWidthOrHeight:CGFloat) -> CGFloat{
-        
+    
         if indexPath.item == 0{
             return 110
         }

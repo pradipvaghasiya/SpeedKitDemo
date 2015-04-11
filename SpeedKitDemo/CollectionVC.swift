@@ -36,35 +36,37 @@ extension CollectionVC{
         if let listingCVC = SPListingCollectionVC.getNewInstance(){
             
             // Layout Setup
-            collectionLayout.delegate = ColumnBasedLayoutDelegate()
+            collectionLayout.delegate = ColumnBasedLayoutDatasource()
             //collectionLayout.scrollDirection = .Horizontal
-            collectionLayout.isSpaceOptimized = true
+            //collectionLayout.isSpaceOptimized = true
 //            collectionLayout.sectionInset = UIEdgeInsetsZero
 //            collectionLayout.noOfLinesShouldFit = 4
-//            collectionLayout.noOfScrollingLines = 4
-//            collectionLayout.lineSpacing = 5
-//            collectionLayout.interitemSpacing = 5
-//            collectionLayout.lengthOfItem = 50
-            collectionLayout.lineSpacing = 20
+            collectionLayout.noOfScrollingLines = 3
+            collectionLayout.lengthOfItem = 50
+            
+            collectionLayout.interitemSpacing = 10
+            collectionLayout.lineSpacing = 10
+            
             //collectionLayout.cellAutoResizingOn = true
             //collectionLayout.estimatedLengthOfItem = 20
             //collectionLayout.debug = true
             
-            var flow = UICollectionViewFlowLayout()
-            flow.estimatedItemSize = CGSizeMake(300, 3)
+            //var flow = UICollectionViewFlowLayout()
+            //flow.estimatedItemSize = CGSizeMake(300, 3)
+            
             listingCVC.collectionViewLayout = collectionLayout
             
             // Section Data Array
             var section0 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 0,
-                    cellModelCommon:SampleCollectionCellModel(Title: "0"))])
+                    cellCount: 15,
+                    cellModelCommon:SampleCollectionCellModel(Title: "0 Pradip"))])
             
             var section1 = SPListingSectionData(Rows: [
                 SPListingCellData(
                     cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 0,
+                    cellCount: 20,
                     cellModelCommon:SampleCollectionCellModel(Title: "1 Pradip Vaghasiya"))])
             
             sectionDataArray = [section0,section1]
