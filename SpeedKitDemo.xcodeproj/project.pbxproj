@@ -33,6 +33,7 @@
 		287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */; };
 		289209531ADA5230001D8812 /* SPListingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209521ADA5230001D8812 /* SPListingTableVC.swift */; };
 		289209561ADA54A2001D8812 /* SPListingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209551ADA54A2001D8812 /* SPListingConstants.swift */; };
+		28DCD6F51ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
 		289209521ADA5230001D8812 /* SPListingTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingTableVC.swift; sourceTree = "<group>"; };
 		289209551ADA54A2001D8812 /* SPListingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPListingConstants.swift; path = Views/SPListingConstants.swift; sourceTree = "<group>"; };
+		28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingTableVCDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 			children = (
 				286D94051A0DEF0600C63224 /* SPUIViewController+TableDatasource.swift */,
 				289209521ADA5230001D8812 /* SPListingTableVC.swift */,
+				28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */,
 			);
 			path = "Generic TableView";
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			files = (
 				285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */,
 				284BE8C21ADAB94D001B48C6 /* SPListingHelper.swift in Sources */,
+				28DCD6F51ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift in Sources */,
 				287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */,
 				28650DB31A177F6C003DEEAF /* SPListingSectionData.swift in Sources */,
 				28332B011A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift in Sources */,

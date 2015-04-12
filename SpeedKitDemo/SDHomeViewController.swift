@@ -52,9 +52,15 @@ extension SDHomeViewController{
             spListingSectionDataArray = [section0,section1];
             
             listingVC.spListingSectionDataArray = spListingSectionDataArray
-            
+            listingVC.delegate = self
             SPListingHelper.add(child: listingVC, into: self, atPosition: self.view.frame)
         }
+    }
+}
+
+extension SDHomeViewController : SPListingTableVCDelegateProtocol{
+    func spTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 }
 
