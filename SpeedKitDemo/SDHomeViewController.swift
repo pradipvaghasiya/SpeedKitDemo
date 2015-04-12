@@ -34,21 +34,22 @@ class SDHomeViewController: UIViewController {
 extension SDHomeViewController{
     func addTableView(){
         if let listingVC = SPListingTableVC.getNewInstance(){
-            spListingSectionDataArray = [
-                // Section 0
-                SPListingSectionData(Rows: [
-                    SPListingCellData(
-                        cellId: kCellIdSampleTableViewCell,
-                        cellCount: 3,
-                        cellModelCommon:SampleTableViewCellModel(TitleText: "Sample Data"))
-                    ], sectionHeader: "Section 1"),
-                // Section 1
-                SPListingSectionData(Rows: [
-                    SPListingCellData(
-                        cellId: kCellIdSampleTableViewCell,
-                        cellCount: 5,
-                        cellModelCommon:SampleTableViewCellModel(TitleText: "Sample Data"))
-                    ], sectionHeader: "Section 2")];
+            var section0 = SPListingSectionData(Rows: [
+                SPListingCellData(
+                    cellId: kCellIdSampleTableViewCell,
+                    cellCount: 3,
+                    cellModelCommon:SampleTableViewCellModel(TitleText: "Sample Data"))
+                ])
+            section0.sectionHeader = "TableView Listing"
+            
+            var section1 = SPListingSectionData(Rows: [
+                SPListingCellData(
+                    cellId: kCellIdSampleTableViewCell,
+                    cellCount: 5,
+                    cellModelCommon:SampleTableViewCellModel(TitleText: "Sample Data"))
+                ], sectionHeader: "CollectionView Listing")
+            
+            spListingSectionDataArray = [section0,section1];
             
             listingVC.spListingSectionDataArray = spListingSectionDataArray
             
