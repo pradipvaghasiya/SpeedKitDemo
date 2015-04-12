@@ -36,16 +36,16 @@ extension CollectionVC{
         if let listingCVC = SPListingCollectionVC.getNewInstance(){
             
             // Layout Setup
-            collectionLayout.delegate = ColumnBasedLayoutDatasource()
+            //collectionLayout.delegate = ColumnBasedLayoutDatasource()
             //collectionLayout.scrollDirection = .Horizontal
             //collectionLayout.isSpaceOptimized = true
-//            collectionLayout.sectionInset = UIEdgeInsetsZero
+            collectionLayout.sectionInset = UIEdgeInsetsZero
 //            collectionLayout.noOfLinesShouldFit = 4
-            collectionLayout.noOfScrollingLines = 3
+            collectionLayout.noOfScrollingLines = 1
             collectionLayout.lengthOfItem = 50
             
             collectionLayout.interitemSpacing = 10
-            collectionLayout.lineSpacing = 10
+            collectionLayout.lineSpacing = 1
             
             //collectionLayout.cellAutoResizingOn = true
             //collectionLayout.estimatedLengthOfItem = 20
