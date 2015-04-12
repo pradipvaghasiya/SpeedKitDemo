@@ -52,13 +52,10 @@ extension ViewController{
             
             listingVC.spListingSectionDataArray = spListingSectionDataArray
             
-            self.addChildViewController(listingVC)
             var tableViewFrame = self.view.frame
             tableViewFrame.origin.y = 20
             tableViewFrame.size.height -= 20
-            listingVC.view.frame = tableViewFrame
-            self.view.addSubview(listingVC.view)
-            listingVC.didMoveToParentViewController(self)
+            SPListingHelper.add(child: listingVC, into: self, atPosition: tableViewFrame)
 
         }
     }
