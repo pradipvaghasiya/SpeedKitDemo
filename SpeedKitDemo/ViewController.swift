@@ -39,23 +39,25 @@ extension ViewController{
                 SPListingSectionData(Rows: [
                     SPListingCellData(
                         cellId: kCellIdSampleTableViewCell,
-                        cellCount: 1,
-                        cellModel:[SampleTableViewCellModel(TitleText: "Hello")])
-                    ]),
+                        cellCount: 3,
+                        cellModel:[SampleTableViewCellModel(TitleText: "Sample Data")])
+                    ], sectionHeader: "Section 1", sectionFooter: "Footer 1"),
                 // Section 1
                 SPListingSectionData(Rows: [
                     SPListingCellData(
                         cellId: kCellIdSampleTableViewCell,
-                        cellCount: 50,
-                        cellModelCommon:SampleTableViewCellModel(TitleText: "Hello"))
-                    ])];
+                        cellCount: 5,
+                        cellModelCommon:SampleTableViewCellModel(TitleText: "Sample Data"))
+                    ], sectionHeader: "Section 2", sectionFooter: "Footer 2")];
             
             listingVC.spListingSectionDataArray = spListingSectionDataArray
             
             self.addChildViewController(listingVC)
-            listingVC.view.frame = self.view.frame
+            var tableViewFrame = self.view.frame
+            tableViewFrame.origin.y = 20
+            tableViewFrame.size.height -= 20
+            listingVC.view.frame = tableViewFrame
             self.view.addSubview(listingVC.view)
-            listingVC.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
             listingVC.didMoveToParentViewController(self)
 
         }
