@@ -11,7 +11,7 @@ import UIKit
 class SDHomeViewController: UIViewController {
     
 //    SPListingViewControllerProtocol
-    var spListingSectionDataArray : [SPListingSectionData] = []
+    var spListingData : SPListingData = SPListingData([])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class SDHomeViewController: UIViewController {
 extension SDHomeViewController{
     func addTableView(){
         if let listingVC = SPListingTableVC.getNewInstance(){
-            var section0 = SPListingSectionData(Rows: [
+            var section0 = SPListingSectionData(Cells: [
                 SPListingCellData(
                     cellId: kCellIdSampleTableViewCell,
                     cellCount: 3,
@@ -49,9 +49,9 @@ extension SDHomeViewController{
                     cellModelCommon:SampleTableViewCellModel(TitleText: "Sample Data"))
                 ], sectionHeader: "CollectionView Listing")
             
-            spListingSectionDataArray = [section0,section1];
+            spListingData = SPListingData([section0,section1]);
             
-            listingVC.spListingSectionDataArray = spListingSectionDataArray
+            listingVC.spListingData = spListingData
             listingVC.delegate = self
             SPListingHelper.add(child: listingVC, into: self, atPosition: self.view.frame)
         }
