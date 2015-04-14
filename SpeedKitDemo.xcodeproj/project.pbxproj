@@ -29,8 +29,8 @@
 		286D940D1A0DEF0600C63224 /* SPListingCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94011A0DEF0600C63224 /* SPListingCellProtocol.swift */; };
 		286D940E1A0DEF0600C63224 /* SPListingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94021A0DEF0600C63224 /* SPListingViewControllerProtocol.swift */; };
 		286D94101A0DEF0600C63224 /* SPTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94051A0DEF0600C63224 /* SPTableViewDatasource.swift */; };
-		287AC6B11972A4070096BCD3 /* SampleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287AC6B01972A4070096BCD3 /* SampleTableViewCell.xib */; };
-		287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */; };
+		287AC6B11972A4070096BCD3 /* SPTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */; };
+		287AC6B31972A5850096BCD3 /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */; };
 		289209531ADA5230001D8812 /* SPListingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209521ADA5230001D8812 /* SPListingTableVC.swift */; };
 		289209561ADA54A2001D8812 /* SPListingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209551ADA54A2001D8812 /* SPListingConstants.swift */; };
 		289FDB6C1ADC083E002839D4 /* SPListingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FDB6B1ADC083E002839D4 /* SPListingData.swift */; };
@@ -74,8 +74,8 @@
 		286D94011A0DEF0600C63224 /* SPListingCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingCellProtocol.swift; sourceTree = "<group>"; };
 		286D94021A0DEF0600C63224 /* SPListingViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingViewControllerProtocol.swift; sourceTree = "<group>"; };
 		286D94051A0DEF0600C63224 /* SPTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewDatasource.swift; sourceTree = "<group>"; };
-		287AC6B01972A4070096BCD3 /* SampleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleTableViewCell.xib; sourceTree = "<group>"; };
-		287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTableViewCell.swift; sourceTree = "<group>"; };
+		287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTitleLabelCell.xib; sourceTree = "<group>"; };
+		287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTitleLabelCell.swift; sourceTree = "<group>"; };
 		289209521ADA5230001D8812 /* SPListingTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingTableVC.swift; sourceTree = "<group>"; };
 		289209551ADA54A2001D8812 /* SPListingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPListingConstants.swift; path = Views/SPListingConstants.swift; sourceTree = "<group>"; };
 		289FDB6B1ADC083E002839D4 /* SPListingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingData.swift; sourceTree = "<group>"; };
@@ -111,8 +111,8 @@
 		282337231A1733D40003F3C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				287AC6B01972A4070096BCD3 /* SampleTableViewCell.xib */,
-				287AC6B21972A5850096BCD3 /* SampleTableViewCell.swift */,
+				287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */,
+				287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */,
 				282337261A1733F90003F3C4 /* SampleCollectionViewCell.xib */,
 				282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */,
 			);
@@ -348,7 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				285C8C24196D85410058C8E2 /* Main.storyboard in Resources */,
-				287AC6B11972A4070096BCD3 /* SampleTableViewCell.xib in Resources */,
+				287AC6B11972A4070096BCD3 /* SPTitleLabelCell.xib in Resources */,
 				282337271A1733F90003F3C4 /* SampleCollectionViewCell.xib in Resources */,
 				286D940A1A0DEF0600C63224 /* SPListing.storyboard in Resources */,
 				285C8C26196D85410058C8E2 /* Images.xcassets in Resources */,
@@ -387,7 +387,7 @@
 			files = (
 				285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */,
 				28DCD6F51ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift in Sources */,
-				287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */,
+				287AC6B31972A5850096BCD3 /* SPTitleLabelCell.swift in Sources */,
 				281998891ADCCFA700944E7F /* SPUIHelper.swift in Sources */,
 				28650DB31A177F6C003DEEAF /* SPListingSectionData.swift in Sources */,
 				28332B011A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift in Sources */,

@@ -37,23 +37,25 @@ extension SDHomeViewController{
         if let listingVC = SPListingTableVC.getNewInstance(){
             var section0 = SPListingSectionData(Cells: [
                 SPListingCellData(
-                    cellId: kCellIdSampleTableViewCell,
-                    cellModel:[SampleTableViewCellModel(TitleText: "Sample Data")])
+                    cellId: kCellIdSPTitleLabelCell,
+                    cellModel:[SPTitleLabelCellModel(TitleText: "Sample Data")])
                 ])
             section0.sectionHeader = "TableView Listing"
+            
             section0.cellDataArray[0] = SPListingCellData(
-                cellId: kCellIdSampleTableViewCell,
-                cellModel:[SampleTableViewCellModel(TitleText: "Sample Data1"),
-                SampleTableViewCellModel(TitleText: "Sample Data2"),
-                SampleTableViewCellModel(TitleText: "Sample Data3")])
+                cellId: kCellIdSPTitleLabelCell,
+                cellModelCommon: SPTitleLabelCellCommonModel(TextAlignment: NSTextAlignment.Center),
+                cellModel:[SPTitleLabelCellModel(TitleText: "Sample Data1"),
+                SPTitleLabelCellModel(TitleText: "Sample Data2"),
+                SPTitleLabelCellModel(TitleText: "Sample Data3")])
             
             var spListingCellData = section0.cellDataArray[0]
             
             var section1 = SPListingSectionData(Rows: [
                 SPListingCellData(
-                    cellId: kCellIdSampleTableViewCell,
+                    cellId: kCellIdSPTitleLabelCell,
                     cellCount: 5,
-                    cellModelCommon:SampleTableViewCellModel(TitleText: "Sample Data"))
+                    cellModelCommon:SPTitleLabelCellModel(TitleText: "Sample Data"))
                 ], sectionHeader: "CollectionView Listing")
             
             spListingData = SPListingData([section0,section1]);
