@@ -37,10 +37,16 @@ extension SDHomeViewController{
             var section0 = SPListingSectionData(Cells: [
                 SPListingCellData(
                     cellId: kCellIdSampleTableViewCell,
-                    cellCount: 3,
-                    cellModelCommon:SampleTableViewCellModel(TitleText: "Sample Data"))
+                    cellModel:[SampleTableViewCellModel(TitleText: "Sample Data")])
                 ])
             section0.sectionHeader = "TableView Listing"
+            section0.cellDataArray[0] = SPListingCellData(
+                cellId: kCellIdSampleTableViewCell,
+                cellModel:[SampleTableViewCellModel(TitleText: "Sample Data1"),
+                SampleTableViewCellModel(TitleText: "Sample Data2"),
+                SampleTableViewCellModel(TitleText: "Sample Data3")])
+            
+            var spListingCellData = section0.cellDataArray[0]
             
             var section1 = SPListingSectionData(Rows: [
                 SPListingCellData(

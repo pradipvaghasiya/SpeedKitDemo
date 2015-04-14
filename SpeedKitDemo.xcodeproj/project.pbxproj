@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		281386701A2AF42200A38D17 /* SPSegmentControllerHolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813866F1A2AF42200A38D17 /* SPSegmentControllerHolderController.swift */; };
+		281998891ADCCFA700944E7F /* SPUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281998881ADCCFA700944E7F /* SPUIHelper.swift */; };
 		282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */; };
 		282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */; };
 		282337271A1733F90003F3C4 /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 282337261A1733F90003F3C4 /* SampleCollectionViewCell.xib */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		2813866F1A2AF42200A38D17 /* SPSegmentControllerHolderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPSegmentControllerHolderController.swift; sourceTree = "<group>"; };
+		281998881ADCCFA700944E7F /* SPUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUIHelper.swift; sourceTree = "<group>"; };
 		282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnBasedLayoutDatasource.swift; sourceTree = "<group>"; };
 		282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		282337261A1733F90003F3C4 /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		286D93F31A0DEF0600C63224 /* SpeedKit */ = {
 			isa = PBXGroup;
 			children = (
+				281998881ADCCFA700944E7F /* SPUIHelper.swift */,
 				286D93FD1A0DEF0600C63224 /* Listing Automation */,
 				2813866E1A2AF3D300A38D17 /* Segmented Controllers */,
 			);
@@ -372,6 +375,7 @@
 				284BE8C21ADAB94D001B48C6 /* SPListingHelper.swift in Sources */,
 				28DCD6F51ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift in Sources */,
 				287AC6B31972A5850096BCD3 /* SampleTableViewCell.swift in Sources */,
+				281998891ADCCFA700944E7F /* SPUIHelper.swift in Sources */,
 				28650DB31A177F6C003DEEAF /* SPListingSectionData.swift in Sources */,
 				28332B011A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift in Sources */,
 				286D940E1A0DEF0600C63224 /* SPListingViewControllerProtocol.swift in Sources */,
