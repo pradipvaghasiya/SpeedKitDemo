@@ -8,14 +8,16 @@
 
 import UIKit
 
+///Home Controller of SpeedKit Demo Project. It contains different use cases which can be implemented using SpeedKit.
 class SDHomeViewController: UIViewController {
     
-//    SPListingViewControllerProtocol
+    ///As per SPListingTableVC description
+    ///
+    ///1. You need to set spListingData - Listing Automation Compatible. When you change spListingData you must call reloadSPListingTableVC method.
     var spListingData : SPListingData = SPListingData([])
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
         // Add Table View Controller using speedkit framework
         self.addTableView()
@@ -30,7 +32,6 @@ class SDHomeViewController: UIViewController {
 
 
 //MARK: Add Table View
-
 extension SDHomeViewController{
     func addTableView(){
         if let listingVC = SPListingTableVC.getNewInstance(){
@@ -65,6 +66,7 @@ extension SDHomeViewController{
 }
 
 extension SDHomeViewController : SPListingTableVCDelegateProtocol{
+    /// This method will get called on tableview row selection
     func spTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }

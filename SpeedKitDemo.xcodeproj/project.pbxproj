@@ -252,18 +252,18 @@
 			isa = PBXGroup;
 			children = (
 				286D94051A0DEF0600C63224 /* SPTableViewDatasource.swift */,
-				289FDB6A1ADBFD87002839D4 /* Reusable Controllers */,
+				289FDB6A1ADBFD87002839D4 /* Basic TableView */,
 			);
 			path = "Generic TableView";
 			sourceTree = "<group>";
 		};
-		289FDB6A1ADBFD87002839D4 /* Reusable Controllers */ = {
+		289FDB6A1ADBFD87002839D4 /* Basic TableView */ = {
 			isa = PBXGroup;
 			children = (
 				289209521ADA5230001D8812 /* SPListingTableVC.swift */,
 				28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */,
 			);
-			name = "Reusable Controllers";
+			name = "Basic TableView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +276,7 @@
 				285C8C15196D85410058C8E2 /* Sources */,
 				285C8C16196D85410058C8E2 /* Frameworks */,
 				285C8C17196D85410058C8E2 /* Resources */,
+				28C67A871ADD54070033B39A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -362,6 +363,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28C67A871ADD54070033B39A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nTAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		285C8C15196D85410058C8E2 /* Sources */ = {
