@@ -59,7 +59,7 @@ extension SDHomeViewController{
             
             listingVC.spListingData = spListingData
             listingVC.delegate = self
-            SPListingHelper.add(child: listingVC, into: self, atPosition: self.view.frame)
+            SPUIHelper.add(child: listingVC, into: self, atPosition: self.view.frame)
         }
     }
 }
