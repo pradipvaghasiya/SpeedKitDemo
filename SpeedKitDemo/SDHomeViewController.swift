@@ -35,30 +35,23 @@ class SDHomeViewController: UIViewController {
 extension SDHomeViewController{
     func addTableView(){
         if let listingVC = SPListingTableVC.getNewInstance(){
-            var section0 = SPListingSectionData(Cells: [
-                SPListingCellData(
-                    cellId: kCellIdSPTitleLabelCell,
-                    cellModel:[SPTitleLabelCellModel(TitleText: "Sample Data")])
-                ])
-            section0.sectionHeader = "TableView Listing"
             
-            section0.cellDataArray[0] = SPListingCellData(
-                cellId: kCellIdSPTitleLabelCell,
-                cellModelCommon: SPTitleLabelCellCommonModel(TextAlignment: NSTextAlignment.Center),
-                cellModel:[SPTitleLabelCellModel(TitleText: "Sample Data1"),
-                SPTitleLabelCellModel(TitleText: "Sample Data2"),
-                SPTitleLabelCellModel(TitleText: "Sample Data3")])
+            var section0Rows = ["Row 1","Row 2","Row 3","Row 1","Row 2","Row 3","Row 1","Row 2","Row 3","Row 1","Row 2","Row 3"]
+
+            var spTitleLabelCellCommonModel = SPTitleLabelCellCommonModel(TextColor: UIColor.grayColor())
+            var spTitleLabelCellModelArray : [SPTitleLabelCellModel] = []
             
-            var spListingCellData = section0.cellDataArray[0]
+            for rowTitle in section0Rows{
+                spTitleLabelCellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
+            }
             
-            var section1 = SPListingSectionData(Rows: [
-                SPListingCellData(
-                    cellId: kCellIdSPTitleLabelCell,
-                    cellCount: 5,
-                    cellModelCommon:SPTitleLabelCellModel(TitleText: "Sample Data"))
-                ], sectionHeader: "CollectionView Listing")
+            var spListingCellData = SPListingCellData(cellId: kCellIdSPTitleLabelCell,
+                cellModelCommon: spTitleLabelCellCommonModel,
+                cellModel: spTitleLabelCellModelArray)
             
-            spListingData = SPListingData([section0,section1]);
+            var spListingSection0Data = SPListingSectionData(Cells: [spListingCellData])
+            
+            spListingData = SPListingData([spListingSection0Data]);
             
             listingVC.spListingData = spListingData
             listingVC.delegate = self
