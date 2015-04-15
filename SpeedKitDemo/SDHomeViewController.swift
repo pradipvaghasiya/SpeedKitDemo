@@ -34,27 +34,50 @@ class SDHomeViewController: UIViewController {
 //MARK: Add Table View
 extension SDHomeViewController{
     func addTableView(){
+        // Create listingVC from generic SPListingTableVC factory method to be added as child view controller.
         if let listingVC = SPListingTableVC.getNewInstance(){
             
-            var section0Rows = ["Row 1","Row 2","Row 3","Row 1","Row 2","Row 3","Row 1","Row 2","Row 3","Row 1","Row 2","Row 3"]
-
-            var spTitleLabelCellCommonModel = SPTitleLabelCellCommonModel(TextColor: UIColor.grayColor())
-            var spTitleLabelCellModelArray : [SPTitleLabelCellModel] = []
+            // This is the model we need to show in TableView
+            var section0Rows = [
+                "Basic TableView",
+                "Custom TableView"]
             
-            for rowTitle in section0Rows{
-                spTitleLabelCellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
-            }
+//            // To display contents inside listingVC we would need spListingData.
+//            // Below there is stepwise comment to create spListingData.
+//            
+//            // Step 1: Create Similar Cell Data required in First Section. 
+//            // Here we need all label cells with text in it. So We would create Cell Data containing SPTitleLabelCell Data.
+//
+//                // Step 1.1: Create Cell CommonModel If only required.
+//                var spTitleLabelCellCommonModel = SPTitleLabelCellCommonModel(TextColor: UIColor.darkGrayColor())
+//            
+//                // Step 1.2: Create Cell Model Array.
+//                var spTitleLabelCellModelArray : [SPTitleLabelCellModel] = []
+//            
+//                for rowTitle in section0Rows{
+//                    spTitleLabelCellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
+//                }
+//            
+//                // Step 1.3: Create spListingCellData Instance using above two models.
+//                var spListingCellData = SPListingCellData(cellId: kCellIdSPTitleLabelCell,
+//                    cellModelCommon: spTitleLabelCellCommonModel,
+//                    cellModel: spTitleLabelCellModelArray)
+//            
+//            // Step 2: Create Section data containing different Cell Data set. 
+//            // Here we only need one set of Cell Data created above.
+//            var spListingSection0Data = SPListingSectionData(Cells: [spListingCellData])
+//            
+//            // Step 3: Create full listing data containing different sections mentioned above.
+//            // Here we only need one section created above.
+//            spListingData = SPListingData([spListingSection0Data]);
             
-            var spListingCellData = SPListingCellData(cellId: kCellIdSPTitleLabelCell,
-                cellModelCommon: spTitleLabelCellCommonModel,
-                cellModel: spTitleLabelCellModelArray)
+            // Assign spListingData to listingVC
+            listingVC.spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
             
-            var spListingSection0Data = SPListingSectionData(Cells: [spListingCellData])
-            
-            spListingData = SPListingData([spListingSection0Data]);
-            
-            listingVC.spListingData = spListingData
+            // Assign yourself as delegate to get callback for table row didSelect event.
             listingVC.delegate = self
+            
+            // Use SpeedKit UI Helper factory class to add listingVC to this controller.
             SPUIHelper.add(child: listingVC, into: self, atPosition: self.view.frame)
         }
     }
@@ -64,6 +87,10 @@ extension SDHomeViewController : SPListingTableVCDelegateProtocol{
     /// This method will get called on tableview row selection
     func spTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if indexPath.section == 0 && indexPath.row == 0{
+            self.performSegueWithIdentifier(kSegueToSDBasicTableVC, sender: self)
+        }
     }
 }
 

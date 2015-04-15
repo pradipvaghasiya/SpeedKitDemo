@@ -33,6 +33,7 @@
 		287AC6B31972A5850096BCD3 /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */; };
 		289209531ADA5230001D8812 /* SPListingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209521ADA5230001D8812 /* SPListingTableVC.swift */; };
 		289209561ADA54A2001D8812 /* SPListingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209551ADA54A2001D8812 /* SPListingConstants.swift */; };
+		289461971ADE9311007C6E56 /* SDBasicTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289461961ADE9311007C6E56 /* SDBasicTableVC.swift */; };
 		289FDB6C1ADC083E002839D4 /* SPListingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FDB6B1ADC083E002839D4 /* SPListingData.swift */; };
 		28DCD6F51ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,7 @@
 		287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTitleLabelCell.swift; sourceTree = "<group>"; };
 		289209521ADA5230001D8812 /* SPListingTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingTableVC.swift; sourceTree = "<group>"; };
 		289209551ADA54A2001D8812 /* SPListingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingConstants.swift; sourceTree = "<group>"; };
+		289461961ADE9311007C6E56 /* SDBasicTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBasicTableVC.swift; sourceTree = "<group>"; };
 		289FDB6B1ADC083E002839D4 /* SPListingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingData.swift; sourceTree = "<group>"; };
 		28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingTableVCDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 			children = (
 				285C8C1E196D85410058C8E2 /* AppDelegate.swift */,
 				285C8C20196D85410058C8E2 /* SDHomeViewController.swift */,
+				289461961ADE9311007C6E56 /* SDBasicTableVC.swift */,
 				285CA8401A172AED00E5093E /* CollectionVC.swift */,
 				282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */,
 				285C8C22196D85410058C8E2 /* Main.storyboard */,
@@ -415,6 +418,7 @@
 				285C8C1F196D85410058C8E2 /* AppDelegate.swift in Sources */,
 				285CA8411A172AED00E5093E /* CollectionVC.swift in Sources */,
 				281386701A2AF42200A38D17 /* SPSegmentControllerHolderController.swift in Sources */,
+				289461971ADE9311007C6E56 /* SDBasicTableVC.swift in Sources */,
 				286D94071A0DEF0600C63224 /* SPListingCollectionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

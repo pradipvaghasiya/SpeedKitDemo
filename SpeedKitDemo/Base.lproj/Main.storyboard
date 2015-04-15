@@ -18,10 +18,32 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="C5R-fE-Ocl"/>
+                    <connections>
+                        <segue destination="ILK-61-Flh" kind="show" identifier="Show SDBasicTableVC" id="3of-4y-Ycl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="523" y="-97"/>
+        </scene>
+        <!--Basic TableView-->
+        <scene sceneID="SZk-xD-Skt">
+            <objects>
+                <viewController id="ILK-61-Flh" customClass="SDBasicTableVC" customModule="SpeedKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HDJ-F7-3jM"/>
+                        <viewControllerLayoutGuide type="bottom" id="dGH-cn-3lQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gpd-N5-3mu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Basic TableView" id="10N-f2-XY6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uam-mx-ttG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="-97"/>
         </scene>
         <!--CollectionVC-->
         <scene sceneID="9xE-Qj-i4K">
@@ -39,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCZ-C6-l6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1338" y="-81"/>
+            <point key="canvasLocation" x="620" y="672"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MtG-DS-MCP">
