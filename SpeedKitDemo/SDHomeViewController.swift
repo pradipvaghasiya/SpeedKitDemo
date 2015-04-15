@@ -78,7 +78,7 @@ extension SDHomeViewController{
             listingVC.delegate = self
             
             // Use SpeedKit UI Helper factory class to add listingVC to this controller.
-            SPUIHelper.add(child: listingVC, into: self, atPosition: self.view.frame)
+            SPUIHelper.add(child: listingVC, into: self, insideView: self.view, atPosition: self.view.frame)
         }
     }
 }

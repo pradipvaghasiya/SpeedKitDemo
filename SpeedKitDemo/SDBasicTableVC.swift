@@ -11,20 +11,38 @@ import UIKit
 ///Storyboard Segue id for segue to this controller
 let kSegueToSDBasicTableVC = "Show SDBasicTableVC"
 
+private let kHeaderNFooterTestCaseString = "Header & Footer"
+private let kHeaderNFooterAsViewTestCaseString = "Header & Footer as UIViews"
+private let kMultipleSectionsTestCaseString = "Multiple Sections"
+private let kDifferentCellDataSetsTestCaseString = "Different Cell Data Set in a Section"  // Tracking callback event from cell or didSelect would be crucial
+private let kVariableRowHeightsTestCaseString = "Automatic Variable Row heights"
+private let kTableViewFooterTestCaseString = "Footer using tableView Property"
+private let kExcessiveRowsTestCaseString = "100,000 Rows"   // Check Performance Memory uti, CPU util.
+private let kRuntimeChangesTestCaseString = "Runtime changes in Listing Data"  // Check performance, ease of use.
+private let kTableViewDifferentFrameTestCaseString = "Different Table View Frame"  // Check performance, ease of use.
+private let kEdtingTableTestCaseString = "Editing TableView"
+private let kNoDataTestCaseString = "No Listing Data"
+private let kNoDelegateTestCaseString = "No delegate"
+private let kUnregisteredNibAddedTestCaseString = "Unregistered nib added"
+
+
 class SDBasicTableVC: UIViewController {
     // List of Test Cases
-    private var testCases = ["Header & Footer",
-        "Header & Footer as UIViews",
-        "Multiple Sections",
-        "Different Cell Data Set in a Section",  // Tracking callback event from cell or didSelect would be crucial
-        "Automatic Variable Row heights",
-        "Tableview Footer",
-        "100,000 Rows",   // Check Performance Memory uti, CPU util.
-        "Runtime changes in Listing Data",  // Check performance, ease of use.
-        "Editing TableView",
-        "No Listing Data",
-        "No delegate",
-        "Negative Scenario - Unregistered nib"]
+    private var testCases = [
+        kHeaderNFooterTestCaseString,
+        kHeaderNFooterAsViewTestCaseString,
+        kMultipleSectionsTestCaseString,
+        kDifferentCellDataSetsTestCaseString,
+        kVariableRowHeightsTestCaseString,
+        kTableViewFooterTestCaseString,
+        kExcessiveRowsTestCaseString,
+        kRuntimeChangesTestCaseString,
+        kTableViewDifferentFrameTestCaseString,
+        kEdtingTableTestCaseString,
+        kNoDataTestCaseString,
+        kNoDelegateTestCaseString,
+        kUnregisteredNibAddedTestCaseString]
+    
 }
 
 // MARK: ViewController Delegate
@@ -57,11 +75,18 @@ extension SDBasicTableVC : SPListingTableVCDelegateProtocol{
             basicTableVC.delegate = self
             
             // Add Child View Controller
-            SPUIHelper.add(child: basicTableVC, into: self, atPosition: self.view.frame)
+            SPUIHelper.add(child: basicTableVC, into: self, insideView: self.view, atPosition: self.view.frame)
         }
     }
     
     func spTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        switch testCases[indexPath.row]{
+        case kRuntimeChangesTestCaseString:
+            self.performSegueWithIdentifier(kSegueToSDRuntimeChangesTestCaseVC, sender: self)
+        default:
+            true
+        }
     }
 }

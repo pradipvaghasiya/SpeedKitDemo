@@ -40,10 +40,61 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Basic TableView" id="10N-f2-XY6"/>
+                    <connections>
+                        <segue destination="g93-jk-gUw" kind="push" identifier="Show SDRuntimeChangesTestCaseVC" id="NaM-Pt-L9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uam-mx-ttG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1198" y="-97"/>
+        </scene>
+        <!--Runtime Changes-->
+        <scene sceneID="ufe-6W-iXB">
+            <objects>
+                <viewController id="g93-jk-gUw" customClass="SDRuntimeChangesTestCaseVC" customModule="SpeedKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FLg-rL-mph"/>
+                        <viewControllerLayoutGuide type="bottom" id="erJ-Sd-nU5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4On-aH-9r4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoL-Fs-c1E">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Rj0-dK-uOn"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Add Item" id="lQg-cg-E3H"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vNI-Q9-iLR"/>
+                                    <barButtonItem title="Reduce Item" id="D7N-kh-E8g"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9U-8J-c8i">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PoL-Fs-c1E" secondAttribute="trailing" id="5rA-sb-N8Z"/>
+                            <constraint firstAttribute="trailing" secondItem="L9U-8J-c8i" secondAttribute="trailing" id="6FH-8t-fM5"/>
+                            <constraint firstItem="L9U-8J-c8i" firstAttribute="top" secondItem="4On-aH-9r4" secondAttribute="top" id="9lr-fB-OXG"/>
+                            <constraint firstItem="L9U-8J-c8i" firstAttribute="leading" secondItem="4On-aH-9r4" secondAttribute="leading" id="FVF-U2-Vv3"/>
+                            <constraint firstItem="PoL-Fs-c1E" firstAttribute="leading" secondItem="4On-aH-9r4" secondAttribute="leading" id="RDS-mI-8GR"/>
+                            <constraint firstItem="PoL-Fs-c1E" firstAttribute="top" secondItem="L9U-8J-c8i" secondAttribute="bottom" id="is7-ia-yJ4"/>
+                            <constraint firstItem="erJ-Sd-nU5" firstAttribute="top" secondItem="PoL-Fs-c1E" secondAttribute="bottom" id="uqs-Wh-Iyh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Runtime Changes" id="c8A-59-dD0"/>
+                    <connections>
+                        <outlet property="speedKitTableViewContainer" destination="L9U-8J-c8i" id="LPx-gf-co3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUU-yN-Whd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="-97"/>
         </scene>
         <!--CollectionVC-->
         <scene sceneID="9xE-Qj-i4K">

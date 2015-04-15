@@ -34,6 +34,7 @@
 		289209531ADA5230001D8812 /* SPListingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209521ADA5230001D8812 /* SPListingTableVC.swift */; };
 		289209561ADA54A2001D8812 /* SPListingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209551ADA54A2001D8812 /* SPListingConstants.swift */; };
 		289461971ADE9311007C6E56 /* SDBasicTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289461961ADE9311007C6E56 /* SDBasicTableVC.swift */; };
+		2894619D1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */; };
 		289FDB6C1ADC083E002839D4 /* SPListingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FDB6B1ADC083E002839D4 /* SPListingData.swift */; };
 		28DCD6F51ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 		289209521ADA5230001D8812 /* SPListingTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingTableVC.swift; sourceTree = "<group>"; };
 		289209551ADA54A2001D8812 /* SPListingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingConstants.swift; sourceTree = "<group>"; };
 		289461961ADE9311007C6E56 /* SDBasicTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBasicTableVC.swift; sourceTree = "<group>"; };
+		2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRuntimeChangesTestCaseVC.swift; sourceTree = "<group>"; };
 		289FDB6B1ADC083E002839D4 /* SPListingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingData.swift; sourceTree = "<group>"; };
 		28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingTableVCDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 		282337231A1733D40003F3C4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				285C8C22196D85410058C8E2 /* Main.storyboard */,
 				282337261A1733F90003F3C4 /* SampleCollectionViewCell.xib */,
 				282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */,
 			);
@@ -153,10 +156,8 @@
 			children = (
 				285C8C1E196D85410058C8E2 /* AppDelegate.swift */,
 				285C8C20196D85410058C8E2 /* SDHomeViewController.swift */,
-				289461961ADE9311007C6E56 /* SDBasicTableVC.swift */,
-				285CA8401A172AED00E5093E /* CollectionVC.swift */,
-				282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */,
-				285C8C22196D85410058C8E2 /* Main.storyboard */,
+				2894619A1ADEA389007C6E56 /* Basic TableView */,
+				2894619B1ADEA3A2007C6E56 /* Collection View */,
 				282337231A1733D40003F3C4 /* Views */,
 				285C8C25196D85410058C8E2 /* Images.xcassets */,
 				285C8C1C196D85410058C8E2 /* Supporting Files */,
@@ -257,6 +258,24 @@
 				28C67A881ADD86C80033B39A /* Generic Cells */,
 			);
 			path = "Generic TableView";
+			sourceTree = "<group>";
+		};
+		2894619A1ADEA389007C6E56 /* Basic TableView */ = {
+			isa = PBXGroup;
+			children = (
+				289461961ADE9311007C6E56 /* SDBasicTableVC.swift */,
+				2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */,
+			);
+			name = "Basic TableView";
+			sourceTree = "<group>";
+		};
+		2894619B1ADEA3A2007C6E56 /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				285CA8401A172AED00E5093E /* CollectionVC.swift */,
+				282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */,
+			);
+			name = "Collection View";
 			sourceTree = "<group>";
 		};
 		289FDB6A1ADBFD87002839D4 /* Basic TableView */ = {
@@ -397,6 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2894619D1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift in Sources */,
 				285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */,
 				28DCD6F51ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift in Sources */,
 				287AC6B31972A5850096BCD3 /* SPTitleLabelCell.swift in Sources */,
@@ -448,6 +468,7 @@
 				285C8C23196D85410058C8E2 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
