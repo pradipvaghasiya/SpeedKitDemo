@@ -15,6 +15,8 @@ class SDRuntimeChangesTestCaseVC: UIViewController {
 
     @IBOutlet weak var speedKitTableViewContainer: UIView!
   
+    var spListingData : SPListingData = SPListingData([])
+    var tableView : UITableView?
 }
 
 // MARK: ViewController Delegate
@@ -38,7 +40,7 @@ extension SDRuntimeChangesTestCaseVC : SPListingTableVCDelegateProtocol{
         if let basicTableVC = SPListingTableVC.getNewInstance(){
             
             // Set SPListingData
-            var spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: ["Row 1"])
+            spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: ["Row Detail"])
             basicTableVC.spListingData = spListingData
             
             // Set Delegate
@@ -50,13 +52,27 @@ extension SDRuntimeChangesTestCaseVC : SPListingTableVCDelegateProtocol{
                 insideView: self.speedKitTableViewContainer,
                 atPosition: self.speedKitTableViewContainer.frame)
 
-            var contentInset = basicTableVC.tableView.contentInset
-            contentInset.top = 64
-            basicTableVC.tableView.contentInset = contentInset
+//            var contentInset = basicTableVC.tableView.contentInset
+//            contentInset.top = 64
+//            basicTableVC.tableView.contentInset = contentInset
+            self.tableView = basicTableVC.tableView
         }
     }
     
     func spTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    // IB Actions
+    @IBAction func addItem(sender: AnyObject) {
+        var cellModel = spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModel
+        cellModel.append(SPTitleLabelCellModel(TitleText: "Row Detail"))
+        spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModel = cellModel
+//        self.tableView?.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
+        self.tableView?.insertRowsAtIndexPaths([NSIndexPath(forRow: cellModel.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+    }
+
+    @IBAction func reduceItem(sender: AnyObject) {
+    }
+
 }
