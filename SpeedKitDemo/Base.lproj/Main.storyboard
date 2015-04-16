@@ -60,10 +60,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9U-8J-c8i">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zx2-Cx-mu0" customClass="SPTableView" customModule="SpeedKitDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            </tableView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoL-Fs-c1E">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <constraints>
@@ -86,18 +86,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zx2-Cx-mu0" firstAttribute="leading" secondItem="4On-aH-9r4" secondAttribute="leading" id="1Ma-VO-ShY"/>
                             <constraint firstAttribute="trailing" secondItem="PoL-Fs-c1E" secondAttribute="trailing" id="5rA-sb-N8Z"/>
-                            <constraint firstAttribute="trailing" secondItem="L9U-8J-c8i" secondAttribute="trailing" id="6FH-8t-fM5"/>
-                            <constraint firstItem="L9U-8J-c8i" firstAttribute="top" secondItem="4On-aH-9r4" secondAttribute="top" id="9lr-fB-OXG"/>
-                            <constraint firstItem="L9U-8J-c8i" firstAttribute="leading" secondItem="4On-aH-9r4" secondAttribute="leading" id="FVF-U2-Vv3"/>
+                            <constraint firstItem="PoL-Fs-c1E" firstAttribute="top" secondItem="zx2-Cx-mu0" secondAttribute="bottom" id="8b0-VC-cE4"/>
+                            <constraint firstItem="zx2-Cx-mu0" firstAttribute="top" secondItem="4On-aH-9r4" secondAttribute="top" id="KL9-iv-ejj"/>
                             <constraint firstItem="PoL-Fs-c1E" firstAttribute="leading" secondItem="4On-aH-9r4" secondAttribute="leading" id="RDS-mI-8GR"/>
-                            <constraint firstItem="PoL-Fs-c1E" firstAttribute="top" secondItem="L9U-8J-c8i" secondAttribute="bottom" id="is7-ia-yJ4"/>
+                            <constraint firstAttribute="trailing" secondItem="zx2-Cx-mu0" secondAttribute="trailing" id="jHh-NY-R5i"/>
                             <constraint firstItem="erJ-Sd-nU5" firstAttribute="top" secondItem="PoL-Fs-c1E" secondAttribute="bottom" id="uqs-Wh-Iyh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Runtime Changes" id="c8A-59-dD0"/>
                     <connections>
-                        <outlet property="speedKitTableViewContainer" destination="L9U-8J-c8i" id="LPx-gf-co3"/>
+                        <outlet property="spTableView" destination="zx2-Cx-mu0" id="WH0-rq-yPv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUU-yN-Whd" userLabel="First Responder" sceneMemberID="firstResponder"/>

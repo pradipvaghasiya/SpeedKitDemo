@@ -24,6 +24,7 @@ private let kEdtingTableTestCaseString = "Editing TableView"
 private let kNoDataTestCaseString = "No Listing Data"
 private let kNoDelegateTestCaseString = "No delegate"
 private let kUnregisteredNibAddedTestCaseString = "Unregistered nib added"
+private let kGroupedTableViewTestCaseString = "Grouped TableView"
 
 
 class SDBasicTableVC: UIViewController {
@@ -41,13 +42,14 @@ class SDBasicTableVC: UIViewController {
         kEdtingTableTestCaseString,
         kNoDataTestCaseString,
         kNoDelegateTestCaseString,
-        kUnregisteredNibAddedTestCaseString]
+        kUnregisteredNibAddedTestCaseString,
+        kGroupedTableViewTestCaseString]
     
 }
 
 // MARK: ViewController Delegate
 extension SDBasicTableVC{
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,27 +61,27 @@ extension SDBasicTableVC{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 // MARK: SDBasicTableView Handling
-extension SDBasicTableVC : SPListingTableVCDelegateProtocol{
+extension SDBasicTableVC : UITableViewDelegate{
     func addBasicTableView(){
-        if let basicTableVC = SPListingTableVC.getNewInstance(){
-            
-            // Set SPListingData
-            var spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
-            basicTableVC.spListingData = spListingData
-            
-            // Set Delegate
-            basicTableVC.delegate = self
-            
-            // Add Child View Controller
-            SPUIHelper.add(child: basicTableVC, into: self, insideView: self.view, atPosition: self.view.frame)
-        }
+        var spTableView = SPTableView(frame: self.view.frame)
+        
+        // Set SPListingData
+        var spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
+        spTableView.spListingData = spListingData
+        
+        // Set Delegate
+        spTableView.delegate = self
+        
+        // Add SPTableView
+        self.view.addSubview(spTableView)
+        
     }
     
-    func spTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         switch testCases[indexPath.row]{

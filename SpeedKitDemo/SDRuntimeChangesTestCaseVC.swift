@@ -13,10 +13,9 @@ let kSegueToSDRuntimeChangesTestCaseVC = "Show SDRuntimeChangesTestCaseVC"
 
 class SDRuntimeChangesTestCaseVC: UIViewController {
 
-    @IBOutlet weak var speedKitTableViewContainer: UIView!
+    @IBOutlet weak var spTableView: SPTableView!
   
     var spListingData : SPListingData = SPListingData([])
-    var tableView : UITableView?
 }
 
 // MARK: ViewController Delegate
@@ -35,41 +34,31 @@ extension SDRuntimeChangesTestCaseVC{
 }
 
 // MARK: SDBasicTableView Handling
-extension SDRuntimeChangesTestCaseVC : SPListingTableVCDelegateProtocol{
+extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
     func addBasicTableView(){
-        if let basicTableVC = SPListingTableVC.getNewInstance(){
-            
-            // Set SPListingData
-            spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: ["Row Detail"])
-            basicTableVC.spListingData = spListingData
-            
-            // Set Delegate
-            basicTableVC.delegate = self
-            
-            // Add Child View Controller
-            SPUIHelper.add(child: basicTableVC,
-                into: self,
-                insideView: self.speedKitTableViewContainer,
-                atPosition: self.speedKitTableViewContainer.frame)
+        
+        // Set SPListingData
+        spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: ["Row Detail"])
+        spTableView.spListingData = spListingData
+        
+        // Set Delegate
+        spTableView.delegate = self
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+}
 
-//            var contentInset = basicTableVC.tableView.contentInset
-//            contentInset.top = 64
-//            basicTableVC.tableView.contentInset = contentInset
-            self.tableView = basicTableVC.tableView
-        }
-    }
+// MARK: IB Actions
+extension SDRuntimeChangesTestCaseVC{
     
-    func spTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
-    
-    // IB Actions
     @IBAction func addItem(sender: AnyObject) {
         var cellModel = spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModel
         cellModel.append(SPTitleLabelCellModel(TitleText: "Row Detail"))
         spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModel = cellModel
 //        self.tableView?.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
-        self.tableView?.insertRowsAtIndexPaths([NSIndexPath(forRow: cellModel.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
+        spTableView.insertRowsAtIndexPaths([NSIndexPath(forRow: cellModel.count - 1, inSection: 0)], withRowAnimation: UITableViewRowAnimation.Automatic)
     }
 
     @IBAction func reduceItem(sender: AnyObject) {

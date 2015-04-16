@@ -31,12 +31,11 @@
 		286D94101A0DEF0600C63224 /* SPTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94051A0DEF0600C63224 /* SPTableViewDatasource.swift */; };
 		287AC6B11972A4070096BCD3 /* SPTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */; };
 		287AC6B31972A5850096BCD3 /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */; };
-		289209531ADA5230001D8812 /* SPListingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209521ADA5230001D8812 /* SPListingTableVC.swift */; };
 		289209561ADA54A2001D8812 /* SPListingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209551ADA54A2001D8812 /* SPListingConstants.swift */; };
 		289461971ADE9311007C6E56 /* SDBasicTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289461961ADE9311007C6E56 /* SDBasicTableVC.swift */; };
 		2894619D1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */; };
+		2894619F1ADF71E9007C6E56 /* SPTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894619E1ADF71E9007C6E56 /* SPTableView.swift */; };
 		289FDB6C1ADC083E002839D4 /* SPListingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FDB6B1ADC083E002839D4 /* SPListingData.swift */; };
-		28DCD6F51ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,12 +77,11 @@
 		286D94051A0DEF0600C63224 /* SPTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewDatasource.swift; sourceTree = "<group>"; };
 		287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTitleLabelCell.xib; sourceTree = "<group>"; };
 		287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTitleLabelCell.swift; sourceTree = "<group>"; };
-		289209521ADA5230001D8812 /* SPListingTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingTableVC.swift; sourceTree = "<group>"; };
 		289209551ADA54A2001D8812 /* SPListingConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingConstants.swift; sourceTree = "<group>"; };
 		289461961ADE9311007C6E56 /* SDBasicTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBasicTableVC.swift; sourceTree = "<group>"; };
 		2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRuntimeChangesTestCaseVC.swift; sourceTree = "<group>"; };
+		2894619E1ADF71E9007C6E56 /* SPTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableView.swift; sourceTree = "<group>"; };
 		289FDB6B1ADC083E002839D4 /* SPListingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingData.swift; sourceTree = "<group>"; };
-		28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingTableVCDelegateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,8 +279,7 @@
 		289FDB6A1ADBFD87002839D4 /* Basic TableView */ = {
 			isa = PBXGroup;
 			children = (
-				289209521ADA5230001D8812 /* SPListingTableVC.swift */,
-				28DCD6F41ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift */,
+				2894619E1ADF71E9007C6E56 /* SPTableView.swift */,
 			);
 			path = "Basic TableView";
 			sourceTree = "<group>";
@@ -418,7 +415,6 @@
 			files = (
 				2894619D1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift in Sources */,
 				285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */,
-				28DCD6F51ADAC93A00E5C258 /* SPListingTableVCDelegateProtocol.swift in Sources */,
 				287AC6B31972A5850096BCD3 /* SPTitleLabelCell.swift in Sources */,
 				281998891ADCCFA700944E7F /* SPUIHelper.swift in Sources */,
 				28650DB31A177F6C003DEEAF /* SPListingSectionData.swift in Sources */,
@@ -432,8 +428,8 @@
 				286D94101A0DEF0600C63224 /* SPTableViewDatasource.swift in Sources */,
 				286D940C1A0DEF0600C63224 /* SPListingCellData.swift in Sources */,
 				289209561ADA54A2001D8812 /* SPListingConstants.swift in Sources */,
+				2894619F1ADF71E9007C6E56 /* SPTableView.swift in Sources */,
 				282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */,
-				289209531ADA5230001D8812 /* SPListingTableVC.swift in Sources */,
 				286D940D1A0DEF0600C63224 /* SPListingCellProtocol.swift in Sources */,
 				285C8C1F196D85410058C8E2 /* AppDelegate.swift in Sources */,
 				285CA8411A172AED00E5093E /* CollectionVC.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 class CollectionVC: UIViewController{
     
-    // SPListingViewControllerProtocol
+    // SPListingViewProtocol
     var spListingData : SPListingData = SPListingData([])
     var collectionLayout = SPListingColumnBasedLayout()
 

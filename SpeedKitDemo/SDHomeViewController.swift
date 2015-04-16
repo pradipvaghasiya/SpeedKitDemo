@@ -16,6 +16,7 @@ class SDHomeViewController: UIViewController {
     ///1. You need to set spListingData - Listing Automation Compatible. When you change spListingData you must call reloadSPListingTableVC method.
     var spListingData : SPListingData = SPListingData([])
     
+    // MARK: ViewController Delegates
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,13 +35,7 @@ class SDHomeViewController: UIViewController {
 //MARK: Add Table View
 extension SDHomeViewController{
     func addTableView(){
-        // Create listingVC from generic SPListingTableVC factory method to be added as child view controller.
-        if let listingVC = SPListingTableVC.getNewInstance(){
-            
-            // This is the model we need to show in TableView
-            var section0Rows = [
-                "Basic TableView",
-                "Custom TableView"]
+        
             
 //            // To display contents inside listingVC we would need spListingData.
 //            // Below there is stepwise comment to create spListingData.
@@ -70,22 +65,28 @@ extension SDHomeViewController{
 //            // Step 3: Create full listing data containing different sections mentioned above.
 //            // Here we only need one section created above.
 //            spListingData = SPListingData([spListingSection0Data]);
-            
-            // Assign spListingData to listingVC
-            listingVC.spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
-            
-            // Assign yourself as delegate to get callback for table row didSelect event.
-            listingVC.delegate = self
-            
-            // Use SpeedKit UI Helper factory class to add listingVC to this controller.
-            SPUIHelper.add(child: listingVC, into: self, insideView: self.view, atPosition: self.view.frame)
-        }
+        
+        var spTableView = SPTableView(frame: self.view.frame)
+        
+        // This is the model we need to show in TableView
+        var section0Rows = [
+            "Basic TableView",
+            "Custom TableView"]
+        
+        // Assign spListingData to SPTableView
+        spTableView.spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
+        
+        // TableView Delegate
+        spTableView.delegate = self
+        
+        //Add spTableView 
+        self.view.addSubview(spTableView)
+        
     }
 }
 
-extension SDHomeViewController : SPListingTableVCDelegateProtocol{
-    /// This method will get called on tableview row selection
-    func spTableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+extension SDHomeViewController : UITableViewDelegate{
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         if indexPath.section == 0 && indexPath.row == 0{
