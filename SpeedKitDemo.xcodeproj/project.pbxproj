@@ -27,7 +27,7 @@
 		286D940B1A0DEF0600C63224 /* SPUIViewController+CollectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D93FF1A0DEF0600C63224 /* SPUIViewController+CollectionDatasource.swift */; };
 		286D940C1A0DEF0600C63224 /* SPListingCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94001A0DEF0600C63224 /* SPListingCellData.swift */; };
 		286D940D1A0DEF0600C63224 /* SPListingCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94011A0DEF0600C63224 /* SPListingCellProtocol.swift */; };
-		286D940E1A0DEF0600C63224 /* SPListingViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94021A0DEF0600C63224 /* SPListingViewControllerProtocol.swift */; };
+		286D940E1A0DEF0600C63224 /* SPListingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94021A0DEF0600C63224 /* SPListingViewProtocol.swift */; };
 		286D94101A0DEF0600C63224 /* SPTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94051A0DEF0600C63224 /* SPTableViewDatasource.swift */; };
 		287AC6B11972A4070096BCD3 /* SPTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */; };
 		287AC6B31972A5850096BCD3 /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */; };
@@ -73,7 +73,7 @@
 		286D93FF1A0DEF0600C63224 /* SPUIViewController+CollectionDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPUIViewController+CollectionDatasource.swift"; sourceTree = "<group>"; };
 		286D94001A0DEF0600C63224 /* SPListingCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingCellData.swift; sourceTree = "<group>"; };
 		286D94011A0DEF0600C63224 /* SPListingCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingCellProtocol.swift; sourceTree = "<group>"; };
-		286D94021A0DEF0600C63224 /* SPListingViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingViewControllerProtocol.swift; sourceTree = "<group>"; };
+		286D94021A0DEF0600C63224 /* SPListingViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingViewProtocol.swift; sourceTree = "<group>"; };
 		286D94051A0DEF0600C63224 /* SPTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewDatasource.swift; sourceTree = "<group>"; };
 		287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTitleLabelCell.xib; sourceTree = "<group>"; };
 		287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTitleLabelCell.swift; sourceTree = "<group>"; };
@@ -240,7 +240,7 @@
 				28650DB21A177F6C003DEEAF /* SPListingSectionData.swift */,
 				286D94001A0DEF0600C63224 /* SPListingCellData.swift */,
 				286D94011A0DEF0600C63224 /* SPListingCellProtocol.swift */,
-				286D94021A0DEF0600C63224 /* SPListingViewControllerProtocol.swift */,
+				286D94021A0DEF0600C63224 /* SPListingViewProtocol.swift */,
 				286D93FB1A0DEF0600C63224 /* Views */,
 				286D93F41A0DEF0600C63224 /* Generic Collection */,
 				286D94041A0DEF0600C63224 /* Generic TableView */,
@@ -419,7 +419,7 @@
 				281998891ADCCFA700944E7F /* SPUIHelper.swift in Sources */,
 				28650DB31A177F6C003DEEAF /* SPListingSectionData.swift in Sources */,
 				28332B011A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift in Sources */,
-				286D940E1A0DEF0600C63224 /* SPListingViewControllerProtocol.swift in Sources */,
+				286D940E1A0DEF0600C63224 /* SPListingViewProtocol.swift in Sources */,
 				289FDB6C1ADC083E002839D4 /* SPListingData.swift in Sources */,
 				286D940B1A0DEF0600C63224 /* SPUIViewController+CollectionDatasource.swift in Sources */,
 				28332B001A38022200CFFA56 /* SPListingColumnBasedLayout.swift in Sources */,
