@@ -76,29 +76,28 @@ extension SDRuntimeChangesTestCaseVC{
     ///
     ///:returns: NSIndexPath where the item added.
     private func insertItem(item: String) -> NSIndexPath{
-        ///TODO: Check how to get addrress reference of cellModel in order to make direct changes.
-        var cellModel = spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModel
-        cellModel.append(SPTitleLabelCellModel(TitleText: item))
-        spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModel = cellModel
+        var cellModelArray = spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModelArray
+        cellModelArray.append(SPTitleLabelCellModel(TitleText: item))
+        spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModelArray = cellModelArray
         
-        return NSIndexPath(forRow: cellModel.count - 1, inSection: 0)
+        return NSIndexPath(forRow: cellModelArray.count - 1, inSection: 0)
     }
     
     ///Removes last item in first cellData types in first section SPListingData.
     ///
     ///:returns: NSIndexPath? where the item added. nil if no data.
     private func removeItem() -> NSIndexPath?{
-        var cellModel = spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModel
+        var cellModelArray = spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModelArray
         
-        if cellModel.count == 0{
+        if cellModelArray.count == 0{
             return nil
         }
+
+        cellModelArray.removeLast()
         
-        cellModel.removeLast()
+        spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModelArray = cellModelArray
         
-        spListingData.spListingSectionDataArray[0].cellDataArray[0].cellModel = cellModel
-        
-        return NSIndexPath(forRow: cellModel.count, inSection: 0)
+        return NSIndexPath(forRow: cellModelArray.count, inSection: 0)
         
     }
 
@@ -109,7 +108,7 @@ extension SDRuntimeChangesTestCaseVC{
         ///Gets CellData Set and exact index of it.
         if let (spListingCellData, index) = spListingData.getCellDataDictionary(IndexPath: indexPAth){
             // If it is of type SPTitleLabelCellModel then change it.
-            if let spTitleLabelCellModel = spListingCellData.cellModel[index] as? SPTitleLabelCellModel{
+            if let spTitleLabelCellModel = spListingCellData.cellModelArray[index] as? SPTitleLabelCellModel{
                 spTitleLabelCellModel.titleText = "RowDetail Edited"
             }
         }

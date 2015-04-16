@@ -12,7 +12,6 @@ import UIKit
 let kSegueToSDBasicTableVC = "Show SDBasicTableVC"
 
 private let kHeaderNFooterTestCaseString = "Header & Footer"
-private let kHeaderNFooterAsViewTestCaseString = "Header & Footer as UIViews"
 private let kMultipleSectionsTestCaseString = "Multiple Sections"
 private let kDifferentCellDataSetsTestCaseString = "Different Cell Data Set in a Section"  // Tracking callback event from cell or didSelect would be crucial
 private let kVariableRowHeightsTestCaseString = "Automatic Variable Row heights"
@@ -31,7 +30,6 @@ class SDBasicTableVC: UIViewController {
     // List of Test Cases
     private var testCases = [
         kHeaderNFooterTestCaseString,
-        kHeaderNFooterAsViewTestCaseString,
         kMultipleSectionsTestCaseString,
         kDifferentCellDataSetsTestCaseString,
         kVariableRowHeightsTestCaseString,
