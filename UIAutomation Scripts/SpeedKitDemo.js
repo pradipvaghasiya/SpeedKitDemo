@@ -8,7 +8,18 @@ appWindow.tableViews()[0].cells()[6].tap();
 var toolBar = target.frontMostApp().toolbar();
 
 
-toolBar.buttons()["Add Item"].tapWithOptions({tapCount:3});
+toolBar.buttons()["Add Item"].tap();
+toolBar.buttons()["Add Item"].tap()
+
 appWindow.tableViews()[0].cells()[0].tap()
-toolBar.buttons()["Reduce Item"].doubleTap();
+
+toolBar.buttons()["Reduce Item"].tap();
+toolBar.buttons()["Reduce Item"].tap();
+toolBar.buttons()["Reduce Item"].tap();
+toolBar.buttons()["Reduce Item"].tap();
+
+
+target.captureScreenWithName( "screenshot1.png" );
+
+target.frontMostApp().navigationBar().leftButton().tap();
 target.frontMostApp().navigationBar().leftButton().tap();

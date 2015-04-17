@@ -15,6 +15,7 @@
 		28332B001A38022200CFFA56 /* SPListingColumnBasedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28332AFD1A38022200CFFA56 /* SPListingColumnBasedLayout.swift */; };
 		28332B011A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28332AFE1A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift */; };
 		28332B021A38022200CFFA56 /* SPListingColumnBasedLayoutInvalidationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28332AFF1A38022200CFFA56 /* SPListingColumnBasedLayoutInvalidationContext.swift */; };
+		28472CA61AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28472CA51AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift */; };
 		285C8C1F196D85410058C8E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C8C1E196D85410058C8E2 /* AppDelegate.swift */; };
 		285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C8C20196D85410058C8E2 /* SDHomeViewController.swift */; };
 		285C8C24196D85410058C8E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285C8C22196D85410058C8E2 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		28332AFD1A38022200CFFA56 /* SPListingColumnBasedLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingColumnBasedLayout.swift; sourceTree = "<group>"; };
 		28332AFE1A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingColumnBasedLayoutDelegate.swift; sourceTree = "<group>"; };
 		28332AFF1A38022200CFFA56 /* SPListingColumnBasedLayoutInvalidationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingColumnBasedLayoutInvalidationContext.swift; sourceTree = "<group>"; };
+		28472CA51AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDHeaderFooterTestCaseVC.swift; sourceTree = "<group>"; };
 		285C8C19196D85410058C8E2 /* SpeedKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		285C8C1D196D85410058C8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285C8C1E196D85410058C8E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				289461961ADE9311007C6E56 /* SDBasicTableVC.swift */,
 				2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */,
+				28472CA51AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift */,
 			);
 			name = "Basic TableView";
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */,
 				28332B021A38022200CFFA56 /* SPListingColumnBasedLayoutInvalidationContext.swift in Sources */,
 				286D940C1A0DEF0600C63224 /* SPListingCellData.swift in Sources */,
+				28472CA61AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift in Sources */,
 				289209561ADA54A2001D8812 /* SPListingConstants.swift in Sources */,
 				2894619F1ADF71E9007C6E56 /* SPTableView.swift in Sources */,
 				282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */,

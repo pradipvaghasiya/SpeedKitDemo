@@ -85,6 +85,9 @@ extension SDBasicTableVC : UITableViewDelegate{
         switch testCases[indexPath.row]{
         case kRuntimeChangesTestCaseString:
             self.performSegueWithIdentifier(kSegueToSDRuntimeChangesTestCaseVC, sender: self)
+        case kHeaderNFooterTestCaseString:
+            var headerFooterVC = SDHeaderFooterTestCaseVC()
+            self.navigationController?.pushViewController(headerFooterVC, animated: true)
         default:
             true
         }
