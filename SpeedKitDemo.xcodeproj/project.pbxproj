@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280D99561AE254D500FB3CF4 /* SPTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */; };
 		281386701A2AF42200A38D17 /* SPSegmentControllerHolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813866F1A2AF42200A38D17 /* SPSegmentControllerHolderController.swift */; };
 		281998891ADCCFA700944E7F /* SPUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281998881ADCCFA700944E7F /* SPUIHelper.swift */; };
 		282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */; };
@@ -20,7 +21,6 @@
 		285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C8C20196D85410058C8E2 /* SDHomeViewController.swift */; };
 		285C8C24196D85410058C8E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285C8C22196D85410058C8E2 /* Main.storyboard */; };
 		285C8C26196D85410058C8E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285C8C25196D85410058C8E2 /* Images.xcassets */; };
-		285C8C32196D85410058C8E2 /* SpeedKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C8C31196D85410058C8E2 /* SpeedKitDemoTests.swift */; };
 		285CA8411A172AED00E5093E /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285CA8401A172AED00E5093E /* CollectionVC.swift */; };
 		28650DB31A177F6C003DEEAF /* SPListingSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28650DB21A177F6C003DEEAF /* SPListingSectionData.swift */; };
 		286D94071A0DEF0600C63224 /* SPListingCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D93F71A0DEF0600C63224 /* SPListingCollectionVC.swift */; };
@@ -36,11 +36,23 @@
 		2894619D1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */; };
 		2894619F1ADF71E9007C6E56 /* SPTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894619E1ADF71E9007C6E56 /* SPTableView.swift */; };
 		289FDB6C1ADC083E002839D4 /* SPListingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FDB6B1ADC083E002839D4 /* SPListingData.swift */; };
+		28A99EC11AE248830004F5C6 /* SPTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EED95D1DC26E5DA74CA8E /* SPTableViewDatasource.swift */; };
+		28CD62B01AE2482D00C9B2AE /* SPListingCellDataSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C8C31196D85410058C8E2 /* SPListingCellDataSetTests.swift */; };
+		28CD62B11AE2484600C9B2AE /* SPUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281998881ADCCFA700944E7F /* SPUIHelper.swift */; };
+		28CD62B21AE2484600C9B2AE /* SPSegmentControllerHolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813866F1A2AF42200A38D17 /* SPSegmentControllerHolderController.swift */; };
+		28CD62B31AE2484600C9B2AE /* SPListingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289209551ADA54A2001D8812 /* SPListingConstants.swift */; };
+		28CD62B41AE2484600C9B2AE /* SPListingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FDB6B1ADC083E002839D4 /* SPListingData.swift */; };
+		28CD62B51AE2484600C9B2AE /* SPListingSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28650DB21A177F6C003DEEAF /* SPListingSectionData.swift */; };
+		28CD62B61AE2484600C9B2AE /* SPListingCellDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94001A0DEF0600C63224 /* SPListingCellDataSet.swift */; };
+		28CD62B71AE2484600C9B2AE /* SPListingCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94011A0DEF0600C63224 /* SPListingCellProtocol.swift */; };
+		28CD62B81AE2484600C9B2AE /* SPListingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94021A0DEF0600C63224 /* SPListingViewProtocol.swift */; };
+		28CD62B91AE2484600C9B2AE /* SPTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894619E1ADF71E9007C6E56 /* SPTableView.swift */; };
+		28CD62BA1AE2484600C9B2AE /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */; };
 		EB3EEE6FF5C01E5AE0BBC517 /* SPTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EED95D1DC26E5DA74CA8E /* SPTableViewDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		285C8C2C196D85410058C8E2 /* PBXContainerItemProxy */ = {
+		2888BB5A1AE2552100CF5D87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 285C8C11196D85410058C8E2 /* Project object */;
 			proxyType = 1;
@@ -65,9 +77,8 @@
 		285C8C20196D85410058C8E2 /* SDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDHomeViewController.swift; sourceTree = "<group>"; };
 		285C8C23196D85410058C8E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		285C8C25196D85410058C8E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		285C8C2B196D85410058C8E2 /* SpeedKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		285C8C30196D85410058C8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		285C8C31196D85410058C8E2 /* SpeedKitDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedKitDemoTests.swift; sourceTree = "<group>"; };
+		285C8C31196D85410058C8E2 /* SPListingCellDataSetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SPListingCellDataSetTests.swift; path = ../SpeedKitDemoTests/SPListingCellDataSetTests.swift; sourceTree = "<group>"; };
 		285CA8401A172AED00E5093E /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
 		28650DB21A177F6C003DEEAF /* SPListingSectionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingSectionData.swift; sourceTree = "<group>"; };
 		286D93F71A0DEF0600C63224 /* SPListingCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingCollectionVC.swift; sourceTree = "<group>"; };
@@ -83,6 +94,8 @@
 		2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRuntimeChangesTestCaseVC.swift; sourceTree = "<group>"; };
 		2894619E1ADF71E9007C6E56 /* SPTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableView.swift; sourceTree = "<group>"; };
 		289FDB6B1ADC083E002839D4 /* SPListingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingData.swift; sourceTree = "<group>"; };
+		28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28CD62A91AE247E500C9B2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB3EED95D1DC26E5DA74CA8E /* SPTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +107,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		285C8C28196D85410058C8E2 /* Frameworks */ = {
+		28CD62A31AE247E500C9B2AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				285C8C19196D85410058C8E2 /* SpeedKitDemo.app */,
-				285C8C2B196D85410058C8E2 /* SpeedKitDemoTests.xctest */,
+				28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,7 +189,6 @@
 		285C8C2E196D85410058C8E2 /* SpeedKitDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				285C8C31196D85410058C8E2 /* SpeedKitDemoTests.swift */,
 				285C8C2F196D85410058C8E2 /* Supporting Files */,
 			);
 			path = SpeedKitDemoTests;
@@ -194,8 +206,9 @@
 			isa = PBXGroup;
 			children = (
 				281998881ADCCFA700944E7F /* SPUIHelper.swift */,
-				286D93FD1A0DEF0600C63224 /* Listing Automation */,
 				2813866E1A2AF3D300A38D17 /* Segmented Controllers */,
+				286D93FD1A0DEF0600C63224 /* Listing Automation */,
+				28CD62A71AE247E500C9B2AE /* SpeedKitTests */,
 			);
 			path = SpeedKit;
 			sourceTree = "<group>";
@@ -296,6 +309,23 @@
 			path = "Generic Cells";
 			sourceTree = "<group>";
 		};
+		28CD62A71AE247E500C9B2AE /* SpeedKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				285C8C31196D85410058C8E2 /* SPListingCellDataSetTests.swift */,
+				28CD62A81AE247E500C9B2AE /* Supporting Files */,
+			);
+			path = SpeedKitTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		28CD62A81AE247E500C9B2AE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28CD62A91AE247E500C9B2AE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,22 +347,22 @@
 			productReference = 285C8C19196D85410058C8E2 /* SpeedKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		285C8C2A196D85410058C8E2 /* SpeedKitDemoTests */ = {
+		28CD62A51AE247E500C9B2AE /* SpeedKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 285C8C38196D85410058C8E2 /* Build configuration list for PBXNativeTarget "SpeedKitDemoTests" */;
+			buildConfigurationList = 28CD62AE1AE247E500C9B2AE /* Build configuration list for PBXNativeTarget "SpeedKitTests" */;
 			buildPhases = (
-				285C8C27196D85410058C8E2 /* Sources */,
-				285C8C28196D85410058C8E2 /* Frameworks */,
-				285C8C29196D85410058C8E2 /* Resources */,
+				28CD62A21AE247E500C9B2AE /* Sources */,
+				28CD62A31AE247E500C9B2AE /* Frameworks */,
+				28CD62A41AE247E500C9B2AE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				285C8C2D196D85410058C8E2 /* PBXTargetDependency */,
+				2888BB5B1AE2552100CF5D87 /* PBXTargetDependency */,
 			);
-			name = SpeedKitDemoTests;
-			productName = SpeedKitDemoTests;
-			productReference = 285C8C2B196D85410058C8E2 /* SpeedKitDemoTests.xctest */;
+			name = SpeedKitTests;
+			productName = SpeedKitTests;
+			productReference = 28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -348,8 +378,8 @@
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = JVPMRHD5PS;
 					};
-					285C8C2A196D85410058C8E2 = {
-						CreatedOnToolsVersion = 6.0;
+					28CD62A51AE247E500C9B2AE = {
+						CreatedOnToolsVersion = 6.3;
 						TestTargetID = 285C8C18196D85410058C8E2;
 					};
 				};
@@ -368,7 +398,7 @@
 			projectRoot = "";
 			targets = (
 				285C8C18196D85410058C8E2 /* SpeedKitDemo */,
-				285C8C2A196D85410058C8E2 /* SpeedKitDemoTests */,
+				28CD62A51AE247E500C9B2AE /* SpeedKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -386,10 +416,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		285C8C29196D85410058C8E2 /* Resources */ = {
+		28CD62A41AE247E500C9B2AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280D99561AE254D500FB3CF4 /* SPTitleLabelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,21 +474,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		285C8C27196D85410058C8E2 /* Sources */ = {
+		28CD62A21AE247E500C9B2AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				285C8C32196D85410058C8E2 /* SpeedKitDemoTests.swift in Sources */,
+				28CD62B11AE2484600C9B2AE /* SPUIHelper.swift in Sources */,
+				28CD62B51AE2484600C9B2AE /* SPListingSectionData.swift in Sources */,
+				28CD62B41AE2484600C9B2AE /* SPListingData.swift in Sources */,
+				28CD62BA1AE2484600C9B2AE /* SPTitleLabelCell.swift in Sources */,
+				28CD62B61AE2484600C9B2AE /* SPListingCellDataSet.swift in Sources */,
+				28CD62B31AE2484600C9B2AE /* SPListingConstants.swift in Sources */,
+				28CD62B71AE2484600C9B2AE /* SPListingCellProtocol.swift in Sources */,
+				28A99EC11AE248830004F5C6 /* SPTableViewDatasource.swift in Sources */,
+				28CD62B91AE2484600C9B2AE /* SPTableView.swift in Sources */,
+				28CD62B81AE2484600C9B2AE /* SPListingViewProtocol.swift in Sources */,
+				28CD62B21AE2484600C9B2AE /* SPSegmentControllerHolderController.swift in Sources */,
+				28CD62B01AE2482D00C9B2AE /* SPListingCellDataSetTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		285C8C2D196D85410058C8E2 /* PBXTargetDependency */ = {
+		2888BB5B1AE2552100CF5D87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 285C8C18196D85410058C8E2 /* SpeedKitDemo */;
-			targetProxy = 285C8C2C196D85410058C8E2 /* PBXContainerItemProxy */;
+			targetProxy = 2888BB5A1AE2552100CF5D87 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -581,39 +623,46 @@
 			};
 			name = Release;
 		};
-		285C8C39196D85410058C8E2 /* Debug */ = {
+		28CD62AC1AE247E500C9B2AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpeedKitDemo.app/SpeedKitDemo";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SpeedKitDemoTests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = SpeedKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeedKitDemo.app/SpeedKitDemo";
 			};
 			name = Debug;
 		};
-		285C8C3A196D85410058C8E2 /* Release */ = {
+		28CD62AD1AE247E500C9B2AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpeedKitDemo.app/SpeedKitDemo";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SpeedKitDemoTests/Supporting Files/Info.plist";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = SpeedKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpeedKitDemo.app/SpeedKitDemo";
 			};
 			name = Release;
 		};
@@ -638,11 +687,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		285C8C38196D85410058C8E2 /* Build configuration list for PBXNativeTarget "SpeedKitDemoTests" */ = {
+		28CD62AE1AE247E500C9B2AE /* Build configuration list for PBXNativeTarget "SpeedKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				285C8C39196D85410058C8E2 /* Debug */,
-				285C8C3A196D85410058C8E2 /* Release */,
+				28CD62AC1AE247E500C9B2AE /* Debug */,
+				28CD62AD1AE247E500C9B2AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
