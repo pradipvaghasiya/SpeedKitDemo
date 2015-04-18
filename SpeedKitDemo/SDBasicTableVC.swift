@@ -11,13 +11,14 @@ import UIKit
 ///Storyboard Segue id for segue to this controller
 let kSegueToSDBasicTableVC = "Show SDBasicTableVC"
 
-private let kHeaderNFooterTestCaseString = "Header & Footer"
-private let kMultipleSectionsTestCaseString = "Multiple Sections"
-private let kDifferentCellDataSetsTestCaseString = "Different Cell Data Set in a Section"  // Tracking callback event from cell or didSelect would be crucial
-private let kVariableRowHeightsTestCaseString = "Automatic Variable Row heights"
-private let kTableViewFooterTestCaseString = "Footer using tableView Property"
-private let kExcessiveRowsTestCaseString = "100,000 Rows"   // Check Performance Memory uti, CPU util.
+// Different Cell Type including prototype cell and by code
+//private let kHeaderNFooterTestCaseString = "Header & Footer"
+//private let kMultipleSectionsTestCaseString = "Multiple Sections"
+//private let kDifferentCellDataSetsTestCaseString = "Different Cell Data Set in a Section"  // Tracking callback event from cell or didSelect would be crucial
+//private let kVariableRowHeightsTestCaseString = "Automatic Variable Row heights"
+//private let kTableViewFooterTestCaseString = "Footer using tableView Property"
 private let kRuntimeChangesTestCaseString = "Runtime changes in Listing Data"  // Check performance, ease of use.
+private let kExcessiveRowsTestCaseString = "100,000 Rows"   // Check Performance Memory uti, CPU util.
 private let kTableViewDifferentFrameTestCaseString = "Different Table View Frame"  // Check performance, ease of use.
 private let kEdtingTableTestCaseString = "Editing TableView"
 private let kNoDataTestCaseString = "No Listing Data"
@@ -29,13 +30,8 @@ private let kGroupedTableViewTestCaseString = "Grouped TableView"
 class SDBasicTableVC: UIViewController {
     // List of Test Cases
     private var testCases = [
-        kHeaderNFooterTestCaseString,
-        kMultipleSectionsTestCaseString,
-        kDifferentCellDataSetsTestCaseString,
-        kVariableRowHeightsTestCaseString,
-        kTableViewFooterTestCaseString,
-        kExcessiveRowsTestCaseString,
         kRuntimeChangesTestCaseString,
+        kExcessiveRowsTestCaseString,
         kTableViewDifferentFrameTestCaseString,
         kEdtingTableTestCaseString,
         kNoDataTestCaseString,
@@ -85,9 +81,6 @@ extension SDBasicTableVC : UITableViewDelegate{
         switch testCases[indexPath.row]{
         case kRuntimeChangesTestCaseString:
             self.performSegueWithIdentifier(kSegueToSDRuntimeChangesTestCaseVC, sender: self)
-        case kHeaderNFooterTestCaseString:
-            var headerFooterVC = SDHeaderFooterTestCaseVC()
-            self.navigationController?.pushViewController(headerFooterVC, animated: true)
         default:
             true
         }

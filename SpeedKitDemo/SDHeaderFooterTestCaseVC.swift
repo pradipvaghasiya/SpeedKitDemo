@@ -48,18 +48,18 @@ extension SDHeaderFooterTestCaseVC : UITableViewDelegate{
         }
 
         
-        var spListingSection0CellData = SPListingCellData(cellId: kCellIdSPTitleLabelCell,
+        var spListingSection0CellData = SPListingCellDataSet(cellId: kCellIdSPTitleLabelCell,
             cellModel: spTitleLabelSection0CellModelArray)
         
-        var spListingSection1CellData = SPListingCellData(cellId: kCellIdSPTitleLabelCell,
+        var spListingSection1CellData = SPListingCellDataSet(cellId: kCellIdSPTitleLabelCell,
             cellModel: spTitleLabelSection1CellModelArray)
 
         
-        var spListingSection0Data = SPListingSectionData(Cells: [spListingSection0CellData])
+        var spListingSection0Data = SPListingSectionData(CellDataSets: [spListingSection0CellData])
         spListingSection0Data.sectionHeader = "Section 0 Header String"
         spListingSection0Data.sectionFooter = "Section 0 Footer String"
         
-        var spListingSection1Data = SPListingSectionData(Cells: [spListingSection1CellData])
+        var spListingSection1Data = SPListingSectionData(CellDataSets: [spListingSection1CellData])
         spListingSection1Data.sectionHeader = "Section 1 Header String"
         spListingSection1Data.sectionFooter = "Section 1 Footer String"
 
