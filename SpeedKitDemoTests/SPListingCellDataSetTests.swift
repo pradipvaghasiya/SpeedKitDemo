@@ -248,5 +248,11 @@ class SPListingCellDataSetTests: XCTestCase {
       }
    }
 
+   func testUpdateCellCountWithOnlyCommonModel(){
+      var cellData = SPListingCellDataSet(cellId: validNibId, cellCount: 5, cellModelCommon: cellCommonModel)
+      cellData.cellCount = 10
+      XCTAssert(cellData.cellCount == 10, "SPListingCellDataSet Should be valid after update")
+   }
    
 }
+
