@@ -150,7 +150,7 @@ extension SDRuntimeChangesTestCaseVC{
       ///Gets CellData Set and exact index of it.
       if let (spListingCellData, index) = spListingData.getCellDataDictionary(IndexPath: indexPAth){
          // If it is of type SPTitleLabelCellModel then change it.
-         if let spTitleLabelCellModel = spListingCellData.cellModelArray[index] as? SPTitleLabelCellModel{
+         if let spTitleLabelCellModel = spListingCellData.cellModelArray[Int(index)] as? SPTitleLabelCellModel{
             spTitleLabelCellModel.titleText = "RowDetail Edited"
          }
       }
