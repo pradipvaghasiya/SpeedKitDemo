@@ -241,9 +241,9 @@ class SPListingCellGroupTests: XCTestCase {
       }
    }
    
-   func testUpdateCellCountToZero(){
+   func testUpdateCellCountToInvalidValue(){
       if let cellData = spListingCellGroupWithAllDetails {
-         cellData.cellCount = 0
+         cellData.cellCount = 0   // assigning 0 though model array count is 2.
          XCTAssert(cellData.cellCount == 2, "SPListingCellGroup Should be valid after update")
       }
    }
