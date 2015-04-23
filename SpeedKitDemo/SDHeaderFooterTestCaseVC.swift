@@ -48,10 +48,10 @@ extension SDHeaderFooterTestCaseVC : UITableViewDelegate{
         }
 
         
-        var spListingSection0CellData = SPListingCellDataSet(cellId: kCellIdSPTitleLabelCell,
+        var spListingSection0CellData = SPListingCellGroup(cellId: kCellIdSPTitleLabelCell,
             cellModel: spTitleLabelSection0CellModelArray)
         
-        var spListingSection1CellData = SPListingCellDataSet(cellId: kCellIdSPTitleLabelCell,
+        var spListingSection1CellData = SPListingCellGroup(cellId: kCellIdSPTitleLabelCell,
             cellModel: spTitleLabelSection1CellModelArray)
 
         

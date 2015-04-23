@@ -54,7 +54,7 @@ extension SDHomeViewController{
 //                }
 //            
 //                // Step 1.3: Create spListingCellData Instance using above two models.
-//                var spListingCellData = SPListingCellDataSet(cellId: kCellIdSPTitleLabelCell,
+//                var spListingCellData = SPListingCellGroup(cellId: kCellIdSPTitleLabelCell,
 //                    cellCommonModel: spTitleLabelCellCommonModel,
 //                    cellModelArray: spTitleLabelCellModelArray)
 //            

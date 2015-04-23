@@ -1,6 +1,6 @@
 //
-//  SPListingCellDataSetTests.swift
-//  SPListingCellDataSetTests
+//  SPListingCellGroupTests.swift
+//  SPListingCellGroupTests
 //
 //  Created by Pradip Vaghasiya on 09/07/14.
 //  Copyright (c) 2014 Happyfall. All rights reserved.
@@ -8,8 +8,8 @@
 
 import XCTest
 
-class SPListingCellDataSetTests: XCTestCase {
-   var spListingCellDataSetWithAllDetails : SPListingCellDataSet?
+class SPListingCellGroupTests: XCTestCase {
+   var spListingCellGroupWithAllDetails : SPListingCellGroup?
    
    var emptyCellModel : [AnyObject] = []
    var cellModel : [AnyObject] = ["model1","model2"]
@@ -18,18 +18,18 @@ class SPListingCellDataSetTests: XCTestCase {
   
    var validNibId : String = "SPTitleLabelCell"
    var validSubClassCellId : String = "SPTitleLabelCell"
-   var validPrototypeCellId : String = "Valid Prototype" // Anyway SPListingCellDataSet can not check validity.
+   var validPrototypeCellId : String = "Valid Prototype" // Anyway SPListingCellGroup can not check validity.
    
    var inValidCellId : String = "InvalidNibCell"
   
    override func setUp() {
       super.setUp()
       
-      spListingCellDataSetWithAllDetails = SPListingCellDataSet(
+      spListingCellGroupWithAllDetails = SPListingCellGroup(
          cellId: validNibId,
          cellModelCommon: cellCommonModel,
          cellModel: cellModel,
-         cellViewType: .NibCell)
+         cellType: .NibCell)
       
    }
    
@@ -41,217 +41,217 @@ class SPListingCellDataSetTests: XCTestCase {
    
    // MARK: CellDataSet Init Test Cases
    func testWithValidNibCellId() {
-      var spListingCellDataSet = SPListingCellDataSet(cellId: validNibId, cellModel: cellModel, cellViewType: SPCellViewType.NibCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModel: cellModel, cellType: SPCellType.NibCell)
       
-      XCTAssertNotNil(spListingCellDataSet.cellId, "CellDataSet Cell Id should not be nil.")
+      XCTAssertNotNil(spListingCellGroup.cellId, "CellDataSet Cell Id should not be nil.")
    }
    
    func testWithInValidNibCellId() {
-      var spListingCellDataSet = SPListingCellDataSet(cellId: inValidCellId, cellModel: cellModel, cellViewType: SPCellViewType.NibCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: inValidCellId, cellModel: cellModel, cellType: SPCellType.NibCell)
       
-      XCTAssertNil(spListingCellDataSet.cellId, "CellDataSet Cell Id should be nil.")
+      XCTAssertNil(spListingCellGroup.cellId, "CellDataSet Cell Id should be nil.")
    }
    
    func testWithValidPrototypeCellId() {
-      var spListingCellDataSet = SPListingCellDataSet(cellId: validPrototypeCellId, cellModel: cellModel, cellViewType: SPCellViewType.PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validPrototypeCellId, cellModel: cellModel, cellType: SPCellType.PrototypeCell)
       
-      XCTAssertNotNil(spListingCellDataSet.cellId, "CellDataSet Cell Id should not be nil.")
+      XCTAssertNotNil(spListingCellGroup.cellId, "CellDataSet Cell Id should not be nil.")
    }
    
    func testWithInValidPrototypeCellId() {
-      var spListingCellDataSet = SPListingCellDataSet(cellId: inValidCellId, cellModel: cellModel, cellViewType: SPCellViewType.PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: inValidCellId, cellModel: cellModel, cellType: SPCellType.PrototypeCell)
 
-      XCTAssertNotNil(spListingCellDataSet.cellId, "CellDataSet Cell Id should not be nil.")
+      XCTAssertNotNil(spListingCellGroup.cellId, "CellDataSet Cell Id should not be nil.")
    }
    
    func testWithValidSubclassCellId() {
-      var spListingCellDataSet = SPListingCellDataSet(cellId: validSubClassCellId, cellModel: cellModel, cellViewType: SPCellViewType.SubclassCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validSubClassCellId, cellModel: cellModel, cellType: SPCellType.SubclassCell)
       
-      XCTAssertNotNil(spListingCellDataSet.cellId, "CellDataSet Cell Id should not be nil.")
+      XCTAssertNotNil(spListingCellGroup.cellId, "CellDataSet Cell Id should not be nil.")
    }
    
    func testWithInValidSubclassCellId() {
-      var spListingCellDataSet = SPListingCellDataSet(cellId: inValidCellId, cellModel: cellModel, cellViewType: SPCellViewType.SubclassCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: inValidCellId, cellModel: cellModel, cellType: SPCellType.SubclassCell)
       
-      XCTAssertNil(spListingCellDataSet.cellId, "CellDataSet Cell Id should be nil.")
+      XCTAssertNil(spListingCellGroup.cellId, "CellDataSet Cell Id should be nil.")
    }
 
    func testPositiveCellCountValue(){
-      var spListingCellDataSet = SPListingCellDataSet(cellId: validNibId, cellCount: 10, cellModelCommon: cellCommonModel)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCount: 10, cellModelCommon: cellCommonModel)
       
-      XCTAssert(spListingCellDataSet.cellCount == 10, "Cellcount should be 10.")
+      XCTAssert(spListingCellGroup.cellCount == 10, "Cellcount should be 10.")
    }
 
    func testZeroCellCountValue(){
-      var spListingCellDataSet = SPListingCellDataSet(cellId: validNibId, cellCount: 0, cellModelCommon: cellCommonModel)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCount: 0, cellModelCommon: cellCommonModel)
       
-      XCTAssert(spListingCellDataSet.cellCount == 0, "Cellcount should be zero")
+      XCTAssert(spListingCellGroup.cellCount == 0, "Cellcount should be zero")
    }
 
    func testOnlyCellModelArray(){
-      var spListingCellDataSet = SPListingCellDataSet(cellId: validNibId, cellModel: cellModel)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModel: cellModel)
       
-      XCTAssert(spListingCellDataSet.cellModelArray.count == 2 &&
-         spListingCellDataSet.cellId == validNibId &&
-         spListingCellDataSet.cellCount == UInt(cellModel.count) &&
-         spListingCellDataSet.cellViewType == .NibCell, "SPListingCellDataSet Should be Created properly")
+      XCTAssert(spListingCellGroup.cellModelArray.count == 2 &&
+         spListingCellGroup.cellId == validNibId &&
+         spListingCellGroup.cellCount == UInt(cellModel.count) &&
+         spListingCellGroup.cellType == .NibCell, "SPListingCellGroup Should be Created properly")
 
    }
    
    func testOnlyCellCommonModel(){
-      var spListingCellDataSet = SPListingCellDataSet(cellId: validNibId, cellCount: 5, cellModelCommon: cellCommonModel)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCount: 5, cellModelCommon: cellCommonModel)
       
-      XCTAssert(spListingCellDataSet.cellModelArray.count == 0 &&
-         spListingCellDataSet.cellId == validNibId &&
-         spListingCellDataSet.cellViewType == .NibCell &&
-         spListingCellDataSet.cellCount == 5 &&
-         (spListingCellDataSet.cellCommonModel! as? String) == cellCommonModel, "SPListingCellDataSet Should be Created properly")
+      XCTAssert(spListingCellGroup.cellModelArray.count == 0 &&
+         spListingCellGroup.cellId == validNibId &&
+         spListingCellGroup.cellType == .NibCell &&
+         spListingCellGroup.cellCount == 5 &&
+         (spListingCellGroup.cellCommonModel! as? String) == cellCommonModel, "SPListingCellGroup Should be Created properly")
    }
    
    func testBothCellModelAndCellCommonModel(){
-      var spListingCellDataSet = SPListingCellDataSet(cellId: validNibId, cellModelCommon: cellCommonModel, cellModel: cellModel, cellViewType: .PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModelCommon: cellCommonModel, cellModel: cellModel, cellType: .PrototypeCell)
       
-      XCTAssert(spListingCellDataSet.cellModelArray.count == cellModel.count &&
-         spListingCellDataSet.cellId == validNibId &&
-         spListingCellDataSet.cellViewType == .PrototypeCell &&
-         spListingCellDataSet.cellCount == UInt(cellModel.count) &&
-         (spListingCellDataSet.cellCommonModel! as? String) == cellCommonModel, "SPListingCellDataSet Should be Created properly")
+      XCTAssert(spListingCellGroup.cellModelArray.count == cellModel.count &&
+         spListingCellGroup.cellId == validNibId &&
+         spListingCellGroup.cellType == .PrototypeCell &&
+         spListingCellGroup.cellCount == UInt(cellModel.count) &&
+         (spListingCellGroup.cellCommonModel! as? String) == cellCommonModel, "SPListingCellGroup Should be Created properly")
 
    }
    
    func testBothEmptyCellModelAndCellCommonModel(){
-      var spListingCellDataSet = SPListingCellDataSet(cellId: validNibId, cellModelCommon: "" , cellModel: [], cellViewType: .PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModelCommon: "" , cellModel: [], cellType: .PrototypeCell)
       
-      XCTAssert(spListingCellDataSet.cellModelArray.count == 0 &&
-         spListingCellDataSet.cellId == validNibId &&
-         spListingCellDataSet.cellViewType == .PrototypeCell &&
-         spListingCellDataSet.cellCount == 0 &&
-         (spListingCellDataSet.cellCommonModel! as? String) == "", "SPListingCellDataSet Should be Created properly")
+      XCTAssert(spListingCellGroup.cellModelArray.count == 0 &&
+         spListingCellGroup.cellId == validNibId &&
+         spListingCellGroup.cellType == .PrototypeCell &&
+         spListingCellGroup.cellCount == 0 &&
+         (spListingCellGroup.cellCommonModel! as? String) == "", "SPListingCellGroup Should be Created properly")
       
    }
    
    
    // MARK: Cell Data Set At Runtime
    func testUpdateCellIdWithInvalidId(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellId = inValidCellId
          XCTAssertNil(cellData.cellId, "CellDataSet Cell Id should be nil.")
       }
    }
    
    func testUpdateCellIdWithValidId(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellId = validNibId
          XCTAssertNotNil(cellData.cellId, "CellDataSet Cell Id should not be nil.")
       }
    }
    
    func testAppendCellModelDirectly(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellModelArray.append("model3")
          XCTAssert(cellData.cellModelArray.count == 3 &&
             cellData.cellCount == 3 &&
-            (cellData.cellModelArray.last as? String) == "model3", "SPListingCellDataSet Should be valid after update")
+            (cellData.cellModelArray.last as? String) == "model3", "SPListingCellGroup Should be valid after update")
       }
    }
 
    func testRemoveCellModelDirectly(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellModelArray.removeLast()
          XCTAssert(cellData.cellModelArray.count == 1 &&
             cellData.cellCount == 1 &&
-            (cellData.cellModelArray.last as? String) == "model1", "SPListingCellDataSet Should be valid after update")
+            (cellData.cellModelArray.last as? String) == "model1", "SPListingCellGroup Should be valid after update")
       }
    }
    
    func testEditCellModelDirectly(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellModelArray[1] = "model2 edited"
          XCTAssert(cellData.cellModelArray.count == 2 &&
             cellData.cellCount == 2 &&
-            (cellData.cellModelArray.last as? String) == "model2 edited", "SPListingCellDataSet Should be valid after update")
+            (cellData.cellModelArray.last as? String) == "model2 edited", "SPListingCellGroup Should be valid after update")
       }
    }
    
    func testAppendCellModelCopying(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          var cellModelArrayCopy = cellData.cellModelArray
          cellModelArrayCopy.append("model3")
          cellData.cellModelArray = cellModelArrayCopy
          XCTAssert(cellData.cellModelArray.count == 3 &&
             cellData.cellCount == 3 &&
-            (cellData.cellModelArray.last as? String) == "model3", "SPListingCellDataSet Should be valid after update")
+            (cellData.cellModelArray.last as? String) == "model3", "SPListingCellGroup Should be valid after update")
       }
    }
    
    func testRemoveCellModelCopying(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          var cellModelArrayCopy = cellData.cellModelArray
          cellModelArrayCopy.removeLast()
          cellData.cellModelArray = cellModelArrayCopy
 
          XCTAssert(cellData.cellModelArray.count == 1 &&
             cellData.cellCount == 1 &&
-            (cellData.cellModelArray.last as? String) == "model1", "SPListingCellDataSet Should be valid after update")
+            (cellData.cellModelArray.last as? String) == "model1", "SPListingCellGroup Should be valid after update")
       }
    }
    
    func testEditCellModelCopying(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          var cellModelArrayCopy = cellData.cellModelArray
          cellModelArrayCopy[1] = "model2 edited"
          cellData.cellModelArray = cellModelArrayCopy
 
          XCTAssert(cellData.cellModelArray.count == 2 &&
             cellData.cellCount == 2 &&
-            (cellData.cellModelArray.last as? String) == "model2 edited", "SPListingCellDataSet Should be valid after update")
+            (cellData.cellModelArray.last as? String) == "model2 edited", "SPListingCellGroup Should be valid after update")
       }
    }
    
    func testEmptyCellModel(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellModelArray.removeAll(keepCapacity: false)
          
          XCTAssert(cellData.cellModelArray.count == 0 &&
-            cellData.cellCount == 0, "SPListingCellDataSet Should be valid after update")
+            cellData.cellCount == 0, "SPListingCellGroup Should be valid after update")
       }
    }
    
    func testfillCellModel(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellModelArray.removeAll(keepCapacity: false)
          cellData.cellModelArray = cellModel
          XCTAssert(cellData.cellModelArray.count == 2 &&
-            cellData.cellCount == 2, "SPListingCellDataSet Should be valid after update")
+            cellData.cellCount == 2, "SPListingCellGroup Should be valid after update")
       }
    }
 
    func testEmptyCellCommonModel(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellCommonModel = nil
-         XCTAssert(cellData.cellCommonModel == nil, "SPListingCellDataSet Should be valid after update")
+         XCTAssert(cellData.cellCommonModel == nil, "SPListingCellGroup Should be valid after update")
       }
    }
    
    func testFillCellCommonModel(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellCommonModel = nil
          cellData.cellCommonModel = cellCommonModel
-         XCTAssert((cellData.cellCommonModel as? String) == "Common Model", "SPListingCellDataSet Should be valid after update")
+         XCTAssert((cellData.cellCommonModel as? String) == "Common Model", "SPListingCellGroup Should be valid after update")
       }
    }
    
    func testUpdateCellCountToZero(){
-      if let cellData = spListingCellDataSetWithAllDetails {
+      if let cellData = spListingCellGroupWithAllDetails {
          cellData.cellCount = 0
-         XCTAssert(cellData.cellCount == 2, "SPListingCellDataSet Should be valid after update")
+         XCTAssert(cellData.cellCount == 2, "SPListingCellGroup Should be valid after update")
       }
    }
 
    func testUpdateCellCountWithOnlyCommonModel(){
-      var cellData = SPListingCellDataSet(cellId: validNibId, cellCount: 5, cellModelCommon: cellCommonModel)
+      var cellData = SPListingCellGroup(cellId: validNibId, cellCount: 5, cellModelCommon: cellCommonModel)
       cellData.cellCount = 10
-      XCTAssert(cellData.cellCount == 10, "SPListingCellDataSet Should be valid after update")
+      XCTAssert(cellData.cellCount == 10, "SPListingCellGroup Should be valid after update")
    }
    
 }

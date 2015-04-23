@@ -54,7 +54,7 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
       // Cell Common Model
       var spTitleLabelCellCommonModel = SPTitleLabelCellCommonModel(TextColor: UIColor.darkGrayColor())
       
-      var spListingSection0CellData = SPListingCellDataSet(
+      var spListingSection0CellData = SPListingCellGroup(
          cellId: kCellIdSPTitleLabelCell,
          cellModelCommon: spTitleLabelCellCommonModel,
          cellModel: spTitleLabelSection0CellModelArray)
@@ -68,7 +68,7 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
          spTitleLabelSection1CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
-      var spListingSection1CellData = SPListingCellDataSet(
+      var spListingSection1CellData = SPListingCellGroup(
          cellId: kCellIdSPTitleLabelCell,
          cellModel: spTitleLabelSection1CellModelArray)
       

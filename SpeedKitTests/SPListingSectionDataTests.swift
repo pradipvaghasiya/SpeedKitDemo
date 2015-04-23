@@ -11,11 +11,11 @@ import XCTest
 
 class SPListingSectionDataTests: XCTestCase {
    
-   var cellDataSet1 = SPListingCellDataSet(cellId: "SPTitleCellLabel", cellCount: 12, cellModelCommon: "CommonModel")
-   var cellDataSet2 = SPListingCellDataSet(cellId: "SPTitleCellLabel", cellModel: ["1","2","3"])
-   var cellDataSet3 = SPListingCellDataSet(cellId: "SPTitleCellLabel", cellModelCommon: "CommonModel", cellModel: ["1","2"])
+   var cellDataSet1 = SPListingCellGroup(cellId: "SPTitleCellLabel", cellCount: 12, cellModelCommon: "CommonModel")
+   var cellDataSet2 = SPListingCellGroup(cellId: "SPTitleCellLabel", cellModel: ["1","2","3"])
+   var cellDataSet3 = SPListingCellGroup(cellId: "SPTitleCellLabel", cellModelCommon: "CommonModel", cellModel: ["1","2"])
   
-   var cellDataSets : [SPListingCellDataSet] = []
+   var cellDataSets : [SPListingCellGroup] = []
    var sectionData = SPListingSectionData(CellDataSets: [])
    
    override func setUp() {
