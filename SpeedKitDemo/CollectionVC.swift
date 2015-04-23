@@ -57,13 +57,13 @@ extension CollectionVC{
             listingCVC.collectionViewLayout = collectionLayout
             
             // Section Data Array
-            var section0 = SPListingSectionData(CellDataSets: [
+            var section0 = SPListingSection(CellDataSets: [
                 SPListingCellGroup(
                     cellId: kCellIdSampleCollectionViewCell,
                     cellCount: 15,
                     cellModelCommon:SampleCollectionCellModel(Title: "0 Pradip"))])
             
-            var section1 = SPListingSectionData(CellDataSets: [
+            var section1 = SPListingSection(CellDataSets: [
                 SPListingCellGroup(
                     cellId: kCellIdSampleCollectionViewCell,
                     cellCount: 20,

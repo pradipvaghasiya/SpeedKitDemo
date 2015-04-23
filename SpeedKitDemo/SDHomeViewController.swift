@@ -60,7 +60,7 @@ extension SDHomeViewController{
 //            
 //            // Step 2: Create Section data containing different Cell Data set. 
 //            // Here we only need one set of Cell Data created above.
-//            var spListingSection0Data = SPListingSectionData(Cells: [spListingCellData])
+//            var spListingSection0Data = SPListingSection(Cells: [spListingCellData])
 //            
 //            // Step 3: Create full listing data containing different sections mentioned above.
 //            // Here we only need one section created above.

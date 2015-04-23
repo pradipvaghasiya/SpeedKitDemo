@@ -73,11 +73,11 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
          cellModel: spTitleLabelSection1CellModelArray)
       
       
-      var spListingSection0Data = SPListingSectionData(CellDataSets: [spListingSection0CellData])
+      var spListingSection0Data = SPListingSection(CellDataSets: [spListingSection0CellData])
       spListingSection0Data.sectionHeader = "Section 0 Header String"
       spListingSection0Data.sectionFooter = "Section 0 Footer String"
       
-      var spListingSection1Data = SPListingSectionData(CellDataSets: [spListingSection1CellData])
+      var spListingSection1Data = SPListingSection(CellDataSets: [spListingSection1CellData])
       spListingSection1Data.sectionHeader = "Section 1 Header String"
       spListingSection1Data.sectionFooter = "Section 1 Footer String"
       
@@ -118,18 +118,18 @@ extension SDRuntimeChangesTestCaseVC{
    ///
    ///:returns: NSIndexPath where the item added.
    private func insertItem(item: String) -> NSIndexPath{
-      spListingData.spListingSectionDataArray[0].cellDataSetArray[0].cellModelArray.append(SPTitleLabelCellModel(TitleText: item))
+      spListingData.spListingSectionArray[0].cellGroupArray[0].cellModelArray.append(SPTitleLabelCellModel(TitleText: item))
 //      cellModelArray.append(SPTitleLabelCellModel(TitleText: item))
-//      spListingData.spListingSectionDataArray[0].cellDataSetArray[0].cellModelArray = cellModelArray
+//      spListingData.spListingSectionArray[0].cellGroupArray[0].cellModelArray = cellModelArray
       
-      return NSIndexPath(forRow: spListingData.spListingSectionDataArray[0].cellDataSetArray[0].cellModelArray.count - 1, inSection: 0)
+      return NSIndexPath(forRow: spListingData.spListingSectionArray[0].cellGroupArray[0].cellModelArray.count - 1, inSection: 0)
    }
    
    ///Removes last item in first cellData types in first section SPListingData.
    ///
    ///:returns: NSIndexPath? where the item added. nil if no data.
    private func removeItem() -> NSIndexPath?{
-      var cellModelArray = spListingData.spListingSectionDataArray[0].cellDataSetArray[0].cellModelArray
+      var cellModelArray = spListingData.spListingSectionArray[0].cellGroupArray[0].cellModelArray
       
       if cellModelArray.count == 0{
          return nil
@@ -137,7 +137,7 @@ extension SDRuntimeChangesTestCaseVC{
       
       cellModelArray.removeLast()
       
-      spListingData.spListingSectionDataArray[0].cellDataSetArray[0].cellModelArray = cellModelArray
+      spListingData.spListingSectionArray[0].cellGroupArray[0].cellModelArray = cellModelArray
       
       return NSIndexPath(forRow: cellModelArray.count, inSection: 0)
       
