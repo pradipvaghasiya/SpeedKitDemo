@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		280D99561AE254D500FB3CF4 /* SPTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */; };
 		281386701A2AF42200A38D17 /* SPSegmentControllerHolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813866F1A2AF42200A38D17 /* SPSegmentControllerHolderController.swift */; };
+		2813B7151AE94214004CACA9 /* SPListingDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813B7141AE94214004CACA9 /* SPListingDataTests.swift */; };
 		281998891ADCCFA700944E7F /* SPUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281998881ADCCFA700944E7F /* SPUIHelper.swift */; };
 		282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */; };
 		282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */; };
@@ -64,6 +65,7 @@
 
 /* Begin PBXFileReference section */
 		2813866F1A2AF42200A38D17 /* SPSegmentControllerHolderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPSegmentControllerHolderController.swift; sourceTree = "<group>"; };
+		2813B7141AE94214004CACA9 /* SPListingDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingDataTests.swift; sourceTree = "<group>"; };
 		281998881ADCCFA700944E7F /* SPUIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPUIHelper.swift; sourceTree = "<group>"; };
 		282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnBasedLayoutDatasource.swift; sourceTree = "<group>"; };
 		282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			children = (
 				285C8C31196D85410058C8E2 /* SPListingCellGroupTests.swift */,
 				2849E9651AE3F25700914714 /* SPListingSectionTests.swift */,
+				2813B7141AE94214004CACA9 /* SPListingDataTests.swift */,
 				28CD62A81AE247E500C9B2AE /* Supporting Files */,
 			);
 			path = SpeedKitTests;
@@ -482,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28CD62B11AE2484600C9B2AE /* SPUIHelper.swift in Sources */,
+				2813B7151AE94214004CACA9 /* SPListingDataTests.swift in Sources */,
 				28CD62B51AE2484600C9B2AE /* SPListingSection.swift in Sources */,
 				28CD62B41AE2484600C9B2AE /* SPListingData.swift in Sources */,
 				28CD62BA1AE2484600C9B2AE /* SPTitleLabelCell.swift in Sources */,

@@ -14,7 +14,7 @@ class SDHomeViewController: UIViewController {
     ///As per SPListingTableVC description
     ///
     ///1. You need to set spListingData - Listing Automation Compatible. When you change spListingData you must call reloadSPListingTableVC method.
-    var spListingData : SPListingData = SPListingData([])
+    var spListingData : SPListingData = SPListingData(SectionArray: [])
     
     // MARK: ViewController Delegates
     override func viewDidLoad() {

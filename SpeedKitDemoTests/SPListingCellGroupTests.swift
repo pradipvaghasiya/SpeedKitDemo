@@ -27,7 +27,7 @@ class SPListingCellGroupTests: XCTestCase {
       
       spListingCellGroupWithAllDetails = SPListingCellGroup(
          cellId: validNibId,
-         cellModelCommon: cellCommonModel,
+         cellCommonModel: cellCommonModel,
          cellModel: cellModel,
          cellType: .NibCell)
       
@@ -77,13 +77,13 @@ class SPListingCellGroupTests: XCTestCase {
    }
 
    func testPositiveCellCountValue(){
-      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCount: 10, cellModelCommon: cellCommonModel)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCount: 10, cellCommonModel: cellCommonModel)
       
       XCTAssert(spListingCellGroup.cellCount == 10, "Cellcount should be 10.")
    }
 
    func testZeroCellCountValue(){
-      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCount: 0, cellModelCommon: cellCommonModel)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCount: 0, cellCommonModel: cellCommonModel)
       
       XCTAssert(spListingCellGroup.cellCount == 0, "Cellcount should be zero")
    }
@@ -99,7 +99,7 @@ class SPListingCellGroupTests: XCTestCase {
    }
    
    func testOnlyCellCommonModel(){
-      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCount: 5, cellModelCommon: cellCommonModel)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCount: 5, cellCommonModel: cellCommonModel)
       
       XCTAssert(spListingCellGroup.cellModelArray.count == 0 &&
          spListingCellGroup.cellId == validNibId &&
@@ -109,7 +109,7 @@ class SPListingCellGroupTests: XCTestCase {
    }
    
    func testBothCellModelAndCellCommonModel(){
-      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModelCommon: cellCommonModel, cellModel: cellModel, cellType: .PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCommonModel: cellCommonModel, cellModel: cellModel, cellType: .PrototypeCell)
       
       XCTAssert(spListingCellGroup.cellModelArray.count == cellModel.count &&
          spListingCellGroup.cellId == validNibId &&
@@ -120,7 +120,7 @@ class SPListingCellGroupTests: XCTestCase {
    }
    
    func testBothEmptyCellModelAndCellCommonModel(){
-      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModelCommon: "" , cellModel: [], cellType: .PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCommonModel: "" , cellModel: [], cellType: .PrototypeCell)
       
       XCTAssert(spListingCellGroup.cellModelArray.count == 0 &&
          spListingCellGroup.cellId == validNibId &&
@@ -249,7 +249,7 @@ class SPListingCellGroupTests: XCTestCase {
    }
 
    func testUpdateCellCountWithOnlyCommonModel(){
-      var cellData = SPListingCellGroup(cellId: validNibId, cellCount: 5, cellModelCommon: cellCommonModel)
+      var cellData = SPListingCellGroup(cellId: validNibId, cellCount: 5, cellCommonModel: cellCommonModel)
       cellData.cellCount = 10
       XCTAssert(cellData.cellCount == 10, "SPListingCellGroup Should be valid after update")
    }

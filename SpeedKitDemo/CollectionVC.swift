@@ -11,7 +11,7 @@ import UIKit
 class CollectionVC: UIViewController{
     
     // SPListingViewProtocol
-    var spListingData : SPListingData = SPListingData([])
+    var spListingData : SPListingData = SPListingData(SectionArray: [])
     var collectionLayout = SPListingColumnBasedLayout()
 
     override func viewDidLoad() {
@@ -57,19 +57,19 @@ extension CollectionVC{
             listingCVC.collectionViewLayout = collectionLayout
             
             // Section Data Array
-            var section0 = SPListingSection(CellDataSets: [
+            var section0 = SPListingSection(CellGroups: [
                 SPListingCellGroup(
                     cellId: kCellIdSampleCollectionViewCell,
                     cellCount: 15,
-                    cellModelCommon:SampleCollectionCellModel(Title: "0 Pradip"))])
+                    cellCommonModel:SampleCollectionCellModel(Title: "0 Pradip"))])
             
-            var section1 = SPListingSection(CellDataSets: [
+            var section1 = SPListingSection(CellGroups: [
                 SPListingCellGroup(
                     cellId: kCellIdSampleCollectionViewCell,
                     cellCount: 20,
-                    cellModelCommon:SampleCollectionCellModel(Title: "1 Pradip Vaghasiya"))])
+                    cellCommonModel:SampleCollectionCellModel(Title: "1 Pradip Vaghasiya"))])
             
-            listingCVC.spListingData = SPListingData([section0,section1])
+            listingCVC.spListingData = SPListingData(SectionArray: [section0,section1])
             
             self.addChildViewController(listingCVC)
             listingCVC.view.frame = self.view.frame

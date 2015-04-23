@@ -11,18 +11,18 @@ import XCTest
 
 class SPListingSectionTests: XCTestCase {
    
-   var cellGroup1 = SPListingCellGroup(cellId: "SPTitleCellLabel", cellCount: 12, cellModelCommon: "CommonModel")
-   var cellGroup2 = SPListingCellGroup(cellId: "SPTitleCellLabel", cellModel: ["1","2","3"])
-   var cellGroup3 = SPListingCellGroup(cellId: "SPTitleCellLabel", cellModelCommon: "CommonModel", cellModel: ["1","2"])
+   var cellGroup1 = SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "CommonModel")
+   var cellGroup2 = SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])
+   var cellGroup3 = SPListingCellGroup(cellId: "SPTitleLabelCell", cellCommonModel: "CommonModel", cellModel: ["1","2"])
   
    var cellGroups : [SPListingCellGroup] = []
-   var sectionData = SPListingSection(CellDataSets: [])
+   var sectionData = SPListingSection(CellGroups: [])
    
    override func setUp() {
       super.setUp()
 
       cellGroups = [cellGroup1,cellGroup2]
-      sectionData = SPListingSection(CellDataSets: [cellGroup1,cellGroup2])
+      sectionData = SPListingSection(CellGroups: [cellGroup1,cellGroup2])
    }
    
    override func tearDown() {
@@ -38,7 +38,7 @@ class SPListingSectionTests: XCTestCase {
    }
    
    func testSectionDataWithEmptyCells(){
-      var sectionData = SPListingSection(CellDataSets: [])
+      var sectionData = SPListingSection(CellGroups: [])
       XCTAssert(sectionData.spCellGroupArray.count == 0 &&
          sectionData.sectionHeader == nil &&
          sectionData.sectionFooter == nil &&
@@ -46,7 +46,7 @@ class SPListingSectionTests: XCTestCase {
    }
    
    func testSectionDataWithSectionHeader(){
-      var sectionData = SPListingSection(CellDataSets: cellGroups, SectionHeader: "header")
+      var sectionData = SPListingSection(CellGroups: cellGroups, SectionHeader: "header")
       XCTAssert(sectionData.spCellGroupArray.count == 2 &&
          sectionData.sectionHeader == "header" &&
          sectionData.sectionFooter == nil &&
@@ -54,7 +54,7 @@ class SPListingSectionTests: XCTestCase {
    }
    
    func testSectionDataWithSectionFooter(){
-      var sectionData = SPListingSection(CellDataSets: cellGroups, SectionFooter: "footer")
+      var sectionData = SPListingSection(CellGroups: cellGroups, SectionFooter: "footer")
       XCTAssert(sectionData.spCellGroupArray.count == 2 &&
          sectionData.sectionHeader == nil &&
          sectionData.sectionFooter == "footer" &&
@@ -62,7 +62,7 @@ class SPListingSectionTests: XCTestCase {
    }
    
    func testSectionDataWithSectionHeaderNFooter(){
-      var sectionData = SPListingSection(CellDataSets: cellGroups, SectionHeader: "header", SectionFooter : "footer")
+      var sectionData = SPListingSection(CellGroups: cellGroups, SectionHeader: "header", SectionFooter : "footer")
       XCTAssert(sectionData.spCellGroupArray.count == 2 &&
          sectionData.sectionHeader == "header" &&
          sectionData.sectionFooter == "footer" &&
@@ -70,7 +70,7 @@ class SPListingSectionTests: XCTestCase {
    }
 
    func testSectionCellCountWithOneCellSet(){
-      var sectionData = SPListingSection(CellDataSets: [cellGroup1])
+      var sectionData = SPListingSection(CellGroups: [cellGroup1])
       XCTAssert(sectionData.spCellGroupArray.count == 1 &&
          sectionData.sectionHeader == nil &&
          sectionData.sectionFooter == nil &&

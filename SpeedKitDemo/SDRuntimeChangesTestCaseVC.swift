@@ -17,7 +17,7 @@ class SDRuntimeChangesTestCaseVC: UIViewController {
    
    @IBOutlet weak var spTableView: SPTableView!
    
-   var spListingData : SPListingData = SPListingData([])
+   var spListingData : SPListingData = SPListingData(SectionArray: [])
 }
 
 // MARK: ViewController Delegate
@@ -56,7 +56,7 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
       
       var spListingSection0CellData = SPListingCellGroup(
          cellId: kCellIdSPTitleLabelCell,
-         cellModelCommon: spTitleLabelCellCommonModel,
+         cellCommonModel: spTitleLabelCellCommonModel,
          cellModel: spTitleLabelSection0CellModelArray)
 
       
@@ -73,16 +73,16 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
          cellModel: spTitleLabelSection1CellModelArray)
       
       
-      var spListingSection0Data = SPListingSection(CellDataSets: [spListingSection0CellData])
+      var spListingSection0Data = SPListingSection(CellGroups: [spListingSection0CellData])
       spListingSection0Data.sectionHeader = "Section 0 Header String"
       spListingSection0Data.sectionFooter = "Section 0 Footer String"
       
-      var spListingSection1Data = SPListingSection(CellDataSets: [spListingSection1CellData])
+      var spListingSection1Data = SPListingSection(CellGroups: [spListingSection1CellData])
       spListingSection1Data.sectionHeader = "Section 1 Header String"
       spListingSection1Data.sectionFooter = "Section 1 Footer String"
       
       // Set SPListingData
-      spListingData = SPListingData([spListingSection0Data,spListingSection1Data])
+      spListingData = SPListingData(SectionArray: [spListingSection0Data,spListingSection1Data])
       spTableView.spListingData = spListingData
       
       // Set Delegate
@@ -148,9 +148,9 @@ extension SDRuntimeChangesTestCaseVC{
    ///:param: indexPAth Item needs to be edited.
    private func editItem(indexPAth: NSIndexPath){
       ///Gets CellData Set and exact index of it.
-      if let (spListingCellData, index) = spListingData.getCellDataDictionary(IndexPath: indexPAth){
+      if let (spListingCellData, index) = spListingData.getListingCellGroupWithIndexOfCellModelArray(ForIndexPath: indexPAth){
          // If it is of type SPTitleLabelCellModel then change it.
-         if let spTitleLabelCellModel = spListingCellData.cellModelArray[Int(index)] as? SPTitleLabelCellModel{
+         if let spTitleLabelCellModel = spListingCellData.cellModelArray[index] as? SPTitleLabelCellModel{
             spTitleLabelCellModel.titleText = "RowDetail Edited"
          }
       }

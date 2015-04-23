@@ -14,7 +14,7 @@ let kSegueToSDBasicTableVC = "Show SDBasicTableVC"
 // Different Cell Type including prototype cell and by code
 //private let kHeaderNFooterTestCaseString = "Header & Footer"
 //private let kMultipleSectionsTestCaseString = "Multiple Sections"
-//private let kDifferentCellDataSetsTestCaseString = "Different Cell Data Set in a Section"  // Tracking callback event from cell or didSelect would be crucial
+//private let kDifferentCellGroupsTestCaseString = "Different Cell Data Set in a Section"  // Tracking callback event from cell or didSelect would be crucial
 //private let kVariableRowHeightsTestCaseString = "Automatic Variable Row heights"
 //private let kTableViewFooterTestCaseString = "Footer using tableView Property"
 private let kRuntimeChangesTestCaseString = "Runtime changes in Listing Data"  // Check performance, ease of use.
