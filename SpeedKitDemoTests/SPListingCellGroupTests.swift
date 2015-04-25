@@ -17,7 +17,7 @@ class SPListingCellGroupTests: XCTestCase {
    var cellCommonModel : String = "Common Model"
   
    var validNibId : String = "SPTitleLabelCell"
-   var validSubClassCellId : String = "SPTitleLabelCell"
+   var validSubClassCellId : String = "SpeedKitDemo.SPTitleLabelCell"
    var validPrototypeCellId : String = "Valid Prototype" // Anyway SPListingCellGroup can not check validity.
    
    var inValidCellId : String = "InvalidNibCell"
