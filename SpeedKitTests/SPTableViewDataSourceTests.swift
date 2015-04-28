@@ -48,6 +48,13 @@ class SPTableViewDataSourceTests: XCTestCase {
             SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell),
             SPListingCellGroup(cellId: "UITableViewCell", cellModel: ["4","5","6"], cellType : SPCellType.SubclassCell)
          ]))
+      
+      listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
+         CellGroups: [
+            SPListingCellGroup(cellId: "InvalidPrototypeCell", cellModel: ["1","2","3"], cellType : SPCellType.PrototypeCell),
+            SPListingCellGroup(cellId: "PrototypeCell", cellModel: ["4","5","6"], cellType : SPCellType.PrototypeCell)
+         ]))
+
       twoSectionDatasource = SPTableViewDatasource(listingViewProtocolTestClassWithMultipleSection)
 
    }
@@ -72,7 +79,7 @@ class SPTableViewDataSourceTests: XCTestCase {
    func testNoOfSectionsWithSectionArray(){
       XCTAssert(emptyDatasource.numberOfSectionsInTableView(UITableView()) == 0 &&
          oneSectionDatasource.numberOfSectionsInTableView(UITableView()) == 1 &&
-         twoSectionDatasource.numberOfSectionsInTableView(UITableView()) == 2, "Section count should be Valid")
+         twoSectionDatasource.numberOfSectionsInTableView(UITableView()) == 3, "Section count should be Valid")
    }
    
    func testNoOfRowsInSection(){
@@ -81,7 +88,7 @@ class SPTableViewDataSourceTests: XCTestCase {
          oneSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 1) == 0 &&
          twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 0) == 15 &&
          twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 1) == 6 &&
-         twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 2) == 0, "Rows count should be valid")
+         twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 2) == 6, "Rows count should be valid")
    }
    
    
@@ -110,7 +117,9 @@ class SPTableViewDataSourceTests: XCTestCase {
    }
    
    func testCellAtIndexPathWithoutRegisteringNib(){
-      XCTAssert(false, "try catch")
+      var cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 0))
+      
+      XCTAssertNotNil(cell, "Default Cell should be created.")
    }
    
    
@@ -126,7 +135,9 @@ class SPTableViewDataSourceTests: XCTestCase {
    
    
    func testCellAtIndexPathWithoutRegisteringSubclass(){
-      XCTAssert(false, "try catch")
+      var cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 1))
+      
+      XCTAssertNotNil(cell, "Default Cell should be created.")
    }
    
    func testCellAtIndexPathWithPrototypeCell(){
@@ -135,8 +146,8 @@ class SPTableViewDataSourceTests: XCTestCase {
    }
    
    func testCellAtIndexPathWithInvalidPrototypeCell(){
-      XCTAssert(false, "try catch")
-
+      var cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 2))
+      XCTAssertNotNil(cell, "Default Cell should be created.")
    }
    
    
