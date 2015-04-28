@@ -32,7 +32,7 @@ class SPTableViewDataSourceTests: XCTestCase {
 
       listingViewProtocolTestClassWithOneSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "CommonModel"),
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: SPTitleLabelCellCommonModel(TextAlignment: NSTextAlignment.Center)),
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])
          ]))
       oneSectionDatasource = SPTableViewDatasource(listingViewProtocolTestClassWithOneSection)
@@ -41,7 +41,7 @@ class SPTableViewDataSourceTests: XCTestCase {
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "CommonModel"),
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)
-         ]))
+         ],SectionHeader : "Header",SectionFooter: "Footer"))
 
       listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
@@ -52,7 +52,9 @@ class SPTableViewDataSourceTests: XCTestCase {
       listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "InvalidPrototypeCell", cellModel: ["1","2","3"], cellType : SPCellType.PrototypeCell),
-            SPListingCellGroup(cellId: "SPTitleTestCell", cellModel: ["4","5","6"], cellType : SPCellType.PrototypeCell)
+            SPListingCellGroup(cellId: "SPTitleTestCell", cellModel: [SPTitleTestCellModel(TitleText: "4")], cellType : SPCellType.PrototypeCell),
+            SPListingCellGroup(cellId: "SPTitleTestCell", cellCount: 12, cellCommonModel: SPTitleTestCellCommonModel(TextAlignment: NSTextAlignment.Center), cellType : SPCellType.PrototypeCell)
+
          ]))
 
       twoSectionDatasource = SPTableViewDatasource(listingViewProtocolTestClassWithMultipleSection)
@@ -88,7 +90,7 @@ class SPTableViewDataSourceTests: XCTestCase {
          oneSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 1) == 0 &&
          twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 0) == 15 &&
          twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 1) == 6 &&
-         twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 2) == 6, "Rows count should be valid")
+         twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 2) == 16, "Rows count should be valid")
    }
    
    
@@ -158,9 +160,45 @@ class SPTableViewDataSourceTests: XCTestCase {
       XCTAssertNotNil(cell, "Default Cell should be created.")
    }
    
+   func testConfigureCellUsingCellModel(){
+      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      var spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
+      
+      spTableViewTestVC.view.setNeedsDisplay()
+      spTableViewTestVC.tableView.dataSource = twoSectionDatasource
+      
+      var cell : SPTitleTestCell? = twoSectionDatasource.tableView(spTableViewTestVC.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 3, inSection: 2)) as? SPTitleTestCell
+      
+      
+      XCTAssert(cell?.titleLabel?.text == "4", "Cell should be configured")
+
+   }
    
-   // configure cell protocol
-   // header n footer
+   func testConfigureCellUsingCellCommonModel(){
+      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      var spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
+      
+      spTableViewTestVC.view.setNeedsDisplay()
+      spTableViewTestVC.tableView.dataSource = twoSectionDatasource
+      
+      var cell : SPTitleTestCell? = twoSectionDatasource.tableView(spTableViewTestVC.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 6, inSection: 2)) as? SPTitleTestCell
+      
+      
+      XCTAssert(cell?.titleLabel?.textAlignment == NSTextAlignment.Center, "Cell should be configured")
+      
+   }
+
+   func testTableViewHeaderAndFooterSet(){
+      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      var spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
+      
+      spTableViewTestVC.view.setNeedsDisplay()
+      spTableViewTestVC.tableView.dataSource = twoSectionDatasource
+      
+      XCTAssert(twoSectionDatasource.tableView(spTableViewTestVC.tableView, titleForHeaderInSection: 0) == "Header" &&
+         twoSectionDatasource.tableView(spTableViewTestVC.tableView, titleForFooterInSection: 0) == "Footer", "Header and Footer should be set")
+      
+   }
    
 
 }
