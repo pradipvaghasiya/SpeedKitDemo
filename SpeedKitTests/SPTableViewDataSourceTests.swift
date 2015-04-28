@@ -52,7 +52,7 @@ class SPTableViewDataSourceTests: XCTestCase {
       listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "InvalidPrototypeCell", cellModel: ["1","2","3"], cellType : SPCellType.PrototypeCell),
-            SPListingCellGroup(cellId: "PrototypeCell", cellModel: ["4","5","6"], cellType : SPCellType.PrototypeCell)
+            SPListingCellGroup(cellId: "SPTitleTestCell", cellModel: ["4","5","6"], cellType : SPCellType.PrototypeCell)
          ]))
 
       twoSectionDatasource = SPTableViewDatasource(listingViewProtocolTestClassWithMultipleSection)
@@ -141,8 +141,16 @@ class SPTableViewDataSourceTests: XCTestCase {
    }
    
    func testCellAtIndexPathWithPrototypeCell(){
-      XCTAssert(false, "Pending Impl")
+      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      var spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
+      
+      spTableViewTestVC.view.setNeedsDisplay()
+      spTableViewTestVC.tableView.dataSource = twoSectionDatasource
 
+      var cell = twoSectionDatasource.tableView(spTableViewTestVC.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 3, inSection: 2))
+
+      XCTAssert(NSStringFromClass(cell.classForCoder) == "SpeedKitTests.SPTitleTestCell", "Test Cell should be created")
+      
    }
    
    func testCellAtIndexPathWithInvalidPrototypeCell(){
