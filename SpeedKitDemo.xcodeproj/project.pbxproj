@@ -44,6 +44,7 @@
 		28958CA41AEFC83D00E75D42 /* SPTableViewTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28958CA31AEFC83D00E75D42 /* SPTableViewTestVC.swift */; };
 		289FDB6C1ADC083E002839D4 /* SPListingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289FDB6B1ADC083E002839D4 /* SPListingData.swift */; };
 		28A99EC11AE248830004F5C6 /* SPTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EED95D1DC26E5DA74CA8E /* SPTableViewDatasource.swift */; };
+		28CCBBE41AF1205900A82682 /* SPTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CCBBE31AF1205900A82682 /* SPTableViewTests.swift */; };
 		28CD62B01AE2482D00C9B2AE /* SPListingCellGroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C8C31196D85410058C8E2 /* SPListingCellGroupTests.swift */; };
 		28CD62B11AE2484600C9B2AE /* SPUIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281998881ADCCFA700944E7F /* SPUIHelper.swift */; };
 		28CD62B21AE2484600C9B2AE /* SPSegmentControllerHolderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2813866F1A2AF42200A38D17 /* SPSegmentControllerHolderController.swift */; };
@@ -108,6 +109,7 @@
 		28958C9F1AEFC60700E75D42 /* SPTitleTestNibCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTitleTestNibCell.xib; sourceTree = "<group>"; };
 		28958CA31AEFC83D00E75D42 /* SPTableViewTestVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewTestVC.swift; sourceTree = "<group>"; };
 		289FDB6B1ADC083E002839D4 /* SPListingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingData.swift; sourceTree = "<group>"; };
+		28CCBBE31AF1205900A82682 /* SPTableViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewTests.swift; sourceTree = "<group>"; };
 		28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CD62A91AE247E500C9B2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB3EED95D1DC26E5DA74CA8E /* SPTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewDatasource.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				2849E9651AE3F25700914714 /* SPListingSectionTests.swift */,
 				2813B7141AE94214004CACA9 /* SPListingDataTests.swift */,
 				280E5F091AEB83E5003BAC96 /* SPTableViewDataSourceTests.swift */,
+				28CCBBE31AF1205900A82682 /* SPTableViewTests.swift */,
 				28CD62A81AE247E500C9B2AE /* Supporting Files */,
 			);
 			path = SpeedKitTests;
@@ -509,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28CCBBE41AF1205900A82682 /* SPTableViewTests.swift in Sources */,
 				28CD62B11AE2484600C9B2AE /* SPUIHelper.swift in Sources */,
 				2813B7151AE94214004CACA9 /* SPListingDataTests.swift in Sources */,
 				28CD62B51AE2484600C9B2AE /* SPListingSection.swift in Sources */,
