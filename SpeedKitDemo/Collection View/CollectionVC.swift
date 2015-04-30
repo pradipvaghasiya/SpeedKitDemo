@@ -33,7 +33,7 @@ class CollectionVC: UIViewController{
 
 extension CollectionVC{
     func addCollectionViewController(){
-        if let listingCVC = SPListingCollectionVC.getNewInstance(){
+        //if let listingCVC = SPListingCollectionVC.getNewInstance(){
             
             // Layout Setup
             //collectionLayout.delegate = ColumnBasedLayoutDatasource()
@@ -54,32 +54,32 @@ extension CollectionVC{
             //var flow = UICollectionViewFlowLayout()
             //flow.estimatedItemSize = CGSizeMake(300, 3)
             
-            listingCVC.collectionViewLayout = collectionLayout
-            
-            // Section Data Array
-            var section0 = SPListingSection(CellGroups: [
-                SPListingCellGroup(
-                    cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 15,
-                    cellCommonModel:SampleCollectionCellModel(Title: "0 Pradip"))])
-            
-            var section1 = SPListingSection(CellGroups: [
-                SPListingCellGroup(
-                    cellId: kCellIdSampleCollectionViewCell,
-                    cellCount: 20,
-                    cellCommonModel:SampleCollectionCellModel(Title: "1 Pradip Vaghasiya"))])
-            
-            listingCVC.spListingData = SPListingData(SectionArray: [section0,section1])
-            
-            self.addChildViewController(listingCVC)
-            listingCVC.view.frame = self.view.frame
-            self.view.addSubview(listingCVC.view)
-            listingCVC.didMoveToParentViewController(self)
-            
-            // Segment Controller
-            var segmentController = SPSegmentControllerHolderController(viewControllers: [listingCVC])
-            
-        }
+//            listingCVC.collectionViewLayout = collectionLayout
+//            
+//            // Section Data Array
+//            var section0 = SPListingSection(CellGroups: [
+//                SPListingCellGroup(
+//                    cellId: kCellIdSampleCollectionViewCell,
+//                    cellCount: 15,
+//                    cellCommonModel:SampleCollectionCellModel(Title: "0 Pradip"))])
+//            
+//            var section1 = SPListingSection(CellGroups: [
+//                SPListingCellGroup(
+//                    cellId: kCellIdSampleCollectionViewCell,
+//                    cellCount: 20,
+//                    cellCommonModel:SampleCollectionCellModel(Title: "1 Pradip Vaghasiya"))])
+//            
+//            listingCVC.spListingData = SPListingData(SectionArray: [section0,section1])
+//            
+//            self.addChildViewController(listingCVC)
+//            listingCVC.view.frame = self.view.frame
+//            self.view.addSubview(listingCVC.view)
+//            listingCVC.didMoveToParentViewController(self)
+//            
+//            // Segment Controller
+//            var segmentController = SPSegmentControllerHolderController(viewControllers: [listingCVC])
+//            
+//        }
     }
 }
 
