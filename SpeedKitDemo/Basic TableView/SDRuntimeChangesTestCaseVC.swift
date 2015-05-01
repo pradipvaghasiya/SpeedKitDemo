@@ -57,7 +57,7 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
       var spListingSection0CellData = SPListingCellGroup(
          cellId: kCellIdSPTitleLabelCell,
          cellCommonModel: spTitleLabelCellCommonModel,
-         cellModel: spTitleLabelSection0CellModelArray)
+         cellModelArray: spTitleLabelSection0CellModelArray)
 
       
    // CellData Set1 in Section 1
@@ -70,7 +70,7 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
       
       var spListingSection1CellData = SPListingCellGroup(
          cellId: kCellIdSPTitleLabelCell,
-         cellModel: spTitleLabelSection1CellModelArray)
+         cellModelArray: spTitleLabelSection1CellModelArray)
       
       
       var spListingSection0Data = SPTableViewSection(CellGroups: [spListingSection0CellData])

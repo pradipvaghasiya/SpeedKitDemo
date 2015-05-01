@@ -62,7 +62,7 @@ extension SPTitleTestCCell{
       }
       
       var spListingCellData = SPListingCellGroup(cellId: kCellIdSPTitleTestCCell,
-         cellModel: SPTitleTestCCellModelArray)
+         cellModelArray: SPTitleTestCCellModelArray)
       
       var spListingSection0Data = SPListingSection(CellGroups: [spListingCellData])
       

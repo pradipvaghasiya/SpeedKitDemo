@@ -28,7 +28,7 @@ class SPListingCellGroupTests: XCTestCase {
       spListingCellGroupWithAllDetails = SPListingCellGroup(
          cellId: validNibId,
          cellCommonModel: cellCommonModel,
-         cellModel: cellModel,
+         cellModelArray: cellModel,
          cellType: .NibCell)
       
    }
@@ -41,37 +41,37 @@ class SPListingCellGroupTests: XCTestCase {
    
    // MARK: CellDataSet Init Test Cases
    func testWithValidNibCellId() {
-      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModel: cellModel, cellType: SPCellType.NibCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModelArray: cellModel, cellType: SPCellType.NibCell)
       
       XCTAssertNotNil(spListingCellGroup.cellId, "CellDataSet Cell Id should not be nil.")
    }
    
    func testWithInValidNibCellId() {
-      var spListingCellGroup = SPListingCellGroup(cellId: inValidCellId, cellModel: cellModel, cellType: SPCellType.NibCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: inValidCellId, cellModelArray: cellModel, cellType: SPCellType.NibCell)
       
       XCTAssertNil(spListingCellGroup.cellId, "CellDataSet Cell Id should be nil.")
    }
    
    func testWithValidPrototypeCellId() {
-      var spListingCellGroup = SPListingCellGroup(cellId: validPrototypeCellId, cellModel: cellModel, cellType: SPCellType.PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validPrototypeCellId, cellModelArray: cellModel, cellType: SPCellType.PrototypeCell)
       
       XCTAssertNotNil(spListingCellGroup.cellId, "CellDataSet Cell Id should not be nil.")
    }
    
    func testWithInValidPrototypeCellId() {
-      var spListingCellGroup = SPListingCellGroup(cellId: inValidCellId, cellModel: cellModel, cellType: SPCellType.PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: inValidCellId, cellModelArray: cellModel, cellType: SPCellType.PrototypeCell)
 
       XCTAssertNotNil(spListingCellGroup.cellId, "CellDataSet Cell Id should not be nil.")
    }
    
    func testWithValidSubclassCellId() {
-      var spListingCellGroup = SPListingCellGroup(cellId: validSubClassCellId, cellModel: cellModel, cellType: SPCellType.SubclassCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validSubClassCellId, cellModelArray: cellModel, cellType: SPCellType.SubclassCell)
       
       XCTAssertNotNil(spListingCellGroup.cellId, "CellDataSet Cell Id should not be nil.")
    }
    
    func testWithInValidSubclassCellId() {
-      var spListingCellGroup = SPListingCellGroup(cellId: inValidCellId, cellModel: cellModel, cellType: SPCellType.SubclassCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: inValidCellId, cellModelArray: cellModel, cellType: SPCellType.SubclassCell)
       
       XCTAssertNil(spListingCellGroup.cellId, "CellDataSet Cell Id should be nil.")
    }
@@ -89,7 +89,7 @@ class SPListingCellGroupTests: XCTestCase {
    }
 
    func testOnlyCellModelArray(){
-      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModel: cellModel)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellModelArray: cellModel)
       
       XCTAssert(spListingCellGroup.cellModelArray.count == 2 &&
          spListingCellGroup.cellId == validNibId &&
@@ -109,7 +109,7 @@ class SPListingCellGroupTests: XCTestCase {
    }
    
    func testBothCellModelAndCellCommonModel(){
-      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCommonModel: cellCommonModel, cellModel: cellModel, cellType: .PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCommonModel: cellCommonModel, cellModelArray: cellModel, cellType: .PrototypeCell)
       
       XCTAssert(spListingCellGroup.cellModelArray.count == cellModel.count &&
          spListingCellGroup.cellId == validNibId &&
@@ -120,7 +120,7 @@ class SPListingCellGroupTests: XCTestCase {
    }
    
    func testBothEmptyCellModelAndCellCommonModel(){
-      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCommonModel: "" , cellModel: [], cellType: .PrototypeCell)
+      var spListingCellGroup = SPListingCellGroup(cellId: validNibId, cellCommonModel: "" , cellModelArray: [], cellType: .PrototypeCell)
       
       XCTAssert(spListingCellGroup.cellModelArray.count == 0 &&
          spListingCellGroup.cellId == validNibId &&

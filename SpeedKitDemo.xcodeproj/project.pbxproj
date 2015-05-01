@@ -114,7 +114,6 @@
 		285C8C1E196D85410058C8E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		285C8C20196D85410058C8E2 /* SDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDHomeViewController.swift; sourceTree = "<group>"; };
 		285C8C25196D85410058C8E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		285C8C30196D85410058C8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		285C8C31196D85410058C8E2 /* SPListingCellGroupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPListingCellGroupTests.swift; sourceTree = "<group>"; };
 		285CA8401A172AED00E5093E /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
 		28650DB21A177F6C003DEEAF /* SPListingSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPListingSection.swift; sourceTree = "<group>"; };
@@ -264,7 +263,6 @@
 				286D93F31A0DEF0600C63224 /* SpeedKit */,
 				285C8C1B196D85410058C8E2 /* SpeedKitDemo */,
 				28CD62A71AE247E500C9B2AE /* SpeedKitTests */,
-				285C8C2E196D85410058C8E2 /* SpeedKitDemoTests */,
 				285C8C1A196D85410058C8E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -296,22 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				285C8C1D196D85410058C8E2 /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		285C8C2E196D85410058C8E2 /* SpeedKitDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				285C8C2F196D85410058C8E2 /* Supporting Files */,
-			);
-			path = SpeedKitDemoTests;
-			sourceTree = "<group>";
-		};
-		285C8C2F196D85410058C8E2 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				285C8C30196D85410058C8E2 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

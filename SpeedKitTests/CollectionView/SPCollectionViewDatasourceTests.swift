@@ -33,27 +33,27 @@ class SPCollectionViewDatasourceTests: XCTestCase {
       listingViewProtocolTestClassWithOneSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: SPTitleTestCCellCommonModel(TextAlignment: NSTextAlignment.Center)),
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"]),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"]),
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2","3"])
          ]))
       oneSectionDatasource = SPCollectionViewDataSource(listingViewProtocolTestClassWithOneSection)
       
       listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "CommonModel"),
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)
          ]))
       
       listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
-            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell),
-            SPListingCellGroup(cellId: "UICollectionViewCell", cellModel: ["4","5","6"], cellType : SPCellType.SubclassCell)
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell),
+            SPListingCellGroup(cellId: "UICollectionViewCell", cellModelArray: ["4","5","6"], cellType : SPCellType.SubclassCell)
          ]))
       
       listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
-            SPListingCellGroup(cellId: "InvalidPrototypeCell", cellModel: ["1","2","3"], cellType : SPCellType.PrototypeCell),
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: [SPTitleTestCCellModel(TitleText: "4")], cellType : SPCellType.PrototypeCell),
+            SPListingCellGroup(cellId: "InvalidPrototypeCell", cellModelArray: ["1","2","3"], cellType : SPCellType.PrototypeCell),
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: [SPTitleTestCCellModel(TitleText: "4")], cellType : SPCellType.PrototypeCell),
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: SPTitleTestCCellCommonModel(TextAlignment: NSTextAlignment.Center), cellType : SPCellType.PrototypeCell)
             
          ]))

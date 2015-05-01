@@ -1,3 +1,4 @@
+
 //
 //  SPCollectionViewSectionTests.swift
 //  SpeedKitDemo
@@ -12,7 +13,7 @@ import XCTest
 class SPCollectionViewSectionTests: XCTestCase {
 
    var cellGroup1 = SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "CommonModel")
-   var cellGroup2 = SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])
+   var cellGroup2 = SPListingCellGroup(cellId: "SPTitleLabelCell",cellModelArray: ["1","2","3"])
    
    var sectionData = SPCollectionViewSection(CellGroups: [])
    

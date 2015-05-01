@@ -44,7 +44,7 @@ class SPTableViewTests: XCTestCase {
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2","3"])])])
       
       XCTAssertNotNil(spTableView.dequeueReusableCellWithIdentifier("SPTitleLabelCell"), "Nib Registered")
    }
@@ -53,7 +53,7 @@ class SPTableViewTests: XCTestCase {
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
 //      XCTAssertNil(spTableView.dequeueReusableCellWithIdentifier("SPTitleTestCCell"), "Nib should not Registered")
       ///TODO: No Try Catch in swift: spTableView.dequeueReusableCellWithIdentifier run time crash.
@@ -63,7 +63,7 @@ class SPTableViewTests: XCTestCase {
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
       
       XCTAssertNil(spTableView.dequeueReusableCellWithIdentifier("SpeedKitDemo.SPTitleTestCCell"), "Subclass should not be Registered")
    }
@@ -72,7 +72,7 @@ class SPTableViewTests: XCTestCase {
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
       
       XCTAssertNotNil(spTableView.dequeueReusableCellWithIdentifier("SpeedKitDemo.SPTitleLabelCell"), "Subclass Registered")
    }
@@ -81,9 +81,9 @@ class SPTableViewTests: XCTestCase {
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2","3"])])])
       
-      spTableView.spListingData.spListingSectionArray[0].spCellGroupArray.append(SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell))
+      spTableView.spListingData.spListingSectionArray[0].spCellGroupArray.append(SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell))
       
       XCTAssertNil(spTableView.dequeueReusableCellWithIdentifier("SpeedKitDemo.SPTitleLabelCell"), "Subclass should not be Registered")
    }
@@ -92,9 +92,9 @@ class SPTableViewTests: XCTestCase {
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2","3"])])])
       
-      var cellGroup = SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)
+      var cellGroup = SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)
       spTableView.spListingData.spListingSectionArray[0].spCellGroupArray.append(cellGroup)
       
       spTableView.registerCellsFor(CellGroup: cellGroup)
@@ -106,12 +106,12 @@ class SPTableViewTests: XCTestCase {
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2","3"])])])
       
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
       
       XCTAssertNil(spTableView.dequeueReusableCellWithIdentifier("SpeedKitDemo.SPTitleLabelCell"), "Subclass should not be Registered")
    }
@@ -120,12 +120,12 @@ class SPTableViewTests: XCTestCase {
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2","3"])])])
       
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
       
       spTableView.registerReusableCellsIfRequired()
       

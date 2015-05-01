@@ -42,7 +42,7 @@ class SPCollectionViewTests: XCTestCase {
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
       XCTAssertNotNil(spCollectionView.dequeueReusableCellWithReuseIdentifier("SPTitleTestCCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)), "Nib Registered")
    }
@@ -51,7 +51,7 @@ class SPCollectionViewTests: XCTestCase {
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2","3"])])])
       
 //      XCTAssertNotNil(spCollectionView.dequeueReusableCellWithReuseIdentifier("SPTitleLabelCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)), "Nib Registered")
       ///TODO: No Try Catch in Swift: Collectionview dequeue run time crash
@@ -63,7 +63,7 @@ class SPCollectionViewTests: XCTestCase {
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
       
       XCTAssertNotNil(spCollectionView.dequeueReusableCellWithReuseIdentifier("SpeedKitDemo.SPTitleTestCCell", forIndexPath: NSIndexPath(forRow: 12, inSection: 0)), "Subclass Registered")
    }
@@ -72,7 +72,7 @@ class SPCollectionViewTests: XCTestCase {
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
       
 //      XCTAssertNotNil(spCollectionView.dequeueReusableCellWithReuseIdentifier("SpeedKitDemo.SPTitleLabelCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)), "Subclass Registered")
       ///TODO: No Try Catch in Swift: Collectionview dequeue run time crash
@@ -84,9 +84,9 @@ class SPCollectionViewTests: XCTestCase {
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
-      spCollectionView.spListingData.spListingSectionArray[0].spCellGroupArray.append(SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell))
+      spCollectionView.spListingData.spListingSectionArray[0].spCellGroupArray.append(SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell))
       
 //      XCTAssertNil(spCollectionView.dequeueReusableCellWithReuseIdentifier("SpeedKitDemo.SPTitleTestCCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)), "Subclass should not be Registered")
       ///TODO: No Try Catch in Swift: Collectionview dequeue run time crash
@@ -97,9 +97,9 @@ class SPCollectionViewTests: XCTestCase {
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
-      var cellGroup = SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)
+      var cellGroup = SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)
       spCollectionView.spListingData.spListingSectionArray[0].spCellGroupArray.append(cellGroup)
       
       spCollectionView.registerCellsFor(CellGroup: cellGroup)
@@ -111,12 +111,12 @@ class SPCollectionViewTests: XCTestCase {
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
       
 //      XCTAssertNil(spCollectionView.dequeueReusableCellWithReuseIdentifier("SpeedKitDemo.SPTitleTestCCell", forIndexPath: NSIndexPath(forRow: 0, inSection: 0)), "Subclass should not be Registered")
       ///TODO: No Try Catch in Swift: Collectionview dequeue run time crash
@@ -127,12 +127,12 @@ class SPCollectionViewTests: XCTestCase {
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"])])])
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
       spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
-            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
       
       spCollectionView.registerReusableCellsIfRequired()
       

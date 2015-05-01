@@ -21,7 +21,7 @@ class SPListingDataTests: XCTestCase {
          SectionArray: [SPListingSection(
             CellGroups: [
                SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "CommonModel"),
-               SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])
+               SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2","3"])
             ])
          ]
       )
@@ -79,7 +79,7 @@ class SPListingDataTests: XCTestCase {
       spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "CommonModel"),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2"])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2"])
          ]))
       
       XCTAssert(spListingData.cellCountOfSection(0) == 15 &&
@@ -100,12 +100,12 @@ class SPListingDataTests: XCTestCase {
    func testGetListingCellGroupWithIndexOfCellModelArrayMultipleSectionSingleCellGroup(){
       spListingDataWithEmptySectionArray.spListingSectionArray.append(SPListingSection(
          CellGroups: [
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2"])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2"])
          ]))
       
       spListingDataWithEmptySectionArray.spListingSectionArray.append(SPListingSection(
          CellGroups: [
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["3","4"])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["3","4"])
          ]))
       
       var (cellGroup1, cellModelIndex1) = spListingDataWithEmptySectionArray.getListingCellGroupWithIndexOfCellModelArray(ForIndexPath: NSIndexPath(forRow: 1, inSection: 0))!
@@ -120,8 +120,8 @@ class SPListingDataTests: XCTestCase {
       
       spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["4","5"]),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2"])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["4","5"]),
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModelArray: ["1","2"])
          ]))
 
       var (cellGroup1, cellModelIndex1) = spListingData.getListingCellGroupWithIndexOfCellModelArray(ForIndexPath: NSIndexPath(forRow: 1, inSection: 0))!  // commonmodel
