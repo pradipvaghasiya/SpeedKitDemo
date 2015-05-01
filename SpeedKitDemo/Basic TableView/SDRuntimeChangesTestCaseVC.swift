@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-///TODO: Add changes test cases with multiple section and multiple cell Data Sets
 ///Storyboard Segue id for segue to this controller
 let kSegueToSDRuntimeChangesTestCaseVC = "Show SDRuntimeChangesTestCaseVC"
 
@@ -111,7 +109,6 @@ extension SDRuntimeChangesTestCaseVC{
    }
    
    
-   ///TODO: How to unit test private functions
    ///Inserts item in first cellData types in first section SPListingData.
    ///
    ///:param: item Item needs to be added.
