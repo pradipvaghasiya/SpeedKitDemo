@@ -33,7 +33,8 @@ class SPTableViewDataSourceTests: XCTestCase {
       listingViewProtocolTestClassWithOneSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: SPTitleLabelCellCommonModel(TextAlignment: NSTextAlignment.Center)),
-            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"])
+            SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"]),
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"])
          ]))
       oneSectionDatasource = SPTableViewDatasource(listingViewProtocolTestClassWithOneSection)
       
@@ -86,7 +87,7 @@ class SPTableViewDataSourceTests: XCTestCase {
    
    func testNoOfRowsInSection(){
       XCTAssert(emptyDatasource.tableView(UITableView(), numberOfRowsInSection: 0) == 0 &&
-         oneSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 0) == 15 &&
+         oneSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 0) == 18 &&
          oneSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 1) == 0 &&
          twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 0) == 15 &&
          twoSectionDatasource.tableView(UITableView(), numberOfRowsInSection: 1) == 6 &&
@@ -106,6 +107,18 @@ class SPTableViewDataSourceTests: XCTestCase {
       
       var cell = twoSectionDatasource.tableView(tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 3, inSection: 1))
       XCTAssertNotNil(cell, "Default Cell should be created If not conform to SPListingViewProtocol")
+   }
+
+   func testCellAtIndexPathWithWrongTypeNibCell(){
+//      var tableView = UITableView()
+//      tableView.registerNib(UINib(nibName: "SPTitleTestCCell", bundle: nil), forCellReuseIdentifier: "SPTitleTestCCell")
+//      tableView.dataSource = oneSectionDatasource
+//      
+//      var cell = oneSectionDatasource.tableView(tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 16, inSection: 0))
+//      
+//      XCTAssert(NSStringFromClass(cell.classForCoder) == "SpeedKitDemo.SPTitleTestCCell", "Nib Cell should not be created")
+      
+      ///TODO: No Try Catch in Swift: Uncomment above code, this will throw runtime exception. It tries to use nib file for which root object is not tableviewcell
    }
 
    func testCellAtIndexPathWithNibCell(){

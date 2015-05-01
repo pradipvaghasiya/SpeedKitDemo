@@ -49,6 +49,25 @@ class SPTableViewTests: XCTestCase {
       XCTAssertNotNil(spTableView.dequeueReusableCellWithIdentifier("SPTitleLabelCell"), "Nib Registered")
    }
    
+   func testDatasourceWrongTypeNibsRegistered(){
+      spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
+         CellGroups: [
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"])])])
+      
+//      XCTAssertNil(spTableView.dequeueReusableCellWithIdentifier("SPTitleTestCCell"), "Nib should not Registered")
+      ///TODO: No Try Catch in swift: spTableView.dequeueReusableCellWithIdentifier run time crash.
+   }
+   
+   func testDatasourceWrongTypeSubClassRegistered(){
+      spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
+         CellGroups: [
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
+            SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)])])
+      
+      XCTAssertNil(spTableView.dequeueReusableCellWithIdentifier("SpeedKitDemo.SPTitleTestCCell"), "Subclass should not be Registered")
+   }
+   
    func testDatasourceSubClassRegistered(){
       spTableView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
