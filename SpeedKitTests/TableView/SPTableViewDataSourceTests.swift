@@ -30,7 +30,7 @@ class SPTableViewDataSourceTests: XCTestCase {
       // Put setup code here. This method is called before the invocation of each test method in the class.
       emptyDatasource = SPTableViewDatasource(listingViewProtocolTestClass)
 
-      listingViewProtocolTestClassWithOneSection.spListingData.spListingSectionArray.append(SPListingSection(
+      listingViewProtocolTestClassWithOneSection.spListingData.spListingSectionArray.append(SPTableViewSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: SPTitleLabelCellCommonModel(TextAlignment: NSTextAlignment.Center)),
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"]),
@@ -38,19 +38,19 @@ class SPTableViewDataSourceTests: XCTestCase {
          ]))
       oneSectionDatasource = SPTableViewDatasource(listingViewProtocolTestClassWithOneSection)
       
-      listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
+      listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPTableViewSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellCount: 12, cellCommonModel: "CommonModel"),
             SPListingCellGroup(cellId: "SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)
          ],SectionHeader : "Header",SectionFooter: "Footer"))
 
-      listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
+      listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPTableViewSection(
          CellGroups: [
             SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleLabelCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell),
             SPListingCellGroup(cellId: "UITableViewCell", cellModel: ["4","5","6"], cellType : SPCellType.SubclassCell)
          ]))
       
-      listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
+      listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPTableViewSection(
          CellGroups: [
             SPListingCellGroup(cellId: "InvalidPrototypeCell", cellModel: ["1","2","3"], cellType : SPCellType.PrototypeCell),
             SPListingCellGroup(cellId: "SPTitleTestCell", cellModel: [SPTitleTestCellModel(TitleText: "4")], cellType : SPCellType.PrototypeCell),

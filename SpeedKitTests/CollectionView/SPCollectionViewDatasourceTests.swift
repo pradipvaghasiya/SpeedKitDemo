@@ -42,7 +42,7 @@ class SPCollectionViewDatasourceTests: XCTestCase {
          CellGroups: [
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "CommonModel"),
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellModel: ["1","2","3"], cellType : SPCellType.SubclassCell)
-         ],SectionHeader : "Header",SectionFooter: "Footer"))
+         ]))
       
       listingViewProtocolTestClassWithMultipleSection.spListingData.spListingSectionArray.append(SPListingSection(
          CellGroups: [

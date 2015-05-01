@@ -73,11 +73,11 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
          cellModel: spTitleLabelSection1CellModelArray)
       
       
-      var spListingSection0Data = SPListingSection(CellGroups: [spListingSection0CellData])
+      var spListingSection0Data = SPTableViewSection(CellGroups: [spListingSection0CellData])
       spListingSection0Data.sectionHeader = "Section 0 Header String"
       spListingSection0Data.sectionFooter = "Section 0 Footer String"
       
-      var spListingSection1Data = SPListingSection(CellGroups: [spListingSection1CellData])
+      var spListingSection1Data = SPTableViewSection(CellGroups: [spListingSection1CellData])
       spListingSection1Data.sectionHeader = "Section 1 Header String"
       spListingSection1Data.sectionFooter = "Section 1 Footer String"
       
