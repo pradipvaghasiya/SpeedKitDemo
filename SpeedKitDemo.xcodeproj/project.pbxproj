@@ -16,6 +16,18 @@
 		282135F71A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */; };
 		282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */; };
 		282337271A1733F90003F3C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282337261A1733F90003F3C4 /* Main.storyboard */; };
+		2824946E1AF3C56100074BCF /* SPFixedColumnRowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824946D1AF3C56100074BCF /* SPFixedColumnRowLayout.swift */; };
+		282494701AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824946F1AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift */; };
+		282494721AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282494711AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift */; };
+		282494751AF3C61900074BCF /* SPFixedColumnRowLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282494741AF3C61900074BCF /* SPFixedColumnRowLayoutTests.swift */; };
+		282494771AF3C62600074BCF /* SPFixedColumnRowVerticalLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282494761AF3C62600074BCF /* SPFixedColumnRowVerticalLayoutTests.swift */; };
+		282494791AF3C63500074BCF /* SPFixedColumnRowHorizontalLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282494781AF3C63500074BCF /* SPFixedColumnRowHorizontalLayoutTests.swift */; };
+		2824947A1AF3C64200074BCF /* SPFixedColumnRowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824946D1AF3C56100074BCF /* SPFixedColumnRowLayout.swift */; };
+		2824947B1AF3C64200074BCF /* SPFixedColumnRowVerticalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824946F1AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift */; };
+		2824947C1AF3C64200074BCF /* SPFixedColumnRowHorizontalLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282494711AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift */; };
+		2824947E1AF3D59200074BCF /* SPCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824947D1AF3D59200074BCF /* SPCollectionViewLayout.swift */; };
+		282494801AF3D5DC00074BCF /* SPCollectionViewLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824947F1AF3D5DC00074BCF /* SPCollectionViewLayoutTests.swift */; };
+		282494811AF3D61300074BCF /* SPCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824947D1AF3D59200074BCF /* SPCollectionViewLayout.swift */; };
 		28310E261AF36FA900F4CC7F /* SPCollectionViewDatasourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28310E251AF36FA900F4CC7F /* SPCollectionViewDatasourceTests.swift */; };
 		28310E271AF3704E00F4CC7F /* SPCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D93FF1A0DEF0600C63224 /* SPCollectionViewDataSource.swift */; };
 		28310E281AF371A300F4CC7F /* SPListingColumnBasedLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28332AFD1A38022200CFFA56 /* SPListingColumnBasedLayout.swift */; };
@@ -95,6 +107,14 @@
 		282135F61A1F009600DA23CB /* ColumnBasedLayoutDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColumnBasedLayoutDatasource.swift; sourceTree = "<group>"; };
 		282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		282337261A1733F90003F3C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		2824946D1AF3C56100074BCF /* SPFixedColumnRowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowLayout.swift; sourceTree = "<group>"; };
+		2824946F1AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowVerticalLayout.swift; sourceTree = "<group>"; };
+		282494711AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowHorizontalLayout.swift; sourceTree = "<group>"; };
+		282494741AF3C61900074BCF /* SPFixedColumnRowLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowLayoutTests.swift; sourceTree = "<group>"; };
+		282494761AF3C62600074BCF /* SPFixedColumnRowVerticalLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowVerticalLayoutTests.swift; sourceTree = "<group>"; };
+		282494781AF3C63500074BCF /* SPFixedColumnRowHorizontalLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowHorizontalLayoutTests.swift; sourceTree = "<group>"; };
+		2824947D1AF3D59200074BCF /* SPCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPCollectionViewLayout.swift; sourceTree = "<group>"; };
+		2824947F1AF3D5DC00074BCF /* SPCollectionViewLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPCollectionViewLayoutTests.swift; sourceTree = "<group>"; };
 		28310E251AF36FA900F4CC7F /* SPCollectionViewDatasourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPCollectionViewDatasourceTests.swift; sourceTree = "<group>"; };
 		28310E2C1AF377B200F4CC7F /* SPTitleTestCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTitleTestCCell.xib; sourceTree = "<group>"; };
 		28310E2E1AF3781300F4CC7F /* SPTitleTestCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTitleTestCCell.swift; sourceTree = "<group>"; };
@@ -183,6 +203,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		282494731AF3C60E00074BCF /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				2824947F1AF3D5DC00074BCF /* SPCollectionViewLayoutTests.swift */,
+				282494741AF3C61900074BCF /* SPFixedColumnRowLayoutTests.swift */,
+				282494761AF3C62600074BCF /* SPFixedColumnRowVerticalLayoutTests.swift */,
+				282494781AF3C63500074BCF /* SPFixedColumnRowHorizontalLayoutTests.swift */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
 		28310E221AF36F4F00F4CC7F /* TableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +229,7 @@
 		28310E231AF36F5600F4CC7F /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				282494731AF3C60E00074BCF /* Layout */,
 				28310E251AF36FA900F4CC7F /* SPCollectionViewDatasourceTests.swift */,
 				28310E341AF3827500F4CC7F /* SPCollectionViewTests.swift */,
 				28310E2C1AF377B200F4CC7F /* SPTitleTestCCell.xib */,
@@ -225,6 +257,10 @@
 				28332AFD1A38022200CFFA56 /* SPListingColumnBasedLayout.swift */,
 				28332AFE1A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift */,
 				28332AFF1A38022200CFFA56 /* SPListingColumnBasedLayoutInvalidationContext.swift */,
+				2824947D1AF3D59200074BCF /* SPCollectionViewLayout.swift */,
+				2824946D1AF3C56100074BCF /* SPFixedColumnRowLayout.swift */,
+				2824946F1AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift */,
+				282494711AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -521,14 +557,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				282494701AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift in Sources */,
 				2894619D1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift in Sources */,
+				2824947E1AF3D59200074BCF /* SPCollectionViewLayout.swift in Sources */,
 				285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */,
+				2824946E1AF3C56100074BCF /* SPFixedColumnRowLayout.swift in Sources */,
 				287AC6B31972A5850096BCD3 /* SPTitleLabelCell.swift in Sources */,
 				281998891ADCCFA700944E7F /* SPUIHelper.swift in Sources */,
 				283BF2391AF3897700595240 /* SPTableViewSection.swift in Sources */,
 				28650DB31A177F6C003DEEAF /* SPListingSection.swift in Sources */,
 				28332B011A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift in Sources */,
 				286D940E1A0DEF0600C63224 /* SPListingViewProtocol.swift in Sources */,
+				282494721AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift in Sources */,
 				28CCBBE61AF1282200A82682 /* SPLogger.swift in Sources */,
 				289FDB6C1ADC083E002839D4 /* SPListingData.swift in Sources */,
 				28310E311AF37AE200F4CC7F /* SPTitleTestCCell.swift in Sources */,
@@ -556,8 +596,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				28CCBBE41AF1205900A82682 /* SPTableViewTests.swift in Sources */,
+				282494811AF3D61300074BCF /* SPCollectionViewLayout.swift in Sources */,
 				28CD62B11AE2484600C9B2AE /* SPUIHelper.swift in Sources */,
+				282494771AF3C62600074BCF /* SPFixedColumnRowVerticalLayoutTests.swift in Sources */,
 				2813B7151AE94214004CACA9 /* SPListingDataTests.swift in Sources */,
+				2824947B1AF3C64200074BCF /* SPFixedColumnRowVerticalLayout.swift in Sources */,
 				28310E351AF3827500F4CC7F /* SPCollectionViewTests.swift in Sources */,
 				28CD62B51AE2484600C9B2AE /* SPListingSection.swift in Sources */,
 				28CD62B41AE2484600C9B2AE /* SPListingData.swift in Sources */,
@@ -573,15 +616,20 @@
 				28CD62B61AE2484600C9B2AE /* SPListingCellGroup.swift in Sources */,
 				28310E281AF371A300F4CC7F /* SPListingColumnBasedLayout.swift in Sources */,
 				28CD62B71AE2484600C9B2AE /* SPListingCellProtocol.swift in Sources */,
+				282494751AF3C61900074BCF /* SPFixedColumnRowLayoutTests.swift in Sources */,
 				28A99EC11AE248830004F5C6 /* SPTableViewDatasource.swift in Sources */,
 				28CD62B91AE2484600C9B2AE /* SPTableView.swift in Sources */,
+				2824947C1AF3C64200074BCF /* SPFixedColumnRowHorizontalLayout.swift in Sources */,
 				28CD62B81AE2484600C9B2AE /* SPListingViewProtocol.swift in Sources */,
 				283BF23F1AF38BC500595240 /* SPTableViewSectionTests.swift in Sources */,
 				28310E271AF3704E00F4CC7F /* SPCollectionViewDataSource.swift in Sources */,
+				282494801AF3D5DC00074BCF /* SPCollectionViewLayoutTests.swift in Sources */,
 				28CD62B21AE2484600C9B2AE /* SPSegmentControllerHolderController.swift in Sources */,
+				282494791AF3C63500074BCF /* SPFixedColumnRowHorizontalLayoutTests.swift in Sources */,
 				28CCBBE71AF12A5E00A82682 /* SPLogger.swift in Sources */,
 				28CD62B01AE2482D00C9B2AE /* SPListingCellGroupTests.swift in Sources */,
 				28958CA41AEFC83D00E75D42 /* SPTableViewTestVC.swift in Sources */,
+				2824947A1AF3C64200074BCF /* SPFixedColumnRowLayout.swift in Sources */,
 				28310E291AF371A600F4CC7F /* SPListingColumnBasedLayoutInvalidationContext.swift in Sources */,
 				283BF2421AF38DA500595240 /* SPCollectionViewSection.swift in Sources */,
 				28310E2A1AF371A800F4CC7F /* SPListingColumnBasedLayoutDelegate.swift in Sources */,
