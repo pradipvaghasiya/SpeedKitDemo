@@ -79,18 +79,13 @@ class SPFixedColumnRowVC: UIViewController {
    
    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
       super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-      println(self.spCollectionView.bounds)
       dispatch_async(dispatch_get_main_queue(), { () -> Void in
-         self.spCollectionView.collectionViewLayout.invalidateLayout()
+         self.spCollectionView.performBatchUpdates({ () -> Void in
+            self.spCollectionView.collectionViewLayout.invalidateLayout()
+         }, completion: nil)
       })
       
    }
-   
-   override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-      println(self.spCollectionView.bounds)
-
-   }
-   
 }
 
 class SPFixedColumRowLayoutDelegate : NSObject, SPFixedColumnRowLayoutDelegate{
