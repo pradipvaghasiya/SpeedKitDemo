@@ -71,7 +71,8 @@ extension SDHomeViewController{
         // This is the model we need to show in TableView
         var section0Rows = [
             "Basic TableView",
-            "Custom TableView"]
+            "Custom TableView",
+      "Fixed Column and Row CollectionView"]
         
         // Assign spListingData to SPTableView
         spTableView.spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
@@ -89,9 +90,14 @@ extension SDHomeViewController : UITableViewDelegate{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
-        if indexPath.section == 0 && indexPath.row == 0{
-            self.performSegueWithIdentifier(kSegueToSDBasicTableVC, sender: self)
-        }
+      switch(indexPath.row){
+      case 0:
+         self.performSegueWithIdentifier(kSegueToSDBasicTableVC, sender: self)
+      case 2:
+         self.performSegueWithIdentifier(kSegueToSPFixedColumnRowVC, sender: self)
+      default:
+         break
+      }
     }
 }
 
