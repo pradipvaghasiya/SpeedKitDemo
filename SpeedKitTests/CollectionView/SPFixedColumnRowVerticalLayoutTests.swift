@@ -35,8 +35,8 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
    
    func testLayoutCreation() {
       // This is an example of a functional test case.
-      XCTAssert(layout.noOfColumns == 10 &&
-         layout.noOfRows == 10, "Pass")
+      XCTAssert(layout.noOfColumns == 3 &&
+         layout.noOfRows == 3, "Pass")
    }
    
    func testAttributeCalculationWithCollectionViewNil(){
@@ -84,22 +84,65 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
       
       layout.prepareLayout()
       
-      for (indexPath,value) in layout.attributesDictionary{
-         println("\(indexPath.section):\(indexPath.row) - \(value.frame)")
-      }
+      XCTAssert(layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 0)]?.frame.origin.x == 20.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 0)]?.frame.origin.y == 10.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 2, inSection: 0)]?.frame.origin.x == 295.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 2, inSection: 0)]?.frame.origin.y == 10.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 0)]?.frame.origin.x == 20.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 0)]?.frame.origin.y == 198.33 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 5, inSection: 0)]?.frame.origin.x == 157.5 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 5, inSection: 0)]?.frame.origin.y == 198.33 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.origin.x == 30.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.origin.y == 1016.65 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 3, inSection: 1)]?.frame.origin.x == 30.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 3, inSection: 1)]?.frame.origin.y == 1154.15 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 1)]?.frame.origin.x == 218.33 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 1)]?.frame.origin.y == 1154.15 , "Height and Width should be valid")
    }
    
    
    func testAttributeCalculationWithSectionDetailsAndSomeEmptySection(){
+      spCollectionViewTestVC!.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
+         CellGroups: [
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])]),
+         SPListingSection(
+            CellGroups: [
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
+      layout.prepareLayout()
+
    }
    
    func testTotalCountForAttributesDictionary(){
+      spCollectionViewTestVC!.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
+         CellGroups: []),
+         SPListingSection(
+            CellGroups: [
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
+      layout.prepareLayout()
+      
+      XCTAssert(true, "No Run time error in case of empty section")
+
    }
    
    func testTotalCountForSectionSizeDictionary(){
+      spCollectionViewTestVC!.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
+         CellGroups: [
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])]),
+         SPListingSection(
+            CellGroups: [
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
+      layout.prepareLayout()
+      
+      XCTAssert(layout.sectionSizeDictionary.count == 2, "Proper sectionSizeDictionary should be created")
+
    }
 
 }

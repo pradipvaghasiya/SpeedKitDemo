@@ -35,12 +35,12 @@ class SPFixedColumnRowLayoutTests: XCTestCase {
    
    func testNoOfRowsFromDelegate(){
       layout.delegate = delegate
-      XCTAssert(layout.noOfRows(ForSection: 0) == 10, "Linspacing should be valid.")
+      XCTAssert(layout.noOfRows(ForSection: 0) == 3, "Linspacing should be valid.")
    }
 
    func testNoOfColumnsFromDelegate(){
       layout.delegate = delegate
-      XCTAssert(layout.noOfColumns(ForSection: 1) == 21, "NoOfColumns should be valid.")
+      XCTAssert(layout.noOfColumns(ForSection: 1) == 3, "NoOfColumns should be valid.")
    }
 
 }

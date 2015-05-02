@@ -105,7 +105,6 @@ class SPFixedColumRowLayoutDelegate : NSObject, SPFixedColumnRowLayoutDelegate{
    
    ///Gets Line spacing required for that section.
    func lineSpacing(ForSection section : Int) -> CGFloat{
-      return 10
       if section == 0 {
          return 5
       }
@@ -122,7 +121,6 @@ class SPFixedColumRowLayoutDelegate : NSObject, SPFixedColumnRowLayoutDelegate{
    
    ///Gets Section Inset required for that section
    func sectionInset(ForSection section : Int) -> UIEdgeInsets{
-      return UIEdgeInsetsMake(10, 10, 10, 10)
       if section == 0 {
          return UIEdgeInsetsMake(10, 20, 30, 40)
       }
