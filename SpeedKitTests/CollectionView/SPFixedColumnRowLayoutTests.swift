@@ -10,13 +10,13 @@ import UIKit
 import XCTest
 
 class SPFixedColumnRowLayoutTests: XCTestCase {
-   var layout = SPFixedColumnRowLayout()
+   var layout = SPFixedColumnRowLayout(NoOfRows: 3, NoOfColumns: 3)
 
    override func setUp() {
       super.setUp()
       // Put setup code here. This method is called before the invocation of each test method in the class.
       
-      layout = SPFixedColumnRowLayout()
+      layout = SPFixedColumnRowLayout(NoOfRows: 3, NoOfColumns: 3)
    }
    
    override func tearDown() {

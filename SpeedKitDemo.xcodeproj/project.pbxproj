@@ -442,8 +442,8 @@
 			isa = PBXGroup;
 			children = (
 				2824946D1AF3C56100074BCF /* SPFixedColumnRowLayout.swift */,
-				2824946F1AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift */,
 				28DBC78C1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift */,
+				2824946F1AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift */,
 				282494711AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift */,
 			);
 			name = "Fixed Column and Row";
