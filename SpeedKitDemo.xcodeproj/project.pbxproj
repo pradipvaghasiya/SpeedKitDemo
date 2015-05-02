@@ -85,6 +85,10 @@
 		28CD62B81AE2484600C9B2AE /* SPListingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94021A0DEF0600C63224 /* SPListingViewProtocol.swift */; };
 		28CD62B91AE2484600C9B2AE /* SPTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894619E1ADF71E9007C6E56 /* SPTableView.swift */; };
 		28CD62BA1AE2484600C9B2AE /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */; };
+		28DBC7891AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7881AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift */; };
+		28DBC78A1AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7881AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift */; };
+		28DBC78D1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC78C1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift */; };
+		28DBC78E1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC78C1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift */; };
 		EB3EEE6FF5C01E5AE0BBC517 /* SPTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EED95D1DC26E5DA74CA8E /* SPTableViewDatasource.swift */; };
 /* End PBXBuildFile section */
 
@@ -156,6 +160,8 @@
 		28CCBBE51AF1282200A82682 /* SPLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLogger.swift; sourceTree = "<group>"; };
 		28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CD62A91AE247E500C9B2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28DBC7881AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPCollectionViewLayoutDelegate.swift; sourceTree = "<group>"; };
+		28DBC78C1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowVerticalLayoutDelegate.swift; sourceTree = "<group>"; };
 		EB3EED95D1DC26E5DA74CA8E /* SPTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,13 +260,12 @@
 		28351B721A19B88E005C56D8 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				2824947D1AF3D59200074BCF /* SPCollectionViewLayout.swift */,
+				28DBC7881AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift */,
+				28DBC78B1AF48A7300D7A012 /* Fixed Column and Row */,
 				28332AFD1A38022200CFFA56 /* SPListingColumnBasedLayout.swift */,
 				28332AFE1A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift */,
 				28332AFF1A38022200CFFA56 /* SPListingColumnBasedLayoutInvalidationContext.swift */,
-				2824947D1AF3D59200074BCF /* SPCollectionViewLayout.swift */,
-				2824946D1AF3C56100074BCF /* SPFixedColumnRowLayout.swift */,
-				2824946F1AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift */,
-				282494711AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -433,6 +438,17 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		28DBC78B1AF48A7300D7A012 /* Fixed Column and Row */ = {
+			isa = PBXGroup;
+			children = (
+				2824946D1AF3C56100074BCF /* SPFixedColumnRowLayout.swift */,
+				2824946F1AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift */,
+				28DBC78C1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift */,
+				282494711AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift */,
+			);
+			name = "Fixed Column and Row";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -559,6 +575,7 @@
 			files = (
 				282494701AF3C5E800074BCF /* SPFixedColumnRowVerticalLayout.swift in Sources */,
 				2894619D1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift in Sources */,
+				28DBC7891AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift in Sources */,
 				2824947E1AF3D59200074BCF /* SPCollectionViewLayout.swift in Sources */,
 				285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */,
 				2824946E1AF3C56100074BCF /* SPFixedColumnRowLayout.swift in Sources */,
@@ -574,6 +591,7 @@
 				28310E311AF37AE200F4CC7F /* SPTitleTestCCell.swift in Sources */,
 				286D940B1A0DEF0600C63224 /* SPCollectionViewDataSource.swift in Sources */,
 				283BF2411AF38D1E00595240 /* SPCollectionViewSection.swift in Sources */,
+				28DBC78D1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift in Sources */,
 				28332B001A38022200CFFA56 /* SPListingColumnBasedLayout.swift in Sources */,
 				282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */,
 				28332B021A38022200CFFA56 /* SPListingColumnBasedLayoutInvalidationContext.swift in Sources */,
@@ -599,12 +617,14 @@
 				282494811AF3D61300074BCF /* SPCollectionViewLayout.swift in Sources */,
 				28CD62B11AE2484600C9B2AE /* SPUIHelper.swift in Sources */,
 				282494771AF3C62600074BCF /* SPFixedColumnRowVerticalLayoutTests.swift in Sources */,
+				28DBC78E1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift in Sources */,
 				2813B7151AE94214004CACA9 /* SPListingDataTests.swift in Sources */,
 				2824947B1AF3C64200074BCF /* SPFixedColumnRowVerticalLayout.swift in Sources */,
 				28310E351AF3827500F4CC7F /* SPCollectionViewTests.swift in Sources */,
 				28CD62B51AE2484600C9B2AE /* SPListingSection.swift in Sources */,
 				28CD62B41AE2484600C9B2AE /* SPListingData.swift in Sources */,
 				280E5F0A1AEB83E5003BAC96 /* SPTableViewDataSourceTests.swift in Sources */,
+				28DBC78A1AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift in Sources */,
 				28310E2B1AF371AC00F4CC7F /* SPCollectionView.swift in Sources */,
 				28310E331AF380DC00F4CC7F /* SPCollectionViewTestVC.swift in Sources */,
 				283BF2441AF38DBD00595240 /* SPCollectionViewSectionTests.swift in Sources */,
