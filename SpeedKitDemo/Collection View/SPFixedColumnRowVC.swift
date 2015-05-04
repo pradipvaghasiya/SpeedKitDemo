@@ -11,16 +11,20 @@ import UIKit
 let kSegueToSPFixedColumnRowVC = "SPFixedColumnRowVC"
 
 class SPFixedColumnRowVC: UIViewController {
-
-   @IBOutlet weak var spCollectionView: SPCollectionView!
-   var layout = SPFixedColumnRowVerticalLayout(NoOfRows: 3, NoOfColumns: 3)
-   private var delegate = SPFixedColumRowLayoutDelegate()
-
    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+   @IBOutlet weak var spCollectionView: SPCollectionView!
+   
+   var isVertical : Bool = true
+   
+   lazy var verticalLayout = SPFixedColumnRowVerticalLayout()
+   lazy var horizontalLayout = SPFixedColumnRowHorizontalLayout()
+   
+   private var delegate = SPFixedColumRowLayoutDelegate()
+   
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      // Do any additional setup after loading the view.
       
       self.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
@@ -51,27 +55,31 @@ class SPFixedColumnRowVC: UIViewController {
                SPTitleTestCCellModel(TitleText: "7"),
                SPTitleTestCCellModel(TitleText: "8"),
                SPTitleTestCCellModel(TitleText: "9"),
-])]
+               ])]
          )
          ]
       )
       
-
-      layout.delegate = delegate
-      self.spCollectionView.collectionViewLayout = layout
+      if isVertical{
+         verticalLayout.delegate = delegate
+         self.spCollectionView.collectionViewLayout = verticalLayout
+      }else{
+         horizontalLayout.delegate = delegate
+         self.spCollectionView.collectionViewLayout = horizontalLayout
+      }
    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
+   override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+   }
+   
    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
       super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
       dispatch_async(dispatch_get_main_queue(), { () -> Void in
          self.spCollectionView.performBatchUpdates({ () -> Void in
             self.spCollectionView.collectionViewLayout.invalidateLayout()
-         }, completion: nil)
+            }, completion: nil)
       })
       
    }

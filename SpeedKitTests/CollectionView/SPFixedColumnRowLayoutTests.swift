@@ -19,7 +19,13 @@ class SPFixedColumnRowLayoutTests: XCTestCase {
       
       layout = SPFixedColumnRowLayout(NoOfRows: 3, NoOfColumns:4)
    }
-   
+
+   func testEmptyCreation(){
+      layout = SPFixedColumnRowLayout()
+      XCTAssert(layout.noOfRows == 3 &&
+         layout.noOfColumns == 3, "Layout should be Created")
+   }
+
    func testCreation(){
       XCTAssert(layout.noOfRows == 3 &&
          layout.noOfColumns == 4, "Layout should be Created")

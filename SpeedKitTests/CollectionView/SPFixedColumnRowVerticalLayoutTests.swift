@@ -33,6 +33,12 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
       super.tearDown()
    }
    
+   func testEmptyCreation(){
+      layout = SPFixedColumnRowVerticalLayout()
+      XCTAssert(layout.noOfRows == 3 &&
+         layout.noOfColumns == 3, "Layout should be Created")
+   }
+
    func testLayoutCreation() {
       // This is an example of a functional test case.
       XCTAssert(layout.noOfColumns == 3 &&
