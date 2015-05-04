@@ -66,17 +66,6 @@ class SPFixedColumnRowVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-   
    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
       super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
       dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -102,31 +91,5 @@ class SPFixedColumRowLayoutDelegate : NSObject, SPFixedColumnRowLayoutDelegate{
       }
       return 3
    }
-   
-   ///Gets Line spacing required for that section.
-   func lineSpacing(ForSection section : Int) -> CGFloat{
-      if section == 0 {
-         return 5
-      }
-      return 10
-   }
-   
-   ///Gets Inter item spacing required for that section.
-   func interItemSpacing(ForSection section : Int) -> CGFloat{
-      if section == 0 {
-         return 10
-      }
-      return 5
-   }
-   
-   ///Gets Section Inset required for that section
-   func sectionInset(ForSection section : Int) -> UIEdgeInsets{
-      if section == 0 {
-         return UIEdgeInsetsMake(10, 20, 30, 40)
-      }
-      return UIEdgeInsetsMake(40, 30, 20, 10)
-      
-   }
-   
    
 }

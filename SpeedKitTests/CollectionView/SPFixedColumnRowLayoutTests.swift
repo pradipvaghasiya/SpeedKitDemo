@@ -43,6 +43,25 @@ class SPFixedColumnRowLayoutTests: XCTestCase {
       XCTAssert(layout.noOfColumns(ForSection: 1) == 3, "NoOfColumns should be valid.")
    }
 
+   func testPrepareLayout(){
+      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      var spCollectionViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPCollectionViewTestVC") as? SPCollectionViewTestVC)!
+      spCollectionViewTestVC.view.setNeedsDisplay()
+      spCollectionViewTestVC.spCollectionView.collectionViewLayout = layout
+      layout.delegate = delegate
+      spCollectionViewTestVC.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
+         CellGroups: [
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])]),
+         SPListingSection(
+            CellGroups: [
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
+
+      layout.prepareLayout()
+      
+      XCTAssert(true, "No Crash only SpeedKit Errors are expected")
+   }
 }
 
 
