@@ -81,7 +81,11 @@ class SPFixedColumnRowVC: UIViewController {
             self.spCollectionView.collectionViewLayout.invalidateLayout()
             }, completion: nil)
       })
-      
+   }
+   
+   ///TODO: Only for iOS 7 below method should be added. Add preprocessor.
+   override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+      self.spCollectionView.collectionViewLayout.invalidateLayout()
    }
 }
 

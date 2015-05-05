@@ -85,6 +85,28 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
          layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.size.height == 107.5, "Height and Width should be valid")
    }
    
+   func testEmptyPrepareLayout(){
+      spCollectionViewTestVC!.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
+         CellGroups: [
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])]),
+         SPListingSection(
+            CellGroups: [
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
+      
+      spCollectionViewTestVC!.spCollectionView.contentInset = UIEdgeInsetsMake(30, 40, 50, 60)
+      
+      layout.prepareLayout()
+      
+      spCollectionViewTestVC!.spCollectionView.spListingData = SPListingData(SectionArray: [])
+      spCollectionViewTestVC!.spCollectionView.dataSource = nil
+      layout.prepareLayout()
+
+      XCTAssert(layout.itemWidthHeightDictionary.count == 0, "itemWidthHeightDictionary should be reset.")
+   }
+
+   
    func testOriginWithSectionDetails(){
       spCollectionViewTestVC!.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
          CellGroups: [
@@ -162,6 +184,19 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
       
       XCTAssert(layout.sectionSizeDictionary.count == 2, "Proper sectionSizeDictionary should be created")
 
+   }
+   
+   func testCollectionViewContentSize(){
+      spCollectionViewTestVC!.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
+         CellGroups: []),
+         SPListingSection(
+            CellGroups: [
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
+               SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
+
+      layout.prepareLayout()
+      XCTAssert(layout.collectionViewContentSize().width == 600.0 &&
+      layout.collectionViewContentSize().height == 835.0, "Content size should be valid.")
    }
 
 }
