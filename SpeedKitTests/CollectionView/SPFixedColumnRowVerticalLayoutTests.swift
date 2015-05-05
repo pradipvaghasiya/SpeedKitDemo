@@ -70,12 +70,19 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
                SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
                SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
+      spCollectionViewTestVC!.spCollectionView.contentInset = UIEdgeInsetsMake(30, 40, 50, 60)
+
       layout.prepareLayout()
       
-      XCTAssert(layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 0)]?.frame.size.width == 127.5 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 0)]?.frame.size.height == 183.33 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.size.width == 183.33 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.size.height == 127.5, "Height and Width should be valid")
+      println(spCollectionViewTestVC!.spCollectionView.bounds)
+      for (indexPath,attr) in layout.attributesDictionary{
+         println("\(indexPath.row) : \(indexPath.section) - \(attr.frame) ")
+      }
+
+      XCTAssert(layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 0)]?.frame.size.width == 102.5 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 0)]?.frame.size.height == 156.67 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.size.width == 150.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.size.height == 107.5, "Height and Width should be valid")
    }
    
    func testOriginWithSectionDetails(){
@@ -88,22 +95,28 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
                SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 15, cellCommonModel: "12"),
                SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
+      spCollectionViewTestVC!.spCollectionView.contentInset = UIEdgeInsetsMake(30, 40, 50, 60)
+      
       layout.prepareLayout()
+      
+//      for (indexPath,attr) in layout.attributesDictionary{
+//         println("\(indexPath.row) : \(indexPath.section) - \(attr.frame) ")
+//      }
       
       XCTAssert(layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 0)]?.frame.origin.x == 20.0 &&
          layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 0)]?.frame.origin.y == 10.0 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 2, inSection: 0)]?.frame.origin.x == 295.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 2, inSection: 0)]?.frame.origin.x == 245.0 &&
          layout.attributesDictionary[NSIndexPath(forRow: 2, inSection: 0)]?.frame.origin.y == 10.0 &&
          layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 0)]?.frame.origin.x == 20.0 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 0)]?.frame.origin.y == 198.33 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 5, inSection: 0)]?.frame.origin.x == 157.5 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 5, inSection: 0)]?.frame.origin.y == 198.33 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 0)]?.frame.origin.y == 171.67 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 5, inSection: 0)]?.frame.origin.x == 132.5 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 5, inSection: 0)]?.frame.origin.y == 171.67 &&
          layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.origin.x == 30.0 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.origin.y == 1016.65 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 1)]?.frame.origin.y == 883.35 &&
          layout.attributesDictionary[NSIndexPath(forRow: 3, inSection: 1)]?.frame.origin.x == 30.0 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 3, inSection: 1)]?.frame.origin.y == 1154.15 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 1)]?.frame.origin.x == 218.33 &&
-         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 1)]?.frame.origin.y == 1154.15 , "Height and Width should be valid")
+         layout.attributesDictionary[NSIndexPath(forRow: 3, inSection: 1)]?.frame.origin.y == 1000.85 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 1)]?.frame.origin.x == 185.0 &&
+         layout.attributesDictionary[NSIndexPath(forRow: 4, inSection: 1)]?.frame.origin.y == 1000.85 , "Height and Width should be valid")
    }
    
    

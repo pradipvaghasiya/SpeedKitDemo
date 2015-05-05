@@ -102,7 +102,7 @@ class SPCollectionViewLayoutTests: XCTestCase {
    }
 
    func testRoundFloatUptoTwoDecimalPoints(){
-      XCTAssert(SPCollectionViewLayout.roundFloatUptoTwoDecimalPoints(18.3333333) == 18.33, "Float Conversion should be valid")
+      XCTAssert(layout.roundFloatUptoTwoDecimalPoints(18.3333333) == 18.33, "Float Conversion should be valid")
    }
 }
 
