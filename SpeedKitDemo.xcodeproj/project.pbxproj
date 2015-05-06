@@ -87,6 +87,7 @@
 		28CD62B81AE2484600C9B2AE /* SPListingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D94021A0DEF0600C63224 /* SPListingViewProtocol.swift */; };
 		28CD62B91AE2484600C9B2AE /* SPTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894619E1ADF71E9007C6E56 /* SPTableView.swift */; };
 		28CD62BA1AE2484600C9B2AE /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287AC6B21972A5850096BCD3 /* SPTitleLabelCell.swift */; };
+		28D12E0C1AF9227B0033DBA4 /* SPColumnBasedVerticalLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D12E0B1AF9227B0033DBA4 /* SPColumnBasedVerticalLayoutDelegate.swift */; };
 		28DBC7891AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7881AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift */; };
 		28DBC78A1AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7881AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift */; };
 		28DBC78D1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC78C1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift */; };
@@ -166,6 +167,7 @@
 		28CCBBE51AF1282200A82682 /* SPLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPLogger.swift; sourceTree = "<group>"; };
 		28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28CD62A91AE247E500C9B2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D12E0B1AF9227B0033DBA4 /* SPColumnBasedVerticalLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPColumnBasedVerticalLayoutDelegate.swift; sourceTree = "<group>"; };
 		28DBC7881AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPCollectionViewLayoutDelegate.swift; sourceTree = "<group>"; };
 		28DBC78C1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowVerticalLayoutDelegate.swift; sourceTree = "<group>"; };
 		28DBC7921AF4D2C300D7A012 /* SPFixedColumnRowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowVC.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				28ADCF7E1AF90CCE009AD2B9 /* SPColumnBasedVerticalLayout.swift */,
+				28D12E0B1AF9227B0033DBA4 /* SPColumnBasedVerticalLayoutDelegate.swift */,
 			);
 			name = "Column Or Row Based";
 			sourceTree = "<group>";
@@ -630,6 +633,7 @@
 				28332B001A38022200CFFA56 /* SPListingColumnBasedLayout.swift in Sources */,
 				282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */,
 				28332B021A38022200CFFA56 /* SPListingColumnBasedLayoutInvalidationContext.swift in Sources */,
+				28D12E0C1AF9227B0033DBA4 /* SPColumnBasedVerticalLayoutDelegate.swift in Sources */,
 				280079281AF2683A0085E47A /* SPCollectionView.swift in Sources */,
 				28DBC7931AF4D2C300D7A012 /* SPFixedColumnRowVC.swift in Sources */,
 				286D940C1A0DEF0600C63224 /* SPListingCellGroup.swift in Sources */,
