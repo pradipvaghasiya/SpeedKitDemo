@@ -75,7 +75,8 @@ extension SDHomeViewController{
          "Basic TableView",
          "Custom TableView",
          "Fixed Column and Row Vertical",
-         "Fixed Column and Row Horizontal"]
+         "Fixed Column and Row Horizontal",
+         "Column Based Vertical"]
       
       // Assign spListingData to SPTableView
       spTableView.spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
@@ -102,6 +103,9 @@ extension SDHomeViewController : UITableViewDelegate{
       case 3:
          isVertical = false
          self.performSegueWithIdentifier(kSegueToSPFixedColumnRowVC, sender: self)
+      case 4:
+         isVertical = true
+         self.performSegueWithIdentifier(kSegueToSDColumnOrRowLayoutVC, sender: self)
       default:
          break
       }
