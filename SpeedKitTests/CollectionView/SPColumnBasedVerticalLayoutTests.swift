@@ -1,5 +1,5 @@
 //
-//  SPColumnBasedVerticalLayoutTests.swift
+//  SPStraightVerticalLayoutTests.swift
 //  SpeedKitDemo
 //
 //  Created by Pradip Vaghasiya on 05/05/15.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class SPColumnBasedVerticalLayoutTests: XCTestCase {
+class SPStraightVerticalLayoutTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

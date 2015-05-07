@@ -17,7 +17,7 @@ class SDColumnOrRowLayoutVC: UIViewController {
    
    var isVertical : Bool = true
    
-   lazy var verticalLayout = SPColumnBasedVerticalLayout()
+   lazy var verticalLayout = SPStraightVerticalLayout()
    lazy var horizontalLayout = SPFixedColumnRowHorizontalLayout()
    
    private var delegate = LayoutDelegate()
@@ -76,7 +76,7 @@ class SDColumnOrRowLayoutVC: UIViewController {
 }
 
 
-class LayoutDelegate : NSObject, SPColumnBasedVerticalLayoutDelegate{
+class LayoutDelegate : NSObject, SPStraightVerticalLayoutDelegate{
    func noOfColumns(ForSection section : Int) -> UInt{
       if section == 0 {
          return 4

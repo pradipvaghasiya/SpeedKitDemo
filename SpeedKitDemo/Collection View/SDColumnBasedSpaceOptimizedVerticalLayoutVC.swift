@@ -16,7 +16,7 @@ class SDColumnBasedSpaceOptimizedVerticalLayoutVC: UIViewController {
    
    var isVertical : Bool = true
    
-   lazy var verticalLayout = SPColumnBasedSpaceOptimizedVerticalLayout()
+   lazy var verticalLayout = SPStraightSpaceOptimizedVerticalLayout()
    lazy var horizontalLayout = SPFixedColumnRowHorizontalLayout()
    
    private var delegate = SpaceOptimzedLayoutDelegate()
@@ -80,7 +80,7 @@ class SDColumnBasedSpaceOptimizedVerticalLayoutVC: UIViewController {
 }
 
 
-class SpaceOptimzedLayoutDelegate : NSObject, SPColumnBasedVerticalLayoutDelegate{
+class SpaceOptimzedLayoutDelegate : NSObject, SPStraightVerticalLayoutDelegate{
    func noOfColumns(ForSection section : Int) -> UInt{
       if section == 0 {
          return 4
