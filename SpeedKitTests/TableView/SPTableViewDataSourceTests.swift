@@ -76,7 +76,7 @@ class SPTableViewDataSourceTests: XCTestCase {
    // MARK: Init Test Cases
    func testNoOfSectionsWithEmptySectionArray(){
       
-      XCTAssert(emptyDatasource.delegate?.spListingData.sectionCount == 0, "Delegate should be created")
+      XCTAssert(emptyDatasource.delegate.spListingData.sectionCount == 0, "Delegate should be created")
    }
    
    func testNoOfSectionsWithSectionArray(){
