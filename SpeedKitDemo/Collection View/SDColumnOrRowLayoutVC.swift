@@ -73,20 +73,6 @@ class SDColumnOrRowLayoutVC: UIViewController {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
    }
-   
-   override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-      super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-      dispatch_async(dispatch_get_main_queue(), { () -> Void in
-         self.spCollectionView.performBatchUpdates({ () -> Void in
-            self.spCollectionView.collectionViewLayout.invalidateLayout()
-            }, completion: nil)
-      })
-   }
-   
-   ///TODO: Only for iOS 7 below method should be added. Add preprocessor.
-   override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-      self.spCollectionView.collectionViewLayout.invalidateLayout()
-   }
 }
 
 

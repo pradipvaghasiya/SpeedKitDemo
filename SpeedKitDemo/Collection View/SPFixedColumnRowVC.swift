@@ -18,7 +18,6 @@ class SPFixedColumnRowVC: UIViewController {
    
    lazy var verticalLayout = SPFixedColumnRowVerticalLayout()
    lazy var horizontalLayout = SPFixedColumnRowHorizontalLayout()
-   lazy var columnBasedLayout = SPColumnBasedVerticalLayout()
    
    private var delegate = SPFixedColumRowLayoutDelegate()
    
@@ -68,8 +67,6 @@ class SPFixedColumnRowVC: UIViewController {
          horizontalLayout.delegate = delegate
          self.spCollectionView.collectionViewLayout = horizontalLayout
       }
-      
-      self.spCollectionView.collectionViewLayout = columnBasedLayout
    }
    
    override func didReceiveMemoryWarning() {
