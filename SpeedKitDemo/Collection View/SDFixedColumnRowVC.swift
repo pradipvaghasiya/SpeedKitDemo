@@ -1,5 +1,5 @@
 //
-//  SPFixedColumnRowVC.swift
+//  SDFixedColumnRowVC.swift
 //  SpeedKitDemo
 //
 //  Created by Pradip Vaghasiya on 02/05/15.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-let kSegueToSPFixedColumnRowVC = "SPFixedColumnRowVC"
+let kSegueToSDFixedColumnRowVC = "SDFixedColumnRowVC"
 
-class SPFixedColumnRowVC: UIViewController {
+class SDFixedColumnRowVC: UIViewController {
    
    @IBOutlet weak var spCollectionView: SPCollectionView!
    

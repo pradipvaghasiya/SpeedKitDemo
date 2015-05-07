@@ -76,7 +76,8 @@ extension SDHomeViewController{
          "Custom TableView",
          "Fixed Column and Row Vertical",
          "Fixed Column and Row Horizontal",
-         "Column Based Vertical"]
+         "Column Based Vertical",
+         "Column Based Space Optimized Vertical"]
       
       // Assign spListingData to SPTableView
       spTableView.spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
@@ -99,21 +100,24 @@ extension SDHomeViewController : UITableViewDelegate{
          self.performSegueWithIdentifier(kSegueToSDBasicTableVC, sender: self)
       case 2:
          isVertical = true
-         self.performSegueWithIdentifier(kSegueToSPFixedColumnRowVC, sender: self)
+         self.performSegueWithIdentifier(kSegueToSDFixedColumnRowVC, sender: self)
       case 3:
          isVertical = false
-         self.performSegueWithIdentifier(kSegueToSPFixedColumnRowVC, sender: self)
+         self.performSegueWithIdentifier(kSegueToSDFixedColumnRowVC, sender: self)
       case 4:
          isVertical = true
          self.performSegueWithIdentifier(kSegueToSDColumnOrRowLayoutVC, sender: self)
+      case 5:
+         isVertical = true
+         self.performSegueWithIdentifier(kSegueToSDColumnBasedSpaceOptimizedVerticalLayoutVC, sender: self)
       default:
          break
       }
    }
    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      if segue.identifier == kSegueToSPFixedColumnRowVC{
-         if let destination = segue.destinationViewController as? SPFixedColumnRowVC{
+      if segue.identifier == kSegueToSDFixedColumnRowVC{
+         if let destination = segue.destinationViewController as? SDFixedColumnRowVC{
             destination.isVertical = isVertical
          }
       }
