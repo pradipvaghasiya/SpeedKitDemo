@@ -69,7 +69,7 @@ class SPFixedColumnRowVC: UIViewController {
          self.spCollectionView.collectionViewLayout = horizontalLayout
       }
       
-     // self.spCollectionView.collectionViewLayout = columnBasedLayout
+      self.spCollectionView.collectionViewLayout = columnBasedLayout
    }
    
    override func didReceiveMemoryWarning() {

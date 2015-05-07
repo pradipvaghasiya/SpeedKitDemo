@@ -96,6 +96,8 @@
 		28DBC78E1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC78C1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift */; };
 		28DBC7931AF4D2C300D7A012 /* SPFixedColumnRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7921AF4D2C300D7A012 /* SPFixedColumnRowVC.swift */; };
 		28DBC7941AF4D2C300D7A012 /* SPFixedColumnRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7921AF4D2C300D7A012 /* SPFixedColumnRowVC.swift */; };
+		28EAB70A1AFB94B000F439E2 /* SPColumnOrRowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAB7091AFB94B000F439E2 /* SPColumnOrRowLayout.swift */; };
+		28EAB70B1AFB94CC00F439E2 /* SPColumnOrRowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAB7091AFB94B000F439E2 /* SPColumnOrRowLayout.swift */; };
 		EB3EEE6FF5C01E5AE0BBC517 /* SPTableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3EED95D1DC26E5DA74CA8E /* SPTableViewDatasource.swift */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +175,7 @@
 		28DBC7881AF488B400D7A012 /* SPCollectionViewLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPCollectionViewLayoutDelegate.swift; sourceTree = "<group>"; };
 		28DBC78C1AF48C7F00D7A012 /* SPFixedColumnRowVerticalLayoutDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowVerticalLayoutDelegate.swift; sourceTree = "<group>"; };
 		28DBC7921AF4D2C300D7A012 /* SPFixedColumnRowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFixedColumnRowVC.swift; sourceTree = "<group>"; };
+		28EAB7091AFB94B000F439E2 /* SPColumnOrRowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPColumnOrRowLayout.swift; sourceTree = "<group>"; };
 		EB3EED95D1DC26E5DA74CA8E /* SPTableViewDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -424,6 +427,7 @@
 		28ADCF7D1AF90C6E009AD2B9 /* Column Or Row Based */ = {
 			isa = PBXGroup;
 			children = (
+				28EAB7091AFB94B000F439E2 /* SPColumnOrRowLayout.swift */,
 				28ADCF7E1AF90CCE009AD2B9 /* SPColumnBasedVerticalLayout.swift */,
 				28D12E0B1AF9227B0033DBA4 /* SPColumnBasedVerticalLayoutDelegate.swift */,
 			);
@@ -619,6 +623,7 @@
 				285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */,
 				2824946E1AF3C56100074BCF /* SPFixedColumnRowLayout.swift in Sources */,
 				287AC6B31972A5850096BCD3 /* SPTitleLabelCell.swift in Sources */,
+				28EAB70A1AFB94B000F439E2 /* SPColumnOrRowLayout.swift in Sources */,
 				281998891ADCCFA700944E7F /* SPUIHelper.swift in Sources */,
 				283BF2391AF3897700595240 /* SPTableViewSection.swift in Sources */,
 				28650DB31A177F6C003DEEAF /* SPListingSection.swift in Sources */,
@@ -679,6 +684,7 @@
 				28310E261AF36FA900F4CC7F /* SPCollectionViewDatasourceTests.swift in Sources */,
 				28CD62B61AE2484600C9B2AE /* SPListingCellGroup.swift in Sources */,
 				28310E281AF371A300F4CC7F /* SPListingColumnBasedLayout.swift in Sources */,
+				28EAB70B1AFB94CC00F439E2 /* SPColumnOrRowLayout.swift in Sources */,
 				28CD62B71AE2484600C9B2AE /* SPListingCellProtocol.swift in Sources */,
 				282494751AF3C61900074BCF /* SPFixedColumnRowLayoutTests.swift in Sources */,
 				28A99EC11AE248830004F5C6 /* SPTableViewDatasource.swift in Sources */,
