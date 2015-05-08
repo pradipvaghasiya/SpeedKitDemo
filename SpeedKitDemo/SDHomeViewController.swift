@@ -76,8 +76,9 @@ extension SDHomeViewController{
          "Custom TableView",
          "Fixed Column and Row Vertical",
          "Fixed Column and Row Horizontal",
-         "Column Based Vertical",
-         "Column Based Space Optimized Vertical"]
+         "Straight Vertical",
+         "Straight Space Optimized Vertical",
+         "Auto Resizing Straight Vertical"]
       
       // Assign spListingData to SPTableView
       spTableView.spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
@@ -110,6 +111,9 @@ extension SDHomeViewController : UITableViewDelegate{
       case 5:
          isVertical = true
          self.performSegueWithIdentifier(kSegueToSDColumnBasedSpaceOptimizedVerticalLayoutVC, sender: self)
+      case 6:
+         isVertical = true
+         self.performSegueWithIdentifier(kSegueToSDStraightAutoSizingVerticalLayoutVC, sender: self)
       default:
          break
       }

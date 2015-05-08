@@ -24,6 +24,7 @@
                         <segue destination="WVQ-7m-gxA" kind="show" identifier="SDFixedColumnRowVC" id="dFL-9b-YM1"/>
                         <segue destination="f1f-7C-1Ca" kind="show" identifier="SDColumnOrRowLayoutVC" id="m5p-Eo-ZWr"/>
                         <segue destination="49i-jM-yWM" kind="show" identifier="SDColumnBasedSpaceOptimizedVerticalLayoutVC" id="rsP-eF-coV"/>
+                        <segue destination="jx5-pR-6by" kind="show" identifier="SDStraightAutoSizingVerticalLayoutVC" id="szL-K0-g7g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -227,6 +228,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feN-uD-f8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1883" y="678"/>
+        </scene>
+        <!--Straight Auto Sizing Vertical LayoutVC-->
+        <scene sceneID="D5g-uW-n9a">
+            <objects>
+                <viewController id="jx5-pR-6by" customClass="SDStraightAutoSizingVerticalLayoutVC" customModule="SpeedKitDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LZc-Vd-usx"/>
+                        <viewControllerLayoutGuide type="bottom" id="7VU-cf-RKn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PMX-Gy-4oM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="USY-Ip-9mS" customClass="SPCollectionView" customModule="SpeedKitDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fxR-g6-Bbi">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7VU-cf-RKn" firstAttribute="top" secondItem="USY-Ip-9mS" secondAttribute="bottom" id="GKI-P7-X4V"/>
+                            <constraint firstAttribute="trailing" secondItem="USY-Ip-9mS" secondAttribute="trailing" id="TTc-sY-5dC"/>
+                            <constraint firstItem="USY-Ip-9mS" firstAttribute="top" secondItem="PMX-Gy-4oM" secondAttribute="top" id="ssW-jQ-RVy"/>
+                            <constraint firstItem="USY-Ip-9mS" firstAttribute="leading" secondItem="PMX-Gy-4oM" secondAttribute="leading" id="wWO-z1-cPo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="spCollectionView" destination="USY-Ip-9mS" id="4Fs-sM-rDp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wAy-If-kxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2563" y="649"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MtG-DS-MCP">
