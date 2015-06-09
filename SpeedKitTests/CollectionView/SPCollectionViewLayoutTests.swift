@@ -61,7 +61,7 @@ class SPCollectionViewLayoutTests: XCTestCase {
    }
 
    func testUpdateSectionSize(){
-      var attr : UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes()
+      let attr : UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes()
       attr.frame = CGRectMake(0, 5, 50, 60)
       
       layout.updateSectionSizeDictionary(OfSection: 0, ByAttributes: attr)
@@ -91,7 +91,7 @@ class SPCollectionViewLayoutTests: XCTestCase {
    }
    
    func testPrepareLayout(){
-      var attr : UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes()
+      let attr : UICollectionViewLayoutAttributes = UICollectionViewLayoutAttributes()
       attr.frame = CGRectMake(0, 5, 50, 60)
       
       layout.updateSectionSizeDictionary(OfSection: 0, ByAttributes: attr)

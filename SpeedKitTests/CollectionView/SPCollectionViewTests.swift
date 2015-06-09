@@ -25,8 +25,8 @@ class SPCollectionViewTests: XCTestCase {
     }
 
    func testFromStoryboard(){
-      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
-      var spCollectionViewTestVC : SPCollectionViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPCollectionViewTestVC") as? SPCollectionViewTestVC)!
+      let storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      let spCollectionViewTestVC : SPCollectionViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPCollectionViewTestVC") as? SPCollectionViewTestVC)!
       
       spCollectionViewTestVC.view.setNeedsDisplay()
       
@@ -99,7 +99,7 @@ class SPCollectionViewTests: XCTestCase {
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellCount: 12, cellCommonModel: "12"),
             SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: ["1","2","3"])])])
       
-      var cellGroup = SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)
+      let cellGroup = SPListingCellGroup(cellId: "SpeedKitDemo.SPTitleTestCCell", cellModelArray: ["1","2","3"], cellType : SPCellType.SubclassCell)
       spCollectionView.spListingData.spListingSectionArray[0].spCellGroupArray.append(cellGroup)
       
       spCollectionView.registerCellsFor(CellGroup: cellGroup)

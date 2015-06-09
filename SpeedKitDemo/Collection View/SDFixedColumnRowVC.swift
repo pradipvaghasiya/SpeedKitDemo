@@ -74,6 +74,7 @@ class SDFixedColumnRowVC: UIViewController {
       // Dispose of any resources that can be recreated.
    }
    
+   @available(iOS 8.0, *)
    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
       super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
       dispatch_async(dispatch_get_main_queue(), { () -> Void in

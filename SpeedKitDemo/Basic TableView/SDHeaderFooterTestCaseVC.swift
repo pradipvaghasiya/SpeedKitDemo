@@ -28,8 +28,8 @@ class SDHeaderFooterTestCaseVC: UIViewController {
 // MARK: SDBasicTableView Handling
 extension SDHeaderFooterTestCaseVC : UITableViewDelegate{
     func addBasicTableView(){
-        var spTableView = SPTableView(frame: self.view.frame)
-        
+         var spTableView = SPTableView(frame: self.view.frame)
+      
         var section0 = ["section 0, Row 1","section 0, Row 2","section 0, Row 3"]
         var section1 = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
 

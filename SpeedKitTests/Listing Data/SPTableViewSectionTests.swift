@@ -39,7 +39,7 @@ class SPTableViewSectionTests: XCTestCase {
    }
    
    func testSectionDataWithEmptyCells(){
-      var sectionData = SPTableViewSection(CellGroups: [])
+      let sectionData = SPTableViewSection(CellGroups: [])
       XCTAssert(sectionData.spCellGroupArray.count == 0 &&
          sectionData.sectionHeader == nil &&
          sectionData.sectionFooter == nil &&
@@ -47,7 +47,7 @@ class SPTableViewSectionTests: XCTestCase {
    }
    
    func testSectionDataWithSectionHeader(){
-      var sectionData = SPTableViewSection(CellGroups: cellGroups, SectionHeader: "header")
+      let sectionData = SPTableViewSection(CellGroups: cellGroups, SectionHeader: "header")
       XCTAssert(sectionData.spCellGroupArray.count == 2 &&
          sectionData.sectionHeader == "header" &&
          sectionData.sectionFooter == nil &&
@@ -55,7 +55,7 @@ class SPTableViewSectionTests: XCTestCase {
    }
    
    func testSectionDataWithSectionFooter(){
-      var sectionData = SPTableViewSection(CellGroups: cellGroups, SectionFooter: "footer")
+      let sectionData = SPTableViewSection(CellGroups: cellGroups, SectionFooter: "footer")
       XCTAssert(sectionData.spCellGroupArray.count == 2 &&
          sectionData.sectionHeader == nil &&
          sectionData.sectionFooter == "footer" &&
@@ -63,7 +63,7 @@ class SPTableViewSectionTests: XCTestCase {
    }
    
    func testSectionDataWithSectionHeaderNFooter(){
-      var sectionData = SPTableViewSection(CellGroups: cellGroups, SectionHeader: "header", SectionFooter : "footer")
+      let sectionData = SPTableViewSection(CellGroups: cellGroups, SectionHeader: "header", SectionFooter : "footer")
       XCTAssert(sectionData.spCellGroupArray.count == 2 &&
          sectionData.sectionHeader == "header" &&
          sectionData.sectionFooter == "footer" &&
@@ -71,7 +71,7 @@ class SPTableViewSectionTests: XCTestCase {
    }
    
    func testSectionCellCountWithOneCellSet(){
-      var sectionData = SPTableViewSection(CellGroups: [cellGroup1])
+      let sectionData = SPTableViewSection(CellGroups: [cellGroup1])
       XCTAssert(sectionData.spCellGroupArray.count == 1 &&
          sectionData.sectionHeader == nil &&
          sectionData.sectionFooter == nil &&

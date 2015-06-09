@@ -36,13 +36,13 @@ class SPListingSectionTests: XCTestCase {
    }
    
    func testSectionDataWithEmptyCells(){
-      var sectionData = SPListingSection(CellGroups: [])
+      let sectionData = SPListingSection(CellGroups: [])
       XCTAssert(sectionData.spCellGroupArray.count == 0 &&
          sectionData.sectionTotalCellCount == 0, "SectionData should be created with proper data")
    }
    
    func testSectionCellCountWithOneCellSet(){
-      var sectionData = SPListingSection(CellGroups: [cellGroup1])
+      let sectionData = SPListingSection(CellGroups: [cellGroup1])
       XCTAssert(sectionData.spCellGroupArray.count == 1 &&
          sectionData.sectionTotalCellCount == 12, "SectionData should be created with proper data")
    }

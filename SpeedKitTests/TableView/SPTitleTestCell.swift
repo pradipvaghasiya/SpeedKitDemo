@@ -41,7 +41,7 @@ class SPTitleTestCell: UITableViewCell,SPListingCellProtocol {
             return
         }
         
-        println("Please pass correct model")
+        print("Please pass correct model")
     }
 }
 
@@ -61,10 +61,10 @@ extension SPTitleTestCell{
             spTitleTestCellModelArray.append(SPTitleTestCellModel(TitleText: rowTitle))
         }
         
-        var spListingCellData = SPListingCellGroup(cellId: kCellIdSPTitleTestCell,
+        let spListingCellData = SPListingCellGroup(cellId: kCellIdSPTitleTestCell,
             cellModelArray: spTitleTestCellModelArray)
         
-        var spListingSection0Data = SPListingSection(CellGroups: [spListingCellData])
+        let spListingSection0Data = SPListingSection(CellGroups: [spListingCellData])
         
         return SPListingData(SectionArray: [spListingSection0Data])
     }

@@ -96,16 +96,16 @@ class SPTableViewDataSourceTests: XCTestCase {
    
    
    func testCellAtIndexPathWithNilCellId(){
-      var cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 12, inSection: 0))
+      let cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 12, inSection: 0))
       XCTAssertNotNil(cell, "Default Cell should be created using Nil Cell Id")
    }
    
    func testCellAtIndexPathWithInvalidCell(){
-      var tableView = UITableView()
+      let tableView = UITableView()
       tableView.registerClass(NSClassFromString("UITableViewCell"), forCellReuseIdentifier: "UITableViewCell")
       tableView.dataSource = twoSectionDatasource
       
-      var cell = twoSectionDatasource.tableView(tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 3, inSection: 1))
+      let cell = twoSectionDatasource.tableView(tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 3, inSection: 1))
       XCTAssertNotNil(cell, "Default Cell should be created If not conform to SPListingViewProtocol")
    }
 
@@ -122,65 +122,65 @@ class SPTableViewDataSourceTests: XCTestCase {
    }
 
    func testCellAtIndexPathWithNibCell(){
-      var tableView = UITableView()
+      let tableView = UITableView()
       tableView.registerNib(UINib(nibName: "SPTitleLabelCell", bundle: nil), forCellReuseIdentifier: "SPTitleLabelCell")
       tableView.dataSource = twoSectionDatasource
       
-      var cell = twoSectionDatasource.tableView(tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 0))
+      let cell = twoSectionDatasource.tableView(tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 0))
       
       XCTAssert(NSStringFromClass(cell.classForCoder) == "SpeedKitDemo.SPTitleLabelCell", "Nib Cell should be created")
    }
    
    func testCellAtIndexPathWithoutRegisteringNib(){
-      var cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 0))
+      let cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 0))
       
       XCTAssertNotNil(cell, "Default Cell should be created.")
    }
    
    
    func testCellAtIndexPathWithSubClassCell(){
-      var tableView = UITableView()
+      let tableView = UITableView()
       tableView.registerClass(NSClassFromString("SpeedKitDemo.SPTitleLabelCell"), forCellReuseIdentifier: "SpeedKitDemo.SPTitleLabelCell")
       tableView.dataSource = twoSectionDatasource
       
-      var cell = twoSectionDatasource.tableView(tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 1))
+      let cell = twoSectionDatasource.tableView(tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 1))
       
       XCTAssert(NSStringFromClass(cell.classForCoder) == "SpeedKitDemo.SPTitleLabelCell", "SubClass Cell should be created")
    }
    
    
    func testCellAtIndexPathWithoutRegisteringSubclass(){
-      var cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 1))
+      let cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 1))
       
       XCTAssertNotNil(cell, "Default Cell should be created.")
    }
    
    func testCellAtIndexPathWithPrototypeCell(){
-      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
-      var spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
+      let storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      let spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
       
       spTableViewTestVC.view.setNeedsDisplay()
       spTableViewTestVC.tableView.dataSource = twoSectionDatasource
 
-      var cell = twoSectionDatasource.tableView(spTableViewTestVC.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 3, inSection: 2))
+      let cell = twoSectionDatasource.tableView(spTableViewTestVC.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 3, inSection: 2))
 
       XCTAssert(NSStringFromClass(cell.classForCoder) == "SpeedKitTests.SPTitleTestCell", "Test Cell should be created")
       
    }
    
    func testCellAtIndexPathWithInvalidPrototypeCell(){
-      var cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 2))
+      let cell = twoSectionDatasource.tableView(UITableView(), cellForRowAtIndexPath: NSIndexPath(forRow: 0, inSection: 2))
       XCTAssertNotNil(cell, "Default Cell should be created.")
    }
    
    func testConfigureCellUsingCellModel(){
-      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
-      var spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
+      let storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      let spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
       
       spTableViewTestVC.view.setNeedsDisplay()
       spTableViewTestVC.tableView.dataSource = twoSectionDatasource
       
-      var cell : SPTitleTestCell? = twoSectionDatasource.tableView(spTableViewTestVC.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 3, inSection: 2)) as? SPTitleTestCell
+      let cell : SPTitleTestCell? = twoSectionDatasource.tableView(spTableViewTestVC.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 3, inSection: 2)) as? SPTitleTestCell
       
       
       XCTAssert(cell?.titleLabel?.text == "4", "Cell should be configured")
@@ -188,13 +188,13 @@ class SPTableViewDataSourceTests: XCTestCase {
    }
    
    func testConfigureCellUsingCellCommonModel(){
-      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
-      var spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
+      let storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      let spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
       
       spTableViewTestVC.view.setNeedsDisplay()
       spTableViewTestVC.tableView.dataSource = twoSectionDatasource
       
-      var cell : SPTitleTestCell? = twoSectionDatasource.tableView(spTableViewTestVC.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 6, inSection: 2)) as? SPTitleTestCell
+      let cell : SPTitleTestCell? = twoSectionDatasource.tableView(spTableViewTestVC.tableView, cellForRowAtIndexPath: NSIndexPath(forRow: 6, inSection: 2)) as? SPTitleTestCell
       
       
       XCTAssert(cell?.titleLabel?.textAlignment == NSTextAlignment.Center, "Cell should be configured")
@@ -202,8 +202,8 @@ class SPTableViewDataSourceTests: XCTestCase {
    }
 
    func testTableViewHeaderAndFooterSet(){
-      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
-      var spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
+      let storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      let spTableViewTestVC : SPTableViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPTableViewTestVC") as? SPTableViewTestVC)!
       
       spTableViewTestVC.view.setNeedsDisplay()
       spTableViewTestVC.tableView.dataSource = twoSectionDatasource

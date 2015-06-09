@@ -38,8 +38,8 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
    func addBasicTableView(){
       
       // Set SPListingData
-      var section0 = ["section 0, Row 1","section 0, Row 2","section 0, Row 3"]
-      var section1 = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
+      let section0 = ["section 0, Row 1","section 0, Row 2","section 0, Row 3"]
+      let section1 = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
       
    // CellDataSet (Of Type SPTitleLabelCell) in Section 0
       // Cell Data Model
@@ -50,9 +50,9 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
       }
       
       // Cell Common Model
-      var spTitleLabelCellCommonModel = SPTitleLabelCellCommonModel(TextColor: UIColor.darkGrayColor())
+      let spTitleLabelCellCommonModel = SPTitleLabelCellCommonModel(TextColor: UIColor.darkGrayColor())
       
-      var spListingSection0CellData = SPListingCellGroup(
+      let spListingSection0CellData = SPListingCellGroup(
          cellId: kCellIdSPTitleLabelCell,
          cellCommonModel: spTitleLabelCellCommonModel,
          cellModelArray: spTitleLabelSection0CellModelArray)
@@ -66,16 +66,16 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
          spTitleLabelSection1CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
-      var spListingSection1CellData = SPListingCellGroup(
+      let spListingSection1CellData = SPListingCellGroup(
          cellId: kCellIdSPTitleLabelCell,
          cellModelArray: spTitleLabelSection1CellModelArray)
       
       
-      var spListingSection0Data = SPTableViewSection(CellGroups: [spListingSection0CellData])
+      let spListingSection0Data = SPTableViewSection(CellGroups: [spListingSection0CellData])
       spListingSection0Data.sectionHeader = "Section 0 Header String"
       spListingSection0Data.sectionFooter = "Section 0 Footer String"
       
-      var spListingSection1Data = SPTableViewSection(CellGroups: [spListingSection1CellData])
+      let spListingSection1Data = SPTableViewSection(CellGroups: [spListingSection1CellData])
       spListingSection1Data.sectionHeader = "Section 1 Header String"
       spListingSection1Data.sectionFooter = "Section 1 Footer String"
       

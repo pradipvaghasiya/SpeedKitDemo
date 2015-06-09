@@ -21,7 +21,7 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
       
       layout = SPFixedColumnRowVerticalLayout(NoOfRows: 3, NoOfColumns: 3)
       
-      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      let storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
       spCollectionViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPCollectionViewTestVC") as? SPCollectionViewTestVC)!
       spCollectionViewTestVC!.view.setNeedsDisplay()
       spCollectionViewTestVC!.spCollectionView.collectionViewLayout = layout
@@ -46,7 +46,7 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
    }
    
    func testAttributeCalculationWithCollectionViewNil(){
-      var layout1 = SPFixedColumnRowVerticalLayout(NoOfRows: 10, NoOfColumns: 10)
+      let layout1 = SPFixedColumnRowVerticalLayout(NoOfRows: 10, NoOfColumns: 10)
       
       layout1.prepareLayout()
       
@@ -74,9 +74,9 @@ class SPFixedColumnRowVerticalLayoutTests: XCTestCase {
 
       layout.prepareLayout()
       
-      println(spCollectionViewTestVC!.spCollectionView.bounds)
+      print(spCollectionViewTestVC!.spCollectionView.bounds)
       for (indexPath,attr) in layout.attributesDictionary{
-         println("\(indexPath.row) : \(indexPath.section) - \(attr.frame) ")
+         print("\(indexPath.row) : \(indexPath.section) - \(attr.frame) ")
       }
 
       XCTAssert(layout.attributesDictionary[NSIndexPath(forRow: 0, inSection: 0)]?.frame.size.width == 102.5 &&

@@ -41,7 +41,7 @@ class SPTitleTestCCell: UICollectionViewCell,SPListingCellProtocol {
          return
       }
       
-      println("Please pass correct model")
+      print("Please pass correct model")
    }
 }
 
@@ -61,10 +61,10 @@ extension SPTitleTestCCell{
          SPTitleTestCCellModelArray.append(SPTitleTestCCellModel(TitleText: rowTitle))
       }
       
-      var spListingCellData = SPListingCellGroup(cellId: kCellIdSPTitleTestCCell,
+      let spListingCellData = SPListingCellGroup(cellId: kCellIdSPTitleTestCCell,
          cellModelArray: SPTitleTestCCellModelArray)
       
-      var spListingSection0Data = SPListingSection(CellGroups: [spListingCellData])
+      let spListingSection0Data = SPListingSection(CellGroups: [spListingCellData])
       
       return SPListingData(SectionArray: [spListingSection0Data])
    }

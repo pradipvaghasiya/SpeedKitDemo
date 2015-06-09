@@ -50,8 +50,8 @@ class SPFixedColumnRowLayoutTests: XCTestCase {
    }
 
    func testPrepareLayout(){
-      var storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
-      var spCollectionViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPCollectionViewTestVC") as? SPCollectionViewTestVC)!
+      let storyboard = UIStoryboard(name: "SPTestStoryboard", bundle: NSBundle(forClass: self.classForCoder))
+      let spCollectionViewTestVC = (storyboard.instantiateViewControllerWithIdentifier("SPCollectionViewTestVC") as? SPCollectionViewTestVC)!
       spCollectionViewTestVC.view.setNeedsDisplay()
       spCollectionViewTestVC.spCollectionView.collectionViewLayout = layout
       layout.delegate = delegate

@@ -32,7 +32,7 @@ class SampleCollectionViewCell : UICollectionViewCell,SPListingCellProtocol{
             self.setNeedsLayout()
             self.layoutIfNeeded()
         }else{
-            println("Please pass correct model (SampleCollectionCellModel)")
+            print("Please pass correct model (SampleCollectionCellModel)")
         }
     }
 }
