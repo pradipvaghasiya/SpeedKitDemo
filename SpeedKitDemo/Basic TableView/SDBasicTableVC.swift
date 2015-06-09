@@ -61,10 +61,10 @@ extension SDBasicTableVC{
 // MARK: SDBasicTableView Handling
 extension SDBasicTableVC : UITableViewDelegate{
     func addBasicTableView(){
-        var spTableView = SPTableView(frame: self.view.frame)
-        
+      let spTableView = SPTableView(frame: self.view.frame, style: .Plain)
+      
         // Set SPListingData
-        var spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
+        let spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
         spTableView.spListingData = spListingData
         
         // Set Delegate

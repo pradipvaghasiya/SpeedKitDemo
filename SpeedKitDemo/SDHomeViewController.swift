@@ -68,10 +68,10 @@ extension SDHomeViewController{
       //            // Here we only need one section created above.
       //            spListingData = SPListingData([spListingSection0Data]);
       
-      var spTableView = SPTableView(frame: self.view.frame)
+      let spTableView = SPTableView(frame: self.view.frame, style: .Plain)
       
       // This is the model we need to show in TableView
-      var section0Rows = [
+      let section0Rows = [
          "Basic TableView",
          "Custom TableView",
          "Fixed Column and Row Vertical",

@@ -11,13 +11,13 @@ import XCTest
 
 class SPTableViewTests: XCTestCase {
    
-   var spTableView = SPTableView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+   var spTableView = SPTableView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), style: .Plain)
    
    override func setUp() {
       super.setUp()
       // Put setup code here. This method is called before the invocation of each test method in the class.
       
-      spTableView = SPTableView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+      spTableView = SPTableView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), style: .Plain)
    }
    
    override func tearDown() {
