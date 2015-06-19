@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18245E9E1B33FA7D00F62DE0 /* SPTable+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18245E9D1B33FA7D00F62DE0 /* SPTable+RegisterCells.swift */; };
+		18245E9F1B33FB7800F62DE0 /* SPTable+RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18245E9D1B33FA7D00F62DE0 /* SPTable+RegisterCells.swift */; };
 		280079281AF2683A0085E47A /* SPCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280079271AF2683A0085E47A /* SPCollectionView.swift */; };
 		280D99561AE254D500FB3CF4 /* SPTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287AC6B01972A4070096BCD3 /* SPTitleLabelCell.xib */; };
 		280E5F0A1AEB83E5003BAC96 /* SPTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280E5F091AEB83E5003BAC96 /* SPTableViewDataSourceTests.swift */; };
@@ -126,6 +128,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18245E9D1B33FA7D00F62DE0 /* SPTable+RegisterCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPTable+RegisterCells.swift"; sourceTree = "<group>"; };
 		280079271AF2683A0085E47A /* SPCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPCollectionView.swift; sourceTree = "<group>"; };
 		280E5F091AEB83E5003BAC96 /* SPTableViewDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		2813866F1A2AF42200A38D17 /* SPSegmentControllerHolderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPSegmentControllerHolderController.swift; sourceTree = "<group>"; };
@@ -444,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				2894619E1ADF71E9007C6E56 /* SPTableView.swift */,
+				18245E9D1B33FA7D00F62DE0 /* SPTable+RegisterCells.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -661,6 +665,7 @@
 				28650DB31A177F6C003DEEAF /* SPListingSection.swift in Sources */,
 				28ADCF7F1AF90CCE009AD2B9 /* SPStraightVerticalLayout.swift in Sources */,
 				28332B011A38022200CFFA56 /* SPListingColumnBasedLayoutDelegate.swift in Sources */,
+				18245E9E1B33FA7D00F62DE0 /* SPTable+RegisterCells.swift in Sources */,
 				286D940E1A0DEF0600C63224 /* SPListingViewProtocol.swift in Sources */,
 				282494721AF3C5F600074BCF /* SPFixedColumnRowHorizontalLayout.swift in Sources */,
 				28CCBBE61AF1282200A82682 /* SPLogger.swift in Sources */,
@@ -730,6 +735,7 @@
 				28CD62B71AE2484600C9B2AE /* SPListingCellProtocol.swift in Sources */,
 				282494751AF3C61900074BCF /* SPFixedColumnRowLayoutTests.swift in Sources */,
 				28A99EC11AE248830004F5C6 /* SPTableViewDatasource.swift in Sources */,
+				18245E9F1B33FB7800F62DE0 /* SPTable+RegisterCells.swift in Sources */,
 				28CD62B91AE2484600C9B2AE /* SPTableView.swift in Sources */,
 				2824947C1AF3C64200074BCF /* SPFixedColumnRowHorizontalLayout.swift in Sources */,
 				28EAB70E1AFB9D0100F439E2 /* SPFixedColumnRowVerticalLayoutDelegate.swift in Sources */,
