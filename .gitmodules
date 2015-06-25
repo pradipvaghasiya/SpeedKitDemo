@@ -1,0 +1,3 @@
+[submodule "SwiftUI"]
+	path = SwiftUI
+	url = https://github.com/pradipvaghasiya/SwiftUI.git

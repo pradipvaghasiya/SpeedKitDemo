@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2A5AB17829D7AA2F7F1AFC3AB74962E20B7AB2A1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "74C4B8BE8CA35F3E6465BD4240FF89B6B1134358" : 0,
+    "2A5AB17829D7AA2F7F1AFC3AB74962E20B7AB2A1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6A331F5C-25AD-4EFB-9E44-9F9BF5298659",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "74C4B8BE8CA35F3E6465BD4240FF89B6B1134358" : "SwiftUIDemo\/SwiftUI\/",
+    "2A5AB17829D7AA2F7F1AFC3AB74962E20B7AB2A1" : "SwiftUIDemo\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftUIDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SwiftUIDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pradipvaghasiya\/SpeedKitDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A5AB17829D7AA2F7F1AFC3AB74962E20B7AB2A1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pradipvaghasiya\/SwiftUI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "74C4B8BE8CA35F3E6465BD4240FF89B6B1134358"
+    }
+  ]
+}
