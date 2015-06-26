@@ -69,6 +69,7 @@ extension SDHomeViewController{
       //            spListingData = SPListingData([spListingSection0Data]);
       
       let spTableView = SPTableView(frame: self.view.frame, style: .Plain)
+      spTableView.contentInset = UIEdgeInsets(top: 64,left: 0,bottom: 0,right: 0)
       
       // This is the model we need to show in TableView
       let section0Rows = [

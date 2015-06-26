@@ -23,6 +23,7 @@
 		28958C991AEFC40F00E75D42 /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28958C981AEFC40F00E75D42 /* SampleCollectionViewCell.xib */; };
 		28DBC7931AF4D2C300D7A012 /* SDFixedColumnRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7921AF4D2C300D7A012 /* SDFixedColumnRowVC.swift */; };
 		28DBC7941AF4D2C300D7A012 /* SDFixedColumnRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7921AF4D2C300D7A012 /* SDFixedColumnRowVC.swift */; };
+		28DF81431B3D8A580013E090 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28DF81421B3D8A580013E090 /* LaunchScreen.xib */; };
 		28EAB7131AFB9D6E00F439E2 /* SDColumnOrRowLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAB7121AFB9D6E00F439E2 /* SDColumnOrRowLayoutVC.swift */; };
 		28EAB7141AFB9D6E00F439E2 /* SDColumnOrRowLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAB7121AFB9D6E00F439E2 /* SDColumnOrRowLayoutVC.swift */; };
 		28EAB71C1AFBAA8200F439E2 /* SDColumnBasedSpaceOptimizedVerticalLayoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EAB71B1AFBAA8200F439E2 /* SDColumnBasedSpaceOptimizedVerticalLayoutVC.swift */; };
@@ -60,6 +61,7 @@
 		28958C981AEFC40F00E75D42 /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
 		28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28DBC7921AF4D2C300D7A012 /* SDFixedColumnRowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFixedColumnRowVC.swift; sourceTree = "<group>"; };
+		28DF81421B3D8A580013E090 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		28EAB7121AFB9D6E00F439E2 /* SDColumnOrRowLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDColumnOrRowLayoutVC.swift; sourceTree = "<group>"; };
 		28EAB71B1AFBAA8200F439E2 /* SDColumnBasedSpaceOptimizedVerticalLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDColumnBasedSpaceOptimizedVerticalLayoutVC.swift; sourceTree = "<group>"; };
 		28EAB71E1AFBADC000F439E2 /* SDStraightAutoSizingVerticalLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDStraightAutoSizingVerticalLayoutVC.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				282337261A1733F90003F3C4 /* Main.storyboard */,
 				282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */,
 				28958C981AEFC40F00E75D42 /* SampleCollectionViewCell.xib */,
+				28DF81421B3D8A580013E090 /* LaunchScreen.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				1899F7281B3C142C002F038B /* SPTitleTestCCell.xib in Resources */,
 				282337271A1733F90003F3C4 /* Main.storyboard in Resources */,
 				18AD103A1B3C054A00E7B644 /* SPTitleLabelCell.xib in Resources */,
+				28DF81431B3D8A580013E090 /* LaunchScreen.xib in Resources */,
 				285C8C26196D85410058C8E2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +405,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SwiftUIDemo/Supporting Files/Info.plist";
@@ -417,7 +420,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SwiftUIDemo/Supporting Files/Info.plist";
