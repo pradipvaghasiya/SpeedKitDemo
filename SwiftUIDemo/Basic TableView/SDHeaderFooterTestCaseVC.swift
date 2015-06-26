@@ -35,38 +35,31 @@ extension SDHeaderFooterTestCaseVC : UITableViewDelegate{
       let section1 = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
       
       // CellModel Section 0
-      var spTitleLabelSection0CellModelArray : [SPTitleLabelCellModel] = []
+      var spTitleLabelSection0CellModelArray : [ViewModelType] = []
       
       for rowTitle in section0{
          spTitleLabelSection0CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
       // CellModel Section 1
-      var spTitleLabelSection1CellModelArray : [SPTitleLabelCellModel] = []
+      var spTitleLabelSection1CellModelArray : [ViewModelType] = []
       
       for rowTitle in section1{
          spTitleLabelSection1CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
+
+      var section0Data = TableViewSection(viewModels: spTitleLabelSection0CellModelArray)
+      section0Data.sectionHeader = "Section 0 Header String"
+      section0Data.sectionFooter = "Section 0 Footer String"
       
-      let spListingSection0CellData = SPListingCellGroup(cellId: kCellIdSPTitleLabelCell,
-         cellModelArray: spTitleLabelSection0CellModelArray)
-      
-      let spListingSection1CellData = SPListingCellGroup(cellId: kCellIdSPTitleLabelCell,
-         cellModelArray: spTitleLabelSection1CellModelArray)
-      
-      
-      let spListingSection0Data = SPTableViewSection(CellGroups: [spListingSection0CellData])
-      spListingSection0Data.sectionHeader = "Section 0 Header String"
-      spListingSection0Data.sectionFooter = "Section 0 Footer String"
-      
-      let spListingSection1Data = SPTableViewSection(CellGroups: [spListingSection1CellData])
-      spListingSection1Data.sectionHeader = "Section 1 Header String"
-      spListingSection1Data.sectionFooter = "Section 1 Footer String"
+      var section1Data = TableViewSection(viewModels: spTitleLabelSection1CellModelArray)
+      section1Data.sectionHeader = "Section 1 Header String"
+      section1Data.sectionFooter = "Section 1 Footer String"
       
       // Set SPListingData
-      let spListingData = SPListingData(SectionArray: [spListingSection0Data,spListingSection1Data])
-      spTableView.spListingData = spListingData
+      let listingData = ListingData(sections: [section0Data,section1Data])
+      spTableView.listingData = listingData
       
       // Set Delegate
       spTableView.delegate = self

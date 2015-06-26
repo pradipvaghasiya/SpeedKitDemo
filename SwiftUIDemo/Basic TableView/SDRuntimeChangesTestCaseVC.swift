@@ -16,7 +16,7 @@ class SDRuntimeChangesTestCaseVC: UIViewController {
    
    @IBOutlet weak var spTableView: SPTableView!
    
-   var spListingData : SPListingData = SPListingData(SectionArray: [])
+   var listingData : ListingData = ListingData<TableViewSection>(sections: [])
 }
 
 // MARK: ViewController Delegate
@@ -38,51 +38,40 @@ extension SDRuntimeChangesTestCaseVC{
 extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
    func addBasicTableView(){
       
+      spTableView.rowHeight = 44
+      
       // Set SPListingData
       let section0 = ["section 0, Row 1","section 0, Row 2","section 0, Row 3"]
       let section1 = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
       
    // CellDataSet (Of Type SPTitleLabelCell) in Section 0
       // Cell Data Model
-      var spTitleLabelSection0CellModelArray : [SPTitleLabelCellModel] = []
+      var spTitleLabelSection0CellModelArray : [ViewModelType] = []
       
       for rowTitle in section0{
          spTitleLabelSection0CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
-      // Cell Common Model
-      let spTitleLabelCellCommonModel = SPTitleLabelCellCommonModel(TextColor: UIColor.darkGrayColor())
-      
-      let spListingSection0CellData = SPListingCellGroup(
-         cellId: kCellIdSPTitleLabelCell,
-         cellCommonModel: spTitleLabelCellCommonModel,
-         cellModelArray: spTitleLabelSection0CellModelArray)
-
-      
    // CellData Set1 in Section 1
       // Cell Data Model
-      var spTitleLabelSection1CellModelArray : [SPTitleLabelCellModel] = []
+      var spTitleLabelSection1CellModelArray : [ViewModelType] = []
       
       for rowTitle in section1{
          spTitleLabelSection1CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
-      let spListingSection1CellData = SPListingCellGroup(
-         cellId: kCellIdSPTitleLabelCell,
-         cellModelArray: spTitleLabelSection1CellModelArray)
       
+      var section0Data = TableViewSection(viewModels: spTitleLabelSection0CellModelArray)
+      section0Data.sectionHeader = "Section 0 Header String"
+      section0Data.sectionFooter = "Section 0 Footer String"
       
-      let spListingSection0Data = SPTableViewSection(CellGroups: [spListingSection0CellData])
-      spListingSection0Data.sectionHeader = "Section 0 Header String"
-      spListingSection0Data.sectionFooter = "Section 0 Footer String"
-      
-      let spListingSection1Data = SPTableViewSection(CellGroups: [spListingSection1CellData])
-      spListingSection1Data.sectionHeader = "Section 1 Header String"
-      spListingSection1Data.sectionFooter = "Section 1 Footer String"
+      var section1Data = TableViewSection(viewModels: spTitleLabelSection1CellModelArray)
+      section1Data.sectionHeader = "Section 1 Header String"
+      section1Data.sectionFooter = "Section 1 Footer String"
       
       // Set SPListingData
-      spListingData = SPListingData(SectionArray: [spListingSection0Data,spListingSection1Data])
-      spTableView.spListingData = spListingData
+      let listingData = ListingData(sections: [section0Data,section1Data])
+      spTableView.listingData = listingData
       
       // Set Delegate
       spTableView.delegate = self
@@ -98,7 +87,8 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
 extension SDRuntimeChangesTestCaseVC{
    
    @IBAction func addItem(sender: AnyObject) {
-      spTableView.insertRowsAtIndexPaths([self.insertItem("Row Detail")], withRowAnimation: UITableViewRowAnimation.Automatic)
+      let indexPath = self.insertItem("Row Detail")
+      spTableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
    }
    
    @IBAction func reduceItem(sender: AnyObject) {
@@ -116,30 +106,21 @@ extension SDRuntimeChangesTestCaseVC{
    ///
    ///:returns: NSIndexPath where the item added.
    private func insertItem(item: String) -> NSIndexPath{
-      print(spListingData[0][0])
-      spListingData[0][0][spListingData[0][0].count] = SPTitleLabelCellModel(TitleText: item)
-//      cellModelArray.append(SPTitleLabelCellModel(TitleText: item))
-//      spListingData.spListingSectionArray[0].spCellGroupArray[0].cellModelArray = cellModelArray
-      
-      return NSIndexPath(forRow: spListingData[0][0].count - 1, inSection: 0)
+      spTableView.listingData[0].append(SPTitleLabelCellModel(TitleText: item))
+      return NSIndexPath(forRow: spTableView.listingData[0].count - 1, inSection: 0)
    }
    
    ///Removes last item in first cellData types in first section SPListingData.
    ///
    ///:returns: NSIndexPath? where the item added. nil if no data.
    private func removeItem() -> NSIndexPath?{
-      let cellModelArray = spListingData[0][0]
-      
-      if cellModelArray.count == 0{
+      if spTableView.listingData[0].count == 0{
          return nil
       }
+
+      spTableView.listingData[0].items.removeLast()
       
-      ///TODO: change this
-      //cellModelArray.removeLast()
-      
-      spListingData[0][0] = cellModelArray
-      
-      return NSIndexPath(forRow: cellModelArray.count, inSection: 0)
+      return NSIndexPath(forRow: spTableView.listingData[0].count, inSection: 0)
       
    }
    
@@ -148,12 +129,12 @@ extension SDRuntimeChangesTestCaseVC{
    ///:param: indexPAth Item needs to be edited.
    private func editItem(indexPAth: NSIndexPath){
       ///Gets CellData Set and exact index of it.
-      if let (spListingCellData, index) = spListingData.getListingCellGroupWithIndexOfCellModelArray(ForIndexPath: indexPAth){
-         // If it is of type SPTitleLabelCellModel then change it.
-         if let spTitleLabelCellModel = spListingCellData[index] as? SPTitleLabelCellModel{
-            spTitleLabelCellModel.titleText = "RowDetail Edited"
-         }
-      }
+//      if let (spListingCellData, index) = spListingData.getListingCellGroupWithIndexOfCellModelArray(ForIndexPath: indexPAth){
+//         // If it is of type SPTitleLabelCellModel then change it.
+//         if let spTitleLabelCellModel = spListingCellData[index] as? SPTitleLabelCellModel{
+//            spTitleLabelCellModel.titleText = "RowDetail Edited"
+//         }
+//      }
    }
    
    

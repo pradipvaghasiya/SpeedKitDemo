@@ -25,7 +25,7 @@ class SPTitleTestCCell: UICollectionViewCell,SPListingCellProtocol {
    @IBOutlet var titleLabel: UILabel?
    
    // SPListingCellProtocol
-   func configureCellUsing(model: AnyObject){
+   func configureCellUsing(model: ViewModelType){
       //If model is of type SPTitleTestCCellModel, It would set title text.
       if let myModel = model as? SPTitleTestCCellModel{
          self.titleLabel?.text = myModel.titleText

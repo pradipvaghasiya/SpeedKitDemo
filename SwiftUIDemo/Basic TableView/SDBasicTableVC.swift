@@ -66,8 +66,8 @@ extension SDBasicTableVC : UITableViewDelegate{
       spTableView.contentInset = UIEdgeInsets(top: 64,left: 0,bottom: 0,right: 0)
       
         // Set SPListingData
-        let spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
-        spTableView.spListingData = spListingData
+        let listingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
+        spTableView.listingData = listingData
         
         // Set Delegate
         spTableView.delegate = self

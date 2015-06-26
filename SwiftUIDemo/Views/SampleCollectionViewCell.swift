@@ -26,7 +26,7 @@ class SampleCollectionViewCell : UICollectionViewCell,SPListingCellProtocol{
     }
 
     
-    func configureCellUsing(model: AnyObject) {
+    func configureCellUsing(model: ViewModelType) {
         self.titleLabel.preferredMaxLayoutWidth = 300
         if let myModel = model as? SampleCollectionCellModel{
             self.titleLabel.text = myModel.titleText
