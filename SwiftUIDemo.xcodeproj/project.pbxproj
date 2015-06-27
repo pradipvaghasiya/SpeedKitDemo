@@ -12,7 +12,6 @@
 		18AD10361B3C02D600E7B644 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AD10351B3C02D600E7B644 /* SwiftUI.framework */; };
 		18AD10391B3C054A00E7B644 /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD10371B3C054A00E7B644 /* SPTitleLabelCell.swift */; };
 		18AD103A1B3C054A00E7B644 /* SPTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AD10381B3C054A00E7B644 /* SPTitleLabelCell.xib */; };
-		282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */; };
 		282337271A1733F90003F3C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282337261A1733F90003F3C4 /* Main.storyboard */; };
 		28472CA61AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28472CA51AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift */; };
 		285C8C1F196D85410058C8E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C8C1E196D85410058C8E2 /* AppDelegate.swift */; };
@@ -20,7 +19,6 @@
 		285C8C26196D85410058C8E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285C8C25196D85410058C8E2 /* Images.xcassets */; };
 		289461971ADE9311007C6E56 /* SDBasicTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289461961ADE9311007C6E56 /* SDBasicTableVC.swift */; };
 		2894619D1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */; };
-		28958C991AEFC40F00E75D42 /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28958C981AEFC40F00E75D42 /* SampleCollectionViewCell.xib */; };
 		28DBC7931AF4D2C300D7A012 /* SDFixedColumnRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7921AF4D2C300D7A012 /* SDFixedColumnRowVC.swift */; };
 		28DBC7941AF4D2C300D7A012 /* SDFixedColumnRowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DBC7921AF4D2C300D7A012 /* SDFixedColumnRowVC.swift */; };
 		28DF81431B3D8A580013E090 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28DF81421B3D8A580013E090 /* LaunchScreen.xib */; };
@@ -48,7 +46,6 @@
 		18AD10351B3C02D600E7B644 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = "SwiftUI/build/Debug-iphoneos/SwiftUI.framework"; sourceTree = "<group>"; };
 		18AD10371B3C054A00E7B644 /* SPTitleLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTitleLabelCell.swift; sourceTree = "<group>"; };
 		18AD10381B3C054A00E7B644 /* SPTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTitleLabelCell.xib; sourceTree = "<group>"; };
-		282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewCell.swift; sourceTree = "<group>"; };
 		282337261A1733F90003F3C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		28472CA51AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDHeaderFooterTestCaseVC.swift; sourceTree = "<group>"; };
 		285C8C19196D85410058C8E2 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +55,6 @@
 		285C8C25196D85410058C8E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		289461961ADE9311007C6E56 /* SDBasicTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBasicTableVC.swift; sourceTree = "<group>"; };
 		2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRuntimeChangesTestCaseVC.swift; sourceTree = "<group>"; };
-		28958C981AEFC40F00E75D42 /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
 		28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28DBC7921AF4D2C300D7A012 /* SDFixedColumnRowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFixedColumnRowVC.swift; sourceTree = "<group>"; };
 		28DF81421B3D8A580013E090 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -94,8 +90,6 @@
 				18AD10371B3C054A00E7B644 /* SPTitleLabelCell.swift */,
 				18AD10381B3C054A00E7B644 /* SPTitleLabelCell.xib */,
 				282337261A1733F90003F3C4 /* Main.storyboard */,
-				282337241A1733EF0003F3C4 /* SampleCollectionViewCell.swift */,
-				28958C981AEFC40F00E75D42 /* SampleCollectionViewCell.xib */,
 				28DF81421B3D8A580013E090 /* LaunchScreen.xib */,
 			);
 			path = Views;
@@ -245,7 +239,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28958C991AEFC40F00E75D42 /* SampleCollectionViewCell.xib in Resources */,
 				1899F7281B3C142C002F038B /* SPTitleTestCCell.xib in Resources */,
 				282337271A1733F90003F3C4 /* Main.storyboard in Resources */,
 				18AD103A1B3C054A00E7B644 /* SPTitleLabelCell.xib in Resources */,
@@ -289,7 +282,6 @@
 				285C8C21196D85410058C8E2 /* SDHomeViewController.swift in Sources */,
 				28EAB71C1AFBAA8200F439E2 /* SDColumnBasedSpaceOptimizedVerticalLayoutVC.swift in Sources */,
 				28EAB7131AFB9D6E00F439E2 /* SDColumnOrRowLayoutVC.swift in Sources */,
-				282337251A1733EF0003F3C4 /* SampleCollectionViewCell.swift in Sources */,
 				28DBC7931AF4D2C300D7A012 /* SDFixedColumnRowVC.swift in Sources */,
 				28EAB71F1AFBADC000F439E2 /* SDStraightAutoSizingVerticalLayoutVC.swift in Sources */,
 				28472CA61AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift in Sources */,
