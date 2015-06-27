@@ -54,20 +54,16 @@ extension SPTitleTestCCell{
    ///:param: stringArray Array of string using which SPListingData would be created.
    ///
    ///:returns: SPListingData which can be used to create CollectionView using SpeedKit
-   class func getBasicDefaultSPListingData(UsingStringArray stringArray: [String]) -> SPListingData{
+   class func getBasicDefaultSPListingData(UsingStringArray stringArray: [String]) ->
+      ListingData<CollectionViewSection>{
       
-      var SPTitleTestCCellModelArray : [SPTitleTestCCellModel] = []
+      var cells : [SPTitleTestCCellModel] = []
       
       for rowTitle in stringArray{
-         SPTitleTestCCellModelArray.append(SPTitleTestCCellModel(TitleText: rowTitle))
+         cells.append(SPTitleTestCCellModel(TitleText: rowTitle))
       }
       
-      let spListingCellData = SPListingCellGroup(cellId: kCellIdSPTitleTestCCell,
-         cellModelArray: SPTitleTestCCellModelArray)
-      
-      let spListingSection0Data = SPListingSection(CellGroups: [spListingCellData])
-      
-      return SPListingData(SectionArray: [spListingSection0Data])
+      return ListingData(sections: [CollectionViewSection(viewModels: cells)])
    }
 }
 

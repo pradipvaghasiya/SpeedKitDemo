@@ -38,11 +38,12 @@ extension SDRuntimeChangesTestCaseVC{
 extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
    func addBasicTableView(){
       
-      spTableView.rowHeight = 44
+      //spTableView.rowHeight = UITableViewAutomaticDimension;
+      spTableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
       
       // Set SPListingData
       let section0 = ["section 0, Row 1","section 0, Row 2","section 0, Row 3"]
-      let section1 = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
+      let section1 = ["section 1, Row 1","section 1, Row 2","section 1, Row 3 with long description3 with long description3 with long description3 with long description3 with long description"]
       
    // CellDataSet (Of Type SPTitleLabelCell) in Section 0
       // Cell Data Model
