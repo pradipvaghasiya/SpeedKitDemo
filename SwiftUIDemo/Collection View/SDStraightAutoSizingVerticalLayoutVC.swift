@@ -24,9 +24,7 @@ class SDStraightAutoSizingVerticalLayoutVC: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view.
       
-      self.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
-         CellGroups: [
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: [
+      self.spCollectionView.listingData = ListingData(sections: [CollectionViewSection(viewModels : [
                SPTitleTestCCellModel(TitleText: "Pradip"),
                SPTitleTestCCellModel(TitleText: "Pradip Vaghasiya"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -44,10 +42,10 @@ class SDStraightAutoSizingVerticalLayoutVC: UIViewController {
                SPTitleTestCCellModel(TitleText: "Pradip Vaghasiya Pradip Vaghasiya Pradip Vaghasiya Pradip Vaghasiya Pradip Vaghasiya Pradip Vaghasiya"),
                SPTitleTestCCellModel(TitleText: "15"),
                SPTitleTestCCellModel(TitleText: "16"),
-               SPTitleTestCCellModel(TitleText: "17")])]
+               SPTitleTestCCellModel(TitleText: "17")]
          ),
-         SPListingSection(
-            CellGroups: [SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: [
+         CollectionViewSection(viewModels :
+            [
                SPTitleTestCCellModel(TitleText: "0"),
                SPTitleTestCCellModel(TitleText: "1"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -58,7 +56,7 @@ class SDStraightAutoSizingVerticalLayoutVC: UIViewController {
                SPTitleTestCCellModel(TitleText: "7"),
                SPTitleTestCCellModel(TitleText: "Pradip Vaghasiya Pradip Vaghasiya"),
                SPTitleTestCCellModel(TitleText: "9"),
-               ])]
+               ]
          )
          ]
       )

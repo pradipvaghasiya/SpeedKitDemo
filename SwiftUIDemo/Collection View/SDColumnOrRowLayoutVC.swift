@@ -26,9 +26,9 @@ class SDColumnOrRowLayoutVC: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view.
       
-      self.spCollectionView.spListingData = SPListingData(SectionArray: [SPListingSection(
-         CellGroups: [
-            SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: [
+      self.spCollectionView.listingData = ListingData(sections: [
+         CollectionViewSection(viewModels:
+            [
                SPTitleTestCCellModel(TitleText: "0"),
                SPTitleTestCCellModel(TitleText: "1"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -41,10 +41,11 @@ class SDColumnOrRowLayoutVC: UIViewController {
                SPTitleTestCCellModel(TitleText: "9"),
                SPTitleTestCCellModel(TitleText: "10"),
                SPTitleTestCCellModel(TitleText: "11"),
-               SPTitleTestCCellModel(TitleText: "12"),])]
+               SPTitleTestCCellModel(TitleText: "12")
+            ]
          ),
-         SPListingSection(
-            CellGroups: [SPListingCellGroup(cellId: "SPTitleTestCCell", cellModelArray: [
+         CollectionViewSection(viewModels:
+            [
                SPTitleTestCCellModel(TitleText: "0"),
                SPTitleTestCCellModel(TitleText: "1"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -54,8 +55,8 @@ class SDColumnOrRowLayoutVC: UIViewController {
                SPTitleTestCCellModel(TitleText: "6"),
                SPTitleTestCCellModel(TitleText: "7"),
                SPTitleTestCCellModel(TitleText: "8"),
-               SPTitleTestCCellModel(TitleText: "9"),
-               ])]
+               SPTitleTestCCellModel(TitleText: "9")
+            ]
          )
          ]
       )

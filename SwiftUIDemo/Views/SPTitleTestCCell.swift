@@ -106,7 +106,10 @@ class SPTitleTestCCellCommonModel{
 
 // MARK: Cell Model
 ///This model contains only one title property.
-class SPTitleTestCCellModel{
+class SPTitleTestCCellModel : ViewModelType{
+   let cellId = kCellIdSPTitleTestCCell
+   let cellType = CellType.Nib
+   
    ///Cell label Title Text
    var titleText:String
    init(TitleText text:String){
