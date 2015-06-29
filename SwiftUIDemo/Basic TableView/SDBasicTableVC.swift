@@ -28,63 +28,65 @@ private let kUnregisteredNibAddedTestCaseString = "Unregistered nib added"
 private let kGroupedTableViewTestCaseString = "Grouped TableView"
 
 
-class SDBasicTableVC: UIViewController {
-    // List of Test Cases
-    private var testCases = [
-        kRuntimeChangesTestCaseString,
-        kExcessiveRowsTestCaseString,
-        kTableViewDifferentFrameTestCaseString,
-        kEdtingTableTestCaseString,
-        kNoDataTestCaseString,
-        kNoDelegateTestCaseString,
-        kUnregisteredNibAddedTestCaseString,
-        kGroupedTableViewTestCaseString]
-    
+class SDBasicTableVC: UIViewController, SPTableListingControllerType {
+
+   var listingData : ListingData<TableViewSection> = ListingData(sections: [])
+   
+   // List of Test Cases
+   private var testCases = [
+      kRuntimeChangesTestCaseString,
+      kExcessiveRowsTestCaseString,
+      kTableViewDifferentFrameTestCaseString,
+      kEdtingTableTestCaseString,
+      kNoDataTestCaseString,
+      kNoDelegateTestCaseString,
+      kUnregisteredNibAddedTestCaseString,
+      kGroupedTableViewTestCaseString]
+   
 }
 
 // MARK: ViewController Delegate
 extension SDBasicTableVC{
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Add TableView using SpeedKit
-        self.addBasicTableView()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      
+      // Add TableView using SpeedKit
+      self.addBasicTableView()
+   }
+   
+   override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+   }
+   
 }
 
 // MARK: SDBasicTableView Handling
 extension SDBasicTableVC : UITableViewDelegate{
-    func addBasicTableView(){
+   func addBasicTableView(){
       let spTableView = SPTableView(frame: self.view.frame, style: .Plain)
       spTableView.contentInset = UIEdgeInsets(top: 64,left: 0,bottom: 0,right: 0)
       
-        // Set SPListingData
-        let listingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
-        spTableView.listingData = listingData
-        
-        // Set Delegate
-        spTableView.delegate = self
-        
-        // Add SPTableView
-        self.view.addSubview(spTableView)
-        
-    }
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        switch testCases[indexPath.row]{
-        case kRuntimeChangesTestCaseString:
-            self.performSegueWithIdentifier(kSegueToSDRuntimeChangesTestCaseVC, sender: self)
-        default:
-            true
-        }
-    }
+      // Set SPListingData
+      listingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
+      spTableView.controller = self
+
+      // Set Delegate
+      spTableView.delegate = self
+      
+      // Add SPTableView
+      self.view.addSubview(spTableView)
+   }
+   
+   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+      tableView.deselectRowAtIndexPath(indexPath, animated: true)
+      
+      switch testCases[indexPath.row]{
+      case kRuntimeChangesTestCaseString:
+         self.performSegueWithIdentifier(kSegueToSDRuntimeChangesTestCaseVC, sender: self)
+      default:
+         true
+      }
+   }
 }

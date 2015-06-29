@@ -11,9 +11,11 @@ import SwiftUI
 
 let kSegueToSDFixedColumnRowVC = "SDFixedColumnRowVC"
 
-class SDFixedColumnRowVC: UIViewController {
+class SDFixedColumnRowVC: UIViewController,SPCollectionListingControllerType{
    
    @IBOutlet weak var spCollectionView: SPCollectionView!
+   var listingData : ListingData<CollectionViewSection> = ListingData(sections: [])
+
    
    var isVertical : Bool = true
    
@@ -27,7 +29,7 @@ class SDFixedColumnRowVC: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view.
       
-      self.spCollectionView.listingData = ListingData(sections: [CollectionViewSection(viewModels: [
+      listingData = ListingData(sections: [CollectionViewSection(viewModels: [
                SPTitleTestCCellModel(TitleText: "0"),
                SPTitleTestCCellModel(TitleText: "1"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -57,6 +59,8 @@ class SDFixedColumnRowVC: UIViewController {
          )
          ]
       )
+
+      self.spCollectionView.controller = self
       
       if isVertical{
          verticalLayout.delegate = delegate

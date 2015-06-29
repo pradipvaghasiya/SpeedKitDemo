@@ -12,10 +12,13 @@ import SwiftUI
 ///Reusable Cell Id defined in xib file and xib file name itself. Both must be same.
 public let kCellIdSPTitleLabelCell = "SPTitleLabelCell"
 
-class SPTitleLabelCell: UITableViewCell,SPListingCellProtocol {
+class SPTitleLabelCell: UITableViewCell,SPTableCellProtocol {
    ///Title Label IBOutlet
    @IBOutlet var titleLabel: UILabel?
    
+   weak var parentView : UITableView?
+   weak var viewModel : ViewModelType?
+
    // SPTableViewCellProtocol
    func configureCellUsing(model: ViewModelType){
       //If model is of type SPTitleLabelCellModel, It would set title text.
@@ -31,7 +34,7 @@ class SPTitleLabelCell: UITableViewCell,SPListingCellProtocol {
 
 // MARK: Cell Model
 ///This model contains only one title property.
-struct SPTitleLabelCellModel : ViewModelType{
+class SPTitleLabelCellModel : ViewModelType{
    
    var cellId = kCellIdSPTitleLabelCell
    var cellType : CellType = .Nib

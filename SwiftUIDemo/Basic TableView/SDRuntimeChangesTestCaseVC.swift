@@ -12,11 +12,11 @@ import SwiftUI
 ///Storyboard Segue id for segue to this controller
 let kSegueToSDRuntimeChangesTestCaseVC = "Show SDRuntimeChangesTestCaseVC"
 
-class SDRuntimeChangesTestCaseVC: UIViewController {
+class SDRuntimeChangesTestCaseVC: UIViewController,SPTableListingControllerType {
    
    @IBOutlet weak var spTableView: SPTableView!
    
-   var listingData : ListingData = ListingData<TableViewSection>(sections: [])
+   var listingData : ListingData<TableViewSection> = ListingData(sections: [])
 }
 
 // MARK: ViewController Delegate
@@ -62,17 +62,17 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
       }
       
       
-      var section0Data = TableViewSection(viewModels: spTitleLabelSection0CellModelArray)
+      let section0Data = TableViewSection(viewModels: spTitleLabelSection0CellModelArray)
       section0Data.sectionHeader = "Section 0 Header String"
       section0Data.sectionFooter = "Section 0 Footer String"
       
-      var section1Data = TableViewSection(viewModels: spTitleLabelSection1CellModelArray)
+      let section1Data = TableViewSection(viewModels: spTitleLabelSection1CellModelArray)
       section1Data.sectionHeader = "Section 1 Header String"
       section1Data.sectionFooter = "Section 1 Footer String"
       
       // Set SPListingData
-      let listingData = ListingData(sections: [section0Data,section1Data])
-      spTableView.listingData = listingData
+      listingData = ListingData(sections: [section0Data,section1Data])
+      spTableView.controller = self
       
       // Set Delegate
       spTableView.delegate = self
@@ -107,21 +107,21 @@ extension SDRuntimeChangesTestCaseVC{
    ///
    ///:returns: NSIndexPath where the item added.
    private func insertItem(item: String) -> NSIndexPath{
-      spTableView.listingData[0].append(SPTitleLabelCellModel(TitleText: item))
-      return NSIndexPath(forRow: spTableView.listingData[0].count - 1, inSection: 0)
+      listingData[0].append(SPTitleLabelCellModel(TitleText: item))
+      return NSIndexPath(forRow: listingData[0].count - 1, inSection: 0)
    }
    
    ///Removes last item in first cellData types in first section SPListingData.
    ///
    ///:returns: NSIndexPath? where the item added. nil if no data.
    private func removeItem() -> NSIndexPath?{
-      if spTableView.listingData[0].count == 0{
+      if listingData[0].count == 0{
          return nil
       }
 
-      spTableView.listingData[0].items.removeLast()
+      listingData[0].items.removeLast()
       
-      return NSIndexPath(forRow: spTableView.listingData[0].count, inSection: 0)
+      return NSIndexPath(forRow: listingData[0].count, inSection: 0)
       
    }
    

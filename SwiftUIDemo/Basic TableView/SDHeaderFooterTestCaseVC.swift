@@ -9,7 +9,9 @@
 import UIKit
 import SwiftUI
 
-class SDHeaderFooterTestCaseVC: UIViewController {
+class SDHeaderFooterTestCaseVC: UIViewController,SPTableListingControllerType {
+   var listingData : ListingData<TableViewSection> = ListingData(sections: [])
+
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -49,17 +51,17 @@ extension SDHeaderFooterTestCaseVC : UITableViewDelegate{
       }
       
 
-      var section0Data = TableViewSection(viewModels: spTitleLabelSection0CellModelArray)
+      let section0Data = TableViewSection(viewModels: spTitleLabelSection0CellModelArray)
       section0Data.sectionHeader = "Section 0 Header String"
       section0Data.sectionFooter = "Section 0 Footer String"
       
-      var section1Data = TableViewSection(viewModels: spTitleLabelSection1CellModelArray)
+      let section1Data = TableViewSection(viewModels: spTitleLabelSection1CellModelArray)
       section1Data.sectionHeader = "Section 1 Header String"
       section1Data.sectionFooter = "Section 1 Footer String"
       
       // Set SPListingData
-      let listingData = ListingData(sections: [section0Data,section1Data])
-      spTableView.listingData = listingData
+      listingData = ListingData(sections: [section0Data,section1Data])
+      spTableView.controller = self
       
       // Set Delegate
       spTableView.delegate = self

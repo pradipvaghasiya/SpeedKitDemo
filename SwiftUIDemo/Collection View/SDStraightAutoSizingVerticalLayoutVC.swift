@@ -11,7 +11,9 @@ import SwiftUI
 
 let kSegueToSDStraightAutoSizingVerticalLayoutVC = "SDStraightAutoSizingVerticalLayoutVC"
 
-class SDStraightAutoSizingVerticalLayoutVC: UIViewController {
+class SDStraightAutoSizingVerticalLayoutVC: UIViewController,SPCollectionListingControllerType {
+   var listingData : ListingData<CollectionViewSection> = ListingData(sections: [])
+
    
    @IBOutlet weak var spCollectionView: SPCollectionView!
    
@@ -24,7 +26,7 @@ class SDStraightAutoSizingVerticalLayoutVC: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view.
       
-      self.spCollectionView.listingData = ListingData(sections: [CollectionViewSection(viewModels : [
+      listingData = ListingData(sections: [CollectionViewSection(viewModels : [
                SPTitleTestCCellModel(TitleText: "Pradip"),
                SPTitleTestCCellModel(TitleText: "Pradip Vaghasiya"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -60,6 +62,8 @@ class SDStraightAutoSizingVerticalLayoutVC: UIViewController {
          )
          ]
       )
+      
+      self.spCollectionView.controller = self
       
       if isVertical{
          self.spCollectionView.collectionViewLayout = verticalLayout

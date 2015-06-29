@@ -11,7 +11,9 @@ import SwiftUI
 
 let kSegueToSDColumnBasedSpaceOptimizedVerticalLayoutVC = "SDColumnBasedSpaceOptimizedVerticalLayoutVC"
 
-class SDColumnBasedSpaceOptimizedVerticalLayoutVC: UIViewController {
+class SDColumnBasedSpaceOptimizedVerticalLayoutVC: UIViewController,SPCollectionListingControllerType {
+   var listingData : ListingData<CollectionViewSection> = ListingData(sections: [])
+
    
    @IBOutlet weak var spCollectionView: SPCollectionView!
    
@@ -26,7 +28,7 @@ class SDColumnBasedSpaceOptimizedVerticalLayoutVC: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view.
       
-      self.spCollectionView.listingData = ListingData(sections: [CollectionViewSection(viewModels: [
+      listingData = ListingData(sections: [CollectionViewSection(viewModels: [
                SPTitleTestCCellModel(TitleText: "0"),
                SPTitleTestCCellModel(TitleText: "1"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -61,6 +63,8 @@ class SDColumnBasedSpaceOptimizedVerticalLayoutVC: UIViewController {
          )
          ]
       )
+      
+      self.spCollectionView.controller = self
       
       if isVertical{
          verticalLayout.delegate = delegate
