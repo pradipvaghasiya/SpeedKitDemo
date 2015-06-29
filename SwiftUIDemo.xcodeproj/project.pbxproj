@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1826FE781B418392007BA401 /* SPSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826FE761B418392007BA401 /* SPSwitchCell.swift */; };
+		1826FE791B418392007BA401 /* SPSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1826FE771B418392007BA401 /* SPSwitchCell.xib */; };
+		1826FE7D1B41877D007BA401 /* SDListingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1826FE7C1B41877D007BA401 /* SDListingTableVC.swift */; };
 		1899F7271B3C142C002F038B /* SPTitleTestCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899F7251B3C142C002F038B /* SPTitleTestCCell.swift */; };
 		1899F7281B3C142C002F038B /* SPTitleTestCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1899F7261B3C142C002F038B /* SPTitleTestCCell.xib */; };
 		18AD10391B3C054A00E7B644 /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD10371B3C054A00E7B644 /* SPTitleLabelCell.swift */; };
@@ -56,6 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1826FE761B418392007BA401 /* SPSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPSwitchCell.swift; sourceTree = "<group>"; };
+		1826FE771B418392007BA401 /* SPSwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPSwitchCell.xib; sourceTree = "<group>"; };
+		1826FE7C1B41877D007BA401 /* SDListingTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDListingTableVC.swift; sourceTree = "<group>"; };
 		1899F7251B3C142C002F038B /* SPTitleTestCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTitleTestCCell.swift; sourceTree = "<group>"; };
 		1899F7261B3C142C002F038B /* SPTitleTestCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTitleTestCCell.xib; sourceTree = "<group>"; };
 		18AD10371B3C054A00E7B644 /* SPTitleLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTitleLabelCell.swift; sourceTree = "<group>"; };
@@ -115,6 +121,8 @@
 				18AD10381B3C054A00E7B644 /* SPTitleLabelCell.xib */,
 				282337261A1733F90003F3C4 /* Main.storyboard */,
 				28DF81421B3D8A580013E090 /* LaunchScreen.xib */,
+				1826FE761B418392007BA401 /* SPSwitchCell.swift */,
+				1826FE771B418392007BA401 /* SPSwitchCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				289461961ADE9311007C6E56 /* SDBasicTableVC.swift */,
+				1826FE7C1B41877D007BA401 /* SDListingTableVC.swift */,
 				2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */,
 				28472CA51AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift */,
 			);
@@ -268,6 +277,7 @@
 				282337271A1733F90003F3C4 /* Main.storyboard in Resources */,
 				18AD103A1B3C054A00E7B644 /* SPTitleLabelCell.xib in Resources */,
 				28DF81431B3D8A580013E090 /* LaunchScreen.xib in Resources */,
+				1826FE791B418392007BA401 /* SPSwitchCell.xib in Resources */,
 				285C8C26196D85410058C8E2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +322,9 @@
 				28472CA61AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift in Sources */,
 				1899F7271B3C142C002F038B /* SPTitleTestCCell.swift in Sources */,
 				285C8C1F196D85410058C8E2 /* AppDelegate.swift in Sources */,
+				1826FE781B418392007BA401 /* SPSwitchCell.swift in Sources */,
 				289461971ADE9311007C6E56 /* SDBasicTableVC.swift in Sources */,
+				1826FE7D1B41877D007BA401 /* SDListingTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8121.20" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SPSwitchCell" rowHeight="119" id="KGk-i7-Jjw" customClass="SPSwitchCell" customModule="SwiftUIDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="118.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFr-BK-1ap">
+                        <rect key="frame" x="15" y="49" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCT-Tz-02C">
+                        <rect key="frame" x="324" y="44" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zFr-BK-1ap" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8OQ-3x-aWF"/>
+                    <constraint firstItem="eCT-Tz-02C" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zFr-BK-1ap" secondAttribute="trailing" constant="5" id="H3l-i3-9HT"/>
+                    <constraint firstItem="zFr-BK-1ap" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Vmx-vt-Dpt"/>
+                    <constraint firstAttribute="trailing" secondItem="eCT-Tz-02C" secondAttribute="trailing" constant="15" id="YPu-5m-QnO"/>
+                    <constraint firstItem="eCT-Tz-02C" firstAttribute="centerY" secondItem="zFr-BK-1ap" secondAttribute="centerY" id="c6I-ML-vwb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="zFr-BK-1ap" id="bkH-b3-rEx"/>
+                <outlet property="uiSwitch" destination="eCT-Tz-02C" id="Nai-JF-wwJ"/>
+            </connections>
+            <point key="canvasLocation" x="585" y="371.5"/>
+        </tableViewCell>
+    </objects>
+</document>

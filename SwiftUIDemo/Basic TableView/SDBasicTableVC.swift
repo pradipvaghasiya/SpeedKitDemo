@@ -18,6 +18,7 @@ let kSegueToSDBasicTableVC = "Show SDBasicTableVC"
 //private let kDifferentCellGroupsTestCaseString = "Different Cell Data Set in a Section"  // Tracking callback event from cell or didSelect would be crucial
 //private let kVariableRowHeightsTestCaseString = "Automatic Variable Row heights"
 //private let kTableViewFooterTestCaseString = "Footer using tableView Property"
+private let kCellTypes = "Different Cells"
 private let kRuntimeChangesTestCaseString = "Runtime changes in Listing Data"  // Check performance, ease of use.
 private let kExcessiveRowsTestCaseString = "100,000 Rows"   // Check Performance Memory uti, CPU util.
 private let kTableViewDifferentFrameTestCaseString = "Different Table View Frame"  // Check performance, ease of use.
@@ -30,10 +31,11 @@ private let kGroupedTableViewTestCaseString = "Grouped TableView"
 
 class SDBasicTableVC: UIViewController {
 
-   var tableData : ListingData<TableViewSection> = ListingData(sections: [])
+   var tableData : ListingData<TableViewSection> = []
    
    // List of Test Cases
    private var testCases = [
+      kCellTypes,
       kRuntimeChangesTestCaseString,
       kExcessiveRowsTestCaseString,
       kTableViewDifferentFrameTestCaseString,
@@ -91,10 +93,22 @@ extension SDBasicTableVC : UITableViewDelegate{
       tableView.deselectRowAtIndexPath(indexPath, animated: true)
       
       switch testCases[indexPath.row]{
+      case kCellTypes:
+         self.performSegueWithIdentifier(kSegueToSDListingTableVC, sender: self)
+         
       case kRuntimeChangesTestCaseString:
          self.performSegueWithIdentifier(kSegueToSDRuntimeChangesTestCaseVC, sender: self)
+         
       default:
          true
+      }
+   }
+   
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+      if segue.identifier == kSegueToSDListingTableVC{
+         if let vc = segue.destinationViewController as? SDListingTableVC{
+            vc.tableData = [[SwitchCellModel(title: "Switch Cell", isSwitchOn: true)]]
+         }
       }
    }
 }

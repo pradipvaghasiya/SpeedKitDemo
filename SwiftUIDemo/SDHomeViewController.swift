@@ -11,7 +11,7 @@ import SwiftUI
 ///Home Controller of SpeedKit Demo Project. It contains different use cases which can be implemented using SpeedKit.
 class SDHomeViewController: UIViewController {
    
-   var tableData : ListingData<TableViewSection> = ListingData(sections: [])
+   var tableData : ListingData<TableViewSection> = []
 
    ///As per SPListingTableVC description
    ///

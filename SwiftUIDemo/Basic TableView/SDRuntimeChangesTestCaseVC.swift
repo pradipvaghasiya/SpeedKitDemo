@@ -16,7 +16,7 @@ class SDRuntimeChangesTestCaseVC: UIViewController {
    
    @IBOutlet weak var spTableView: SPTableView!
    
-   var tableData : ListingData<TableViewSection> = ListingData(sections: [])
+   var tableData : ListingData<TableViewSection> = []
 }
 
 // MARK: ViewController Delegate
@@ -49,37 +49,31 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
       //spTableView.rowHeight = UITableViewAutomaticDimension;
       spTableView.estimatedRowHeight = 44.0; // set to whatever your "average" cell height is
       
-      // Set SPListingData
-      let section0 = ["section 0, Row 1","section 0, Row 2","section 0, Row 3"]
-      let section1 = ["section 1, Row 1","section 1, Row 2","section 1, Row 3 with long description3 with long description3 with long description3 with long description3 with long description"]
+      let section0Array = ["section 0, Row 1","section 0, Row 2","section 0, Row 3"]
+      let section1Array = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
       
-   // CellDataSet (Of Type SPTitleLabelCell) in Section 0
-      // Cell Data Model
-      var spTitleLabelSection0CellModelArray : [ViewModelType] = []
+      // CellModel Section 0
+      let section0 : TableViewSection = []
       
-      for rowTitle in section0{
-         spTitleLabelSection0CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
+      for rowTitle in section0Array{
+         section0.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
-   // CellData Set1 in Section 1
-      // Cell Data Model
-      var spTitleLabelSection1CellModelArray : [ViewModelType] = []
-      
-      for rowTitle in section1{
-         spTitleLabelSection1CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
+      // CellModel Section 1
+      let section1 : TableViewSection = []
+      for rowTitle in section1Array{
+         section1.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
       
-      let section0Data = TableViewSection(viewModels: spTitleLabelSection0CellModelArray)
-      section0Data.sectionHeader = "Section 0 Header String"
-      section0Data.sectionFooter = "Section 0 Footer String"
+      section0.sectionHeader = "Section 0 Header String"
+      section0.sectionFooter = "Section 0 Footer String"
       
-      let section1Data = TableViewSection(viewModels: spTitleLabelSection1CellModelArray)
-      section1Data.sectionHeader = "Section 1 Header String"
-      section1Data.sectionFooter = "Section 1 Footer String"
+      section1.sectionHeader = "Section 1 Header String"
+      section1.sectionFooter = "Section 1 Footer String"
       
       // Set SPListingData
-      tableData = ListingData(sections: [section0Data,section1Data])
+      tableData = [section0,section1]
       spTableView.controller = self
       
       // Set Delegate

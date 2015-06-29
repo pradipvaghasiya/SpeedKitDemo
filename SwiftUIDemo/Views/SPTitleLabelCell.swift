@@ -57,15 +57,12 @@ extension SPTitleLabelCell{
    ///:returns: SPListingData which can be used to create TableView using SpeedKit
    class func getBasicDefaultSPListingData(UsingStringArray stringArray: [String]) -> ListingData<TableViewSection>{
       
-      var spTitleLabelCellModelArray : [ViewModelType] = []
-      
+      let section : TableViewSection = []
       for rowTitle in stringArray{
-         spTitleLabelCellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
+         section.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
-      let section = TableViewSection(viewModels: spTitleLabelCellModelArray)
-      
-      return ListingData(sections: [section])
+      return [section]
    }
 }
 

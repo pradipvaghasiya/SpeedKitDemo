@@ -50,13 +50,13 @@ extension SPTitleTestCCell{
    class func getBasicDefaultSPListingData(UsingStringArray stringArray: [String]) ->
       ListingData<CollectionViewSection>{
       
-      var cells : [SPTitleTestCCellModel] = []
+      let section : CollectionViewSection = []
       
       for rowTitle in stringArray{
-         cells.append(SPTitleTestCCellModel(TitleText: rowTitle))
+         section.append(SPTitleTestCCellModel(TitleText: rowTitle))
       }
       
-      return ListingData(sections: [CollectionViewSection(viewModels: cells)])
+      return [section]
    }
 }
 

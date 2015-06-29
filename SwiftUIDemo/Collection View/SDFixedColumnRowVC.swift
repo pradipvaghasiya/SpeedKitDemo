@@ -14,7 +14,7 @@ let kSegueToSDFixedColumnRowVC = "SDFixedColumnRowVC"
 class SDFixedColumnRowVC: UIViewController{
    
    @IBOutlet weak var spCollectionView: SPCollectionView!
-   var collectionData : ListingData<CollectionViewSection> = ListingData(sections: [])
+   var collectionData : ListingData<CollectionViewSection> = []
 
    
    var isVertical : Bool = true
@@ -29,7 +29,7 @@ class SDFixedColumnRowVC: UIViewController{
       super.viewDidLoad()
       // Do any additional setup after loading the view.
       
-      collectionData = ListingData(sections: [CollectionViewSection(viewModels: [
+      collectionData = [[
                SPTitleTestCCellModel(TitleText: "0"),
                SPTitleTestCCellModel(TitleText: "1"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -42,9 +42,8 @@ class SDFixedColumnRowVC: UIViewController{
                SPTitleTestCCellModel(TitleText: "9"),
                SPTitleTestCCellModel(TitleText: "10"),
                SPTitleTestCCellModel(TitleText: "11"),
-               SPTitleTestCCellModel(TitleText: "12")]
-         ),
-         CollectionViewSection(viewModels: [
+               SPTitleTestCCellModel(TitleText: "12")],
+         [
                SPTitleTestCCellModel(TitleText: "0"),
                SPTitleTestCCellModel(TitleText: "1"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -56,9 +55,7 @@ class SDFixedColumnRowVC: UIViewController{
                SPTitleTestCCellModel(TitleText: "8"),
                SPTitleTestCCellModel(TitleText: "9"),
                ]
-         )
          ]
-      )
 
       self.spCollectionView.controller = self
       

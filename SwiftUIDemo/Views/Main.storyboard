@@ -31,6 +31,40 @@
             </objects>
             <point key="canvasLocation" x="523" y="-97"/>
         </scene>
+        <!--Readymade Cells-->
+        <scene sceneID="ZW3-vz-xDp">
+            <objects>
+                <viewController id="7Jf-pf-Rsa" customClass="SDListingTableVC" customModule="SwiftUIDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mub-po-S0k"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eit-0c-Yqm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cAW-HC-aob">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pzT-2X-8SL" customClass="SPTableView" customModule="SwiftUI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pzT-2X-8SL" firstAttribute="top" secondItem="cAW-HC-aob" secondAttribute="top" id="3Pk-EL-MTx"/>
+                            <constraint firstItem="pzT-2X-8SL" firstAttribute="leading" secondItem="cAW-HC-aob" secondAttribute="leading" id="4vW-sk-Z8w"/>
+                            <constraint firstItem="Eit-0c-Yqm" firstAttribute="top" secondItem="pzT-2X-8SL" secondAttribute="bottom" id="EXu-p0-0fW"/>
+                            <constraint firstAttribute="trailing" secondItem="pzT-2X-8SL" secondAttribute="trailing" id="Vtz-Go-NJQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Readymade Cells" id="g9f-HX-483"/>
+                    <connections>
+                        <outlet property="tableview" destination="pzT-2X-8SL" id="IGm-FG-WlI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IWo-PI-eVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="-888"/>
+        </scene>
         <!--Basic TableView-->
         <scene sceneID="SZk-xD-Skt">
             <objects>
@@ -47,6 +81,7 @@
                     <navigationItem key="navigationItem" title="Basic TableView" id="10N-f2-XY6"/>
                     <connections>
                         <segue destination="g93-jk-gUw" kind="push" identifier="Show SDRuntimeChangesTestCaseVC" id="NaM-Pt-L9g"/>
+                        <segue destination="7Jf-pf-Rsa" kind="show" identifier="Show SDListingTableVC" id="CYC-lK-VUA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uam-mx-ttG" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,7 +12,7 @@ import SwiftUI
 let kSegueToSDColumnOrRowLayoutVC = "SDColumnOrRowLayoutVC"
 
 class SDColumnOrRowLayoutVC: UIViewController {
-   var collectionData : ListingData<CollectionViewSection> = ListingData(sections: [])
+   var collectionData : ListingData<CollectionViewSection> = []
 
    @IBOutlet weak var spCollectionView: SPCollectionView!
    
@@ -27,8 +27,7 @@ class SDColumnOrRowLayoutVC: UIViewController {
       super.viewDidLoad()
       // Do any additional setup after loading the view.
       
-      collectionData = ListingData(sections: [
-         CollectionViewSection(viewModels:
+      collectionData = [
             [
                SPTitleTestCCellModel(TitleText: "0"),
                SPTitleTestCCellModel(TitleText: "1"),
@@ -43,10 +42,7 @@ class SDColumnOrRowLayoutVC: UIViewController {
                SPTitleTestCCellModel(TitleText: "10"),
                SPTitleTestCCellModel(TitleText: "11"),
                SPTitleTestCCellModel(TitleText: "12")
-            ]
-         ),
-         CollectionViewSection(viewModels:
-            [
+            ],[
                SPTitleTestCCellModel(TitleText: "0"),
                SPTitleTestCCellModel(TitleText: "1"),
                SPTitleTestCCellModel(TitleText: "2"),
@@ -58,9 +54,7 @@ class SDColumnOrRowLayoutVC: UIViewController {
                SPTitleTestCCellModel(TitleText: "8"),
                SPTitleTestCCellModel(TitleText: "9")
             ]
-         )
          ]
-      )
       
       self.spCollectionView.controller = self
       if isVertical{

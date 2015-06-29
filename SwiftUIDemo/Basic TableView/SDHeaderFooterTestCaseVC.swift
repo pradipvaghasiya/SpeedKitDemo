@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 class SDHeaderFooterTestCaseVC: UIViewController {
-   var tableData : ListingData<TableViewSection> = ListingData(sections: [])
+   var tableData : ListingData<TableViewSection> = []
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -38,34 +38,31 @@ extension SDHeaderFooterTestCaseVC : UITableViewDelegate{
    func addBasicTableView(){
       let spTableView = SPTableView(frame: self.view.frame, style: .Plain)
       
-      let section0 = ["section 0, Row 1","section 0, Row 2","section 0, Row 3"]
-      let section1 = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
+      let section0Array = ["section 0, Row 1","section 0, Row 2","section 0, Row 3"]
+      let section1Array = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
       
       // CellModel Section 0
-      var spTitleLabelSection0CellModelArray : [ViewModelType] = []
+      let section0 : TableViewSection = []
       
-      for rowTitle in section0{
-         spTitleLabelSection0CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
+      for rowTitle in section0Array{
+         section0.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
       // CellModel Section 1
-      var spTitleLabelSection1CellModelArray : [ViewModelType] = []
-      
-      for rowTitle in section1{
-         spTitleLabelSection1CellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
+      let section1 : TableViewSection = []
+      for rowTitle in section1Array{
+         section1.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
 
-      let section0Data = TableViewSection(viewModels: spTitleLabelSection0CellModelArray)
-      section0Data.sectionHeader = "Section 0 Header String"
-      section0Data.sectionFooter = "Section 0 Footer String"
+      section0.sectionHeader = "Section 0 Header String"
+      section0.sectionFooter = "Section 0 Footer String"
       
-      let section1Data = TableViewSection(viewModels: spTitleLabelSection1CellModelArray)
-      section1Data.sectionHeader = "Section 1 Header String"
-      section1Data.sectionFooter = "Section 1 Footer String"
+      section1.sectionHeader = "Section 1 Header String"
+      section1.sectionFooter = "Section 1 Footer String"
       
       // Set SPListingData
-      tableData = ListingData(sections: [section0Data,section1Data])
+      tableData = [section0,section1]
       spTableView.controller = self
       
       // Set Delegate
