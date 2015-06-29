@@ -128,14 +128,11 @@ extension SDRuntimeChangesTestCaseVC{
    ///Edits item at given indexPath
    ///
    ///:param: indexPAth Item needs to be edited.
-   private func editItem(indexPAth: NSIndexPath){
+   private func editItem(indexPath: NSIndexPath){
       ///Gets CellData Set and exact index of it.
-//      if let (spListingCellData, index) = spListingData.getListingCellGroupWithIndexOfCellModelArray(ForIndexPath: indexPAth){
-//         // If it is of type SPTitleLabelCellModel then change it.
-//         if let spTitleLabelCellModel = spListingCellData[index] as? SPTitleLabelCellModel{
-//            spTitleLabelCellModel.titleText = "RowDetail Edited"
-//         }
-//      }
+      if let model = listingData[indexPath.section][indexPath.row] as? SPTitleLabelCellModel{
+         model.titleText = "RowDetail Edited"
+      }
    }
    
    

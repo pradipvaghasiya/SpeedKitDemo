@@ -27,19 +27,10 @@ class SPTitleTestCCell: UICollectionViewCell,SPCollectionCellProtocol {
    weak var viewModel : ViewModelType?
 
    // SPListingCellProtocol
-   func configureCellUsing(model: ViewModelType){
+   func configureCell(){
       //If model is of type SPTitleTestCCellModel, It would set title text.
-      if let myModel = model as? SPTitleTestCCellModel{
+      if let myModel = viewModel as? SPTitleTestCCellModel{
          self.titleLabel?.text = myModel.titleText
-         
-         return
-      }
-      
-      //If model is of type SPTitleTestCCellCommonModel, It would set Label properties.
-      if let myModel = model as? SPTitleTestCCellCommonModel{
-         self.titleLabel?.textColor = myModel.textColor
-         self.titleLabel?.textAlignment = myModel.textAlignment
-         self.titleLabel?.font = myModel.font
          
          return
       }
@@ -66,39 +57,6 @@ extension SPTitleTestCCell{
       }
       
       return ListingData(sections: [CollectionViewSection(viewModels: cells)])
-   }
-}
-
-// MARK: Cell Common Model
-///This model ideally should be used as Common Model so that it can be applied to all similar cells.
-class SPTitleTestCCellCommonModel{
-   //User can change below label property.
-   var font: UIFont
-   var textColor: UIColor
-   var textAlignment: NSTextAlignment
-   
-   init(Font font:UIFont,
-      TextColor textColor:UIColor = kDefaultTextColor,
-      TextAlignment alignment : NSTextAlignment = kDefaultTextAlignment){
-         self.font = font
-         self.textColor = textColor
-         self.textAlignment = alignment
-   }
-   
-   init(TextColor textColor:UIColor,
-      TextAlignment alignment : NSTextAlignment = kDefaultTextAlignment,
-      Font font:UIFont = kDefaultFont){
-         self.font = font
-         self.textColor = textColor
-         self.textAlignment = alignment
-   }
-   
-   init(TextAlignment alignment : NSTextAlignment,
-      Font font:UIFont = kDefaultFont,
-      TextColor textColor:UIColor = kDefaultTextColor){
-         self.font = font
-         self.textColor = textColor
-         self.textAlignment = alignment
    }
 }
 

@@ -20,9 +20,9 @@ class SPTitleLabelCell: UITableViewCell,SPTableCellProtocol {
    weak var viewModel : ViewModelType?
 
    // SPTableViewCellProtocol
-   func configureCellUsing(model: ViewModelType){
+   func configureCell(){
       //If model is of type SPTitleLabelCellModel, It would set title text.
-      if let myModel = model as? SPTitleLabelCellModel{
+      if let myModel = viewModel as? SPTitleLabelCellModel{
          self.titleLabel?.text = myModel.titleText
          
          return
