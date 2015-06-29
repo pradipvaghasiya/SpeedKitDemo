@@ -1,8 +1,6 @@
 
-SpeedKitDemo.xcodeproj/xcuserdata/*
-SpeedKitDemo.xcodeproj/project.xcworkspace/*
-SpeedKit/
+SwiftUIDemo.xcodeproj/xcuserdata/*
+SwiftUIDemo.xcodeproj/project.xcworkspace/*
+SwiftUI/
 
 *.xcuserstate
-
-SwiftUIDemo.xcodeproj/project.xcworkspace/*

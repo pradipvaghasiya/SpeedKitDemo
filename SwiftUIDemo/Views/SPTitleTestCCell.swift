@@ -25,7 +25,7 @@ class SPTitleTestCCell: UICollectionViewCell,SPListingCellProtocol {
    @IBOutlet var titleLabel: UILabel?
    
    // SPListingCellProtocol
-   func configureCellUsing(model: AnyObject){
+   func configureCellUsing(model: ViewModelType){
       //If model is of type SPTitleTestCCellModel, It would set title text.
       if let myModel = model as? SPTitleTestCCellModel{
          self.titleLabel?.text = myModel.titleText
@@ -54,20 +54,16 @@ extension SPTitleTestCCell{
    ///:param: stringArray Array of string using which SPListingData would be created.
    ///
    ///:returns: SPListingData which can be used to create CollectionView using SpeedKit
-   class func getBasicDefaultSPListingData(UsingStringArray stringArray: [String]) -> SPListingData{
+   class func getBasicDefaultSPListingData(UsingStringArray stringArray: [String]) ->
+      ListingData<CollectionViewSection>{
       
-      var SPTitleTestCCellModelArray : [SPTitleTestCCellModel] = []
+      var cells : [SPTitleTestCCellModel] = []
       
       for rowTitle in stringArray{
-         SPTitleTestCCellModelArray.append(SPTitleTestCCellModel(TitleText: rowTitle))
+         cells.append(SPTitleTestCCellModel(TitleText: rowTitle))
       }
       
-      let spListingCellData = SPListingCellGroup(cellId: kCellIdSPTitleTestCCell,
-         cellModelArray: SPTitleTestCCellModelArray)
-      
-      let spListingSection0Data = SPListingSection(CellGroups: [spListingCellData])
-      
-      return SPListingData(SectionArray: [spListingSection0Data])
+      return ListingData(sections: [CollectionViewSection(viewModels: cells)])
    }
 }
 
@@ -106,7 +102,10 @@ class SPTitleTestCCellCommonModel{
 
 // MARK: Cell Model
 ///This model contains only one title property.
-class SPTitleTestCCellModel{
+class SPTitleTestCCellModel : ViewModelType{
+   let cellId = kCellIdSPTitleTestCCell
+   let cellType = CellType.Nib
+   
    ///Cell label Title Text
    var titleText:String
    init(TitleText text:String){

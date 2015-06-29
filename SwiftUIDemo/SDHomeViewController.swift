@@ -13,8 +13,6 @@ class SDHomeViewController: UIViewController {
    
    ///As per SPListingTableVC description
    ///
-   ///1. You need to set spListingData - Listing Automation Compatible. When you change spListingData you must call reloadSPListingTableVC method.
-   var spListingData : SPListingData = SPListingData(SectionArray: [])
    
    var isVertical : Bool = true
    
@@ -38,37 +36,8 @@ class SDHomeViewController: UIViewController {
 extension SDHomeViewController{
    func addTableView(){
       
-      
-      //            // To display contents inside listingVC we would need spListingData.
-      //            // Below there is stepwise comment to create spListingData.
-      //
-      //            // Step 1: Create Similar Cell Data required in First Section.
-      //            // Here we need all label cells with text in it. So We would create Cell Data containing SPTitleLabelCell Data.
-      //
-      //                // Step 1.1: Create Cell CommonModel If only required.
-      //                var spTitleLabelCellCommonModel = SPTitleLabelCellCommonModel(TextColor: UIColor.darkGrayColor())
-      //
-      //                // Step 1.2: Create Cell Model Array.
-      //                var spTitleLabelCellModelArray : [SPTitleLabelCellModel] = []
-      //
-      //                for rowTitle in section0Rows{
-      //                    spTitleLabelCellModelArray.append(SPTitleLabelCellModel(TitleText: rowTitle))
-      //                }
-      //
-      //                // Step 1.3: Create spListingCellData Instance using above two models.
-      //                var spListingCellData = SPListingCellGroup(cellId: kCellIdSPTitleLabelCell,
-      //                    cellCommonModel: spTitleLabelCellCommonModel,
-      //                    cellModelArray: spTitleLabelCellModelArray)
-      //
-      //            // Step 2: Create Section data containing different Cell Data set.
-      //            // Here we only need one set of Cell Data created above.
-      //            var spListingSection0Data = SPListingSection(Cells: [spListingCellData])
-      //
-      //            // Step 3: Create full listing data containing different sections mentioned above.
-      //            // Here we only need one section created above.
-      //            spListingData = SPListingData([spListingSection0Data]);
-      
       let spTableView = SPTableView(frame: self.view.frame, style: .Plain)
+      spTableView.contentInset = UIEdgeInsets(top: 64,left: 0,bottom: 0,right: 0)
       
       // This is the model we need to show in TableView
       let section0Rows = [
@@ -81,7 +50,7 @@ extension SDHomeViewController{
          "Auto Resizing Straight Vertical"]
       
       // Assign spListingData to SPTableView
-      spTableView.spListingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
+      spTableView.listingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
       
       // TableView Delegate
       spTableView.delegate = self
