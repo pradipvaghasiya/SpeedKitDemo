@@ -20,14 +20,12 @@ private let kDefaultTextAlignment : NSTextAlignment = .Left
 
 // MARK: Cell Configuration
 ///This cell shows single label covered in whole length and height
-class SPTitleTestCCell: UICollectionViewCell,SPCollectionCellProtocol {
+class SPTitleTestCCell: SPCollectionCell {
    ///Title Label IBOutlet
    @IBOutlet var titleLabel: UILabel?
-   weak var parentView : UICollectionView?
-   weak var viewModel : ViewModelType?
 
    // SPListingCellProtocol
-   func configureCell(){
+   override func configureCell(){
       //If model is of type SPTitleTestCCellModel, It would set title text.
       if let myModel = viewModel as? SPTitleTestCCellModel{
          self.titleLabel?.text = myModel.titleText

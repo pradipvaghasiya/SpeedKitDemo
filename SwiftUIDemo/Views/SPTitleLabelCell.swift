@@ -12,15 +12,12 @@ import SwiftUI
 ///Reusable Cell Id defined in xib file and xib file name itself. Both must be same.
 public let kCellIdSPTitleLabelCell = "SPTitleLabelCell"
 
-class SPTitleLabelCell: UITableViewCell,SPTableCellProtocol {
+class SPTitleLabelCell: SPTableCell {
    ///Title Label IBOutlet
    @IBOutlet var titleLabel: UILabel?
-   
-   weak var parentView : UITableView?
-   weak var viewModel : ViewModelType?
 
    // SPTableViewCellProtocol
-   func configureCell(){
+   override func configureCell(){
       //If model is of type SPTitleLabelCellModel, It would set title text.
       if let myModel = viewModel as? SPTitleLabelCellModel{
          self.titleLabel?.text = myModel.titleText

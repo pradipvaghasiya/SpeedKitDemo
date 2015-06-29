@@ -14,13 +14,24 @@ class SDListingTableVC: UIViewController, SPTableListingControllerType {
    var tableData : ListingData<TableViewSection> = []
    @IBOutlet weak var tableview: SPTableView!
    
+   var switchCellModel = SwitchCellModel(title: "Switch Cell", isSwitchOn: true){
+      didSet{
+         
+      }
+   }
+   
    override func viewDidLoad() {
       super.viewDidLoad()
       
+      self.tableData = [[switchCellModel]]
       self.tableview.controller = self
+      
+      switchCellModel.isSwitchOn = false
    }
 
    func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
       return tableData
    }
+   
+   
 }

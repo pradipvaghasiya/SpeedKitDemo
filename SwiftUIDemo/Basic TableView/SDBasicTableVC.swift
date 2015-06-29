@@ -103,12 +103,4 @@ extension SDBasicTableVC : UITableViewDelegate{
          true
       }
    }
-   
-   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-      if segue.identifier == kSegueToSDListingTableVC{
-         if let vc = segue.destinationViewController as? SDListingTableVC{
-            vc.tableData = [[SwitchCellModel(title: "Switch Cell", isSwitchOn: true)]]
-         }
-      }
-   }
 }
