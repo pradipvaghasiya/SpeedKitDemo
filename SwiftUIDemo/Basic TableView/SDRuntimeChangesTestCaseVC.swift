@@ -12,11 +12,11 @@ import SwiftUI
 ///Storyboard Segue id for segue to this controller
 let kSegueToSDRuntimeChangesTestCaseVC = "Show SDRuntimeChangesTestCaseVC"
 
-class SDRuntimeChangesTestCaseVC: UIViewController,SPTableListingControllerType {
+class SDRuntimeChangesTestCaseVC: UIViewController {
    
    @IBOutlet weak var spTableView: SPTableView!
    
-   var listingData : ListingData<TableViewSection> = ListingData(sections: [])
+   var tableData : ListingData<TableViewSection> = ListingData(sections: [])
 }
 
 // MARK: ViewController Delegate
@@ -33,6 +33,14 @@ extension SDRuntimeChangesTestCaseVC{
       // Dispose of any resources that can be recreated.
    }
 }
+
+extension SDRuntimeChangesTestCaseVC: SPTableListingControllerType{
+   func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
+      return tableData
+   }
+}
+
+
 
 // MARK: SDBasicTableView Handling
 extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
@@ -71,7 +79,7 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
       section1Data.sectionFooter = "Section 1 Footer String"
       
       // Set SPListingData
-      listingData = ListingData(sections: [section0Data,section1Data])
+      tableData = ListingData(sections: [section0Data,section1Data])
       spTableView.controller = self
       
       // Set Delegate
@@ -107,21 +115,21 @@ extension SDRuntimeChangesTestCaseVC{
    ///
    ///:returns: NSIndexPath where the item added.
    private func insertItem(item: String) -> NSIndexPath{
-      listingData[0].append(SPTitleLabelCellModel(TitleText: item))
-      return NSIndexPath(forRow: listingData[0].count - 1, inSection: 0)
+      tableData[0].append(SPTitleLabelCellModel(TitleText: item))
+      return NSIndexPath(forRow: tableData[0].count - 1, inSection: 0)
    }
    
-   ///Removes last item in first cellData types in first section SPListingData.
+   ///Removes last item in first cellData types in first section SPtableData.
    ///
    ///:returns: NSIndexPath? where the item added. nil if no data.
    private func removeItem() -> NSIndexPath?{
-      if listingData[0].count == 0{
+      if tableData[0].count == 0{
          return nil
       }
 
-      listingData[0].items.removeLast()
+      tableData[0].items.removeLast()
       
-      return NSIndexPath(forRow: listingData[0].count, inSection: 0)
+      return NSIndexPath(forRow: tableData[0].count, inSection: 0)
       
    }
    
@@ -130,7 +138,7 @@ extension SDRuntimeChangesTestCaseVC{
    ///:param: indexPAth Item needs to be edited.
    private func editItem(indexPath: NSIndexPath){
       ///Gets CellData Set and exact index of it.
-      if let model = listingData[indexPath.section][indexPath.row] as? SPTitleLabelCellModel{
+      if let model = tableData[indexPath.section][indexPath.row] as? SPTitleLabelCellModel{
          model.titleText = "RowDetail Edited"
       }
    }

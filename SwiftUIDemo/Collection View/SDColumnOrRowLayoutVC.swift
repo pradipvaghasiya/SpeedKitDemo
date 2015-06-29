@@ -11,8 +11,8 @@ import SwiftUI
 
 let kSegueToSDColumnOrRowLayoutVC = "SDColumnOrRowLayoutVC"
 
-class SDColumnOrRowLayoutVC: UIViewController,SPCollectionListingControllerType {
-   var listingData : ListingData<CollectionViewSection> = ListingData(sections: [])
+class SDColumnOrRowLayoutVC: UIViewController {
+   var collectionData : ListingData<CollectionViewSection> = ListingData(sections: [])
 
    @IBOutlet weak var spCollectionView: SPCollectionView!
    
@@ -27,7 +27,7 @@ class SDColumnOrRowLayoutVC: UIViewController,SPCollectionListingControllerType 
       super.viewDidLoad()
       // Do any additional setup after loading the view.
       
-      listingData = ListingData(sections: [
+      collectionData = ListingData(sections: [
          CollectionViewSection(viewModels:
             [
                SPTitleTestCCellModel(TitleText: "0"),
@@ -77,6 +77,13 @@ class SDColumnOrRowLayoutVC: UIViewController,SPCollectionListingControllerType 
       // Dispose of any resources that can be recreated.
    }
 }
+
+extension SDColumnOrRowLayoutVC: SPCollectionListingControllerType{
+   func collectionListingData(collectionView: UICollectionView) -> ListingData<CollectionViewSection> {
+      return collectionData
+   }
+}
+
 
 
 class LayoutDelegate : NSObject, SPStraightVerticalLayoutDelegate{

@@ -9,9 +9,9 @@
 import UIKit
 import SwiftUI
 ///Home Controller of SpeedKit Demo Project. It contains different use cases which can be implemented using SpeedKit.
-class SDHomeViewController: UIViewController,SPTableListingControllerType {
+class SDHomeViewController: UIViewController {
    
-   var listingData : ListingData<TableViewSection> = ListingData(sections: [])
+   var tableData : ListingData<TableViewSection> = ListingData(sections: [])
 
    ///As per SPListingTableVC description
    ///
@@ -33,13 +33,19 @@ class SDHomeViewController: UIViewController,SPTableListingControllerType {
    }
 }
 
+extension SDHomeViewController: SPTableListingControllerType{
+   func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
+      return tableData
+   }
+}
+
 
 //MARK: Add Table View
 extension SDHomeViewController{
    func addTableView(){
       
       let spTableView = SPTableView(frame: self.view.frame, style : .Plain)
-      
+      self.automaticallyAdjustsScrollViewInsets = false
       spTableView.contentInset = UIEdgeInsets(top: 64,left: 0,bottom: 0,right: 0)
       
       // This is the model we need to show in TableView
@@ -53,7 +59,7 @@ extension SDHomeViewController{
          "Auto Resizing Straight Vertical"]
       
       // Assign spListingData to SPTableView
-      listingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
+      tableData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: section0Rows)
       spTableView.controller = self
       
       // TableView Delegate

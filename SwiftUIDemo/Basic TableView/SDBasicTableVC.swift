@@ -28,9 +28,9 @@ private let kUnregisteredNibAddedTestCaseString = "Unregistered nib added"
 private let kGroupedTableViewTestCaseString = "Grouped TableView"
 
 
-class SDBasicTableVC: UIViewController, SPTableListingControllerType {
+class SDBasicTableVC: UIViewController {
 
-   var listingData : ListingData<TableViewSection> = ListingData(sections: [])
+   var tableData : ListingData<TableViewSection> = ListingData(sections: [])
    
    // List of Test Cases
    private var testCases = [
@@ -62,14 +62,22 @@ extension SDBasicTableVC{
    
 }
 
+extension SDBasicTableVC: SPTableListingControllerType{
+   func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
+      return tableData
+   }
+}
+
+
 // MARK: SDBasicTableView Handling
 extension SDBasicTableVC : UITableViewDelegate{
    func addBasicTableView(){
       let spTableView = SPTableView(frame: self.view.frame, style: .Plain)
+      self.automaticallyAdjustsScrollViewInsets = false
       spTableView.contentInset = UIEdgeInsets(top: 64,left: 0,bottom: 0,right: 0)
       
       // Set SPListingData
-      listingData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
+      tableData = SPTitleLabelCell.getBasicDefaultSPListingData(UsingStringArray: testCases)
       spTableView.controller = self
 
       // Set Delegate

@@ -9,9 +9,8 @@
 import UIKit
 import SwiftUI
 
-class SDHeaderFooterTestCaseVC: UIViewController,SPTableListingControllerType {
-   var listingData : ListingData<TableViewSection> = ListingData(sections: [])
-
+class SDHeaderFooterTestCaseVC: UIViewController {
+   var tableData : ListingData<TableViewSection> = ListingData(sections: [])
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -25,6 +24,12 @@ class SDHeaderFooterTestCaseVC: UIViewController,SPTableListingControllerType {
    override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
+   }
+}
+
+extension SDHeaderFooterTestCaseVC : SPTableListingControllerType{
+   func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
+      return tableData
    }
 }
 
@@ -60,7 +65,7 @@ extension SDHeaderFooterTestCaseVC : UITableViewDelegate{
       section1Data.sectionFooter = "Section 1 Footer String"
       
       // Set SPListingData
-      listingData = ListingData(sections: [section0Data,section1Data])
+      tableData = ListingData(sections: [section0Data,section1Data])
       spTableView.controller = self
       
       // Set Delegate
