@@ -22,7 +22,7 @@ class SDHomeViewController: UIViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      // Add Table View Controller using speedkit framework
+      // Add Table View Controller using swiftui framework
       self.addTableView()
    }
    

@@ -74,7 +74,7 @@
 		285C8C25196D85410058C8E2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		289461961ADE9311007C6E56 /* SDBasicTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDBasicTableVC.swift; sourceTree = "<group>"; };
 		2894619C1ADEA3DE007C6E56 /* SDRuntimeChangesTestCaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDRuntimeChangesTestCaseVC.swift; sourceTree = "<group>"; };
-		28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28CD62A61AE247E500C9B2AE /* SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28DBC7921AF4D2C300D7A012 /* SDFixedColumnRowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDFixedColumnRowVC.swift; sourceTree = "<group>"; };
 		28DF81421B3D8A580013E090 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		28EAB7121AFB9D6E00F439E2 /* SDColumnOrRowLayoutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDColumnOrRowLayoutVC.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				285C8C19196D85410058C8E2 /* SwiftUIDemo.app */,
-				28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */,
+				28CD62A61AE247E500C9B2AE /* SwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,9 +209,9 @@
 			productReference = 285C8C19196D85410058C8E2 /* SwiftUIDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		28CD62A51AE247E500C9B2AE /* SpeedKitTests */ = {
+		28CD62A51AE247E500C9B2AE /* SwiftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28CD62AE1AE247E500C9B2AE /* Build configuration list for PBXNativeTarget "SpeedKitTests" */;
+			buildConfigurationList = 28CD62AE1AE247E500C9B2AE /* Build configuration list for PBXNativeTarget "SwiftUITests" */;
 			buildPhases = (
 				28CD62A21AE247E500C9B2AE /* Sources */,
 				28CD62A31AE247E500C9B2AE /* Frameworks */,
@@ -222,9 +222,9 @@
 			dependencies = (
 				2888BB5B1AE2552100CF5D87 /* PBXTargetDependency */,
 			);
-			name = SpeedKitTests;
+			name = SwiftUITests;
 			productName = SpeedKitTests;
-			productReference = 28CD62A61AE247E500C9B2AE /* SpeedKitTests.xctest */;
+			productReference = 28CD62A61AE247E500C9B2AE /* SwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +261,7 @@
 			projectRoot = "";
 			targets = (
 				285C8C18196D85410058C8E2 /* SwiftUIDemo */,
-				28CD62A51AE247E500C9B2AE /* SpeedKitTests */,
+				28CD62A51AE247E500C9B2AE /* SwiftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -471,7 +471,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "SpeedKitTests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "SwiftUITests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -491,7 +491,7 @@
 					"$(inherited)",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "SpeedKitTests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "SwiftUITests/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -522,7 +522,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28CD62AE1AE247E500C9B2AE /* Build configuration list for PBXNativeTarget "SpeedKitTests" */ = {
+		28CD62AE1AE247E500C9B2AE /* Build configuration list for PBXNativeTarget "SwiftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28CD62AC1AE247E500C9B2AE /* Debug */,
