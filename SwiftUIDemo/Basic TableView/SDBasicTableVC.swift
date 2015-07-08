@@ -53,7 +53,7 @@ extension SDBasicTableVC{
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      // Add TableView using SpeedKit
+      // Add TableView using SwiftUI
       self.addBasicTableView()
    }
    

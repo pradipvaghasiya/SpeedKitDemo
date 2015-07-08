@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftUI
-///Home Controller of SpeedKit Demo Project. It contains different use cases which can be implemented using SpeedKit.
+///Home Controller of SwiftUI Demo Project. It contains different use cases which can be implemented using SwiftUI.
 class SDHomeViewController: UIViewController {
    
    var tableData : ListingData<TableViewSection> = []

@@ -17,7 +17,7 @@ class SDHeaderFooterTestCaseVC: UIViewController {
       
       self.title = "Header and Footer"
       
-      // Add TableView using SpeedKit
+      // Add TableView using SwiftUI
       self.addBasicTableView()
    }
    

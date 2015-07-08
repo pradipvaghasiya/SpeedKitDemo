@@ -24,7 +24,7 @@ extension SDRuntimeChangesTestCaseVC{
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      // Add TableView using SpeedKit
+      // Add TableView using SwiftUI
       self.addBasicTableView()
    }
    
