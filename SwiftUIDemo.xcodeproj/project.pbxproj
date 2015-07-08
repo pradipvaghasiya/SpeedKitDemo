@@ -14,8 +14,7 @@
 		1899F7281B3C142C002F038B /* SPTitleTestCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1899F7261B3C142C002F038B /* SPTitleTestCCell.xib */; };
 		18AD10391B3C054A00E7B644 /* SPTitleLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AD10371B3C054A00E7B644 /* SPTitleLabelCell.swift */; };
 		18AD103A1B3C054A00E7B644 /* SPTitleLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AD10381B3C054A00E7B644 /* SPTitleLabelCell.xib */; };
-		18D97E651B41576800BA97AB /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D97E641B41576800BA97AB /* SwiftUI.framework */; };
-		18D97E661B41576800BA97AB /* SwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 18D97E641B41576800BA97AB /* SwiftUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18D986CE1B4D101C00279413 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D986CD1B4D101C00279413 /* SwiftUI.framework */; };
 		282337271A1733F90003F3C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 282337261A1733F90003F3C4 /* Main.storyboard */; };
 		28472CA61AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28472CA51AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift */; };
 		285C8C1F196D85410058C8E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C8C1E196D85410058C8E2 /* AppDelegate.swift */; };
@@ -51,7 +50,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				18D97E661B41576800BA97AB /* SwiftUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +64,7 @@
 		1899F7261B3C142C002F038B /* SPTitleTestCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTitleTestCCell.xib; sourceTree = "<group>"; };
 		18AD10371B3C054A00E7B644 /* SPTitleLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPTitleLabelCell.swift; sourceTree = "<group>"; };
 		18AD10381B3C054A00E7B644 /* SPTitleLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPTitleLabelCell.xib; sourceTree = "<group>"; };
-		18D97E641B41576800BA97AB /* SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftUI.framework; path = "/Users/ibm/Library/Developer/Xcode/DerivedData/SwiftUIDemo-ctigasetxkyftidmhbwuqwjnauhy/Build/Products/Debug-iphoneos/SwiftUI.framework"; sourceTree = "<absolute>"; };
+		18D986CD1B4D101C00279413 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = "SwiftUI/build/Debug-iphoneos/SwiftUI.framework"; sourceTree = "<group>"; };
 		282337261A1733F90003F3C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		28472CA51AE1522D00C72E2F /* SDHeaderFooterTestCaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDHeaderFooterTestCaseVC.swift; sourceTree = "<group>"; };
 		285C8C19196D85410058C8E2 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18D97E651B41576800BA97AB /* SwiftUI.framework in Frameworks */,
+				18D986CE1B4D101C00279413 /* SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +104,6 @@
 		18D97E681B4158B900BA97AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18D97E641B41576800BA97AB /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			path = ..;
@@ -130,6 +127,7 @@
 		285C8C10196D85410058C8E2 = {
 			isa = PBXGroup;
 			children = (
+				18D986CD1B4D101C00279413 /* SwiftUI.framework */,
 				285C8C1B196D85410058C8E2 /* SwiftUIDemo */,
 				285C8C1A196D85410058C8E2 /* Products */,
 			);

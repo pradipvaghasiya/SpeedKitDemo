@@ -22,6 +22,9 @@ class SwitchCellModel : ViewModelType{
    }
 }
 
+protocol SwitchCellDelegate{
+   func switchValueChanged(indexPath: NSIndexPath?, viewModel : SwitchCellModel)
+}
 
 private let kCellId = "SPSwitchCell"
 class SPSwitchCell: SPTableCell {
@@ -42,6 +45,10 @@ extension SPSwitchCell{
    @IBAction func switchValueChanged(sender: UISwitch) {
       if let myModel = viewModel as? SwitchCellModel{
          myModel.isSwitchOn = sender.on
+         if let cellDelegate = self.tableView?.delegate as? SwitchCellDelegate{
+            cellDelegate.switchValueChanged(
+               self.tableView?.indexPathForCell(self),viewModel: myModel)
+         }
       }
    }
 }
