@@ -10,6 +10,7 @@ import UIKit
 import SwiftUI
 
 let kSegueToSDListingTableVC = "Show SDListingTableVC"
+
 class SDListingTableVC: UIViewController{
    var tableData : ListingData<TableViewSection> = []
    @IBOutlet weak var tableview: SPTableView!
@@ -19,7 +20,10 @@ class SDListingTableVC: UIViewController{
    override func viewDidLoad() {
       super.viewDidLoad()
       
-      self.tableData = [[switchCellModel]]
+      self.tableData = [[switchCellModel],[switchCellModel]]
+      self.tableData[0].sectionHeader = "header 1"
+      self.tableData[1].sectionHeader = "header 2"
+
       self.tableview.controller = self
       self.tableview.delegate = self
    }
@@ -28,7 +32,7 @@ class SDListingTableVC: UIViewController{
 extension SDListingTableVC : SPTableListingControllerType{
    func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
       return tableData
-   }   
+   }
 }
 
 extension SDListingTableVC : UITableViewDelegate{
