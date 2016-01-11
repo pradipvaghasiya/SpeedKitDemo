@@ -63,7 +63,8 @@ extension SPTitleTestCCell{
 class SPTitleTestCCellModel : ViewModelType{
    let cellId = kCellIdSPTitleTestCCell
    let cellType = CellType.Nib
-   
+   var serverId: Any?
+    
    ///Cell label Title Text
    var titleText:String
    init(TitleText text:String){

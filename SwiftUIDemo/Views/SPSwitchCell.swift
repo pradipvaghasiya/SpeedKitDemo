@@ -12,7 +12,8 @@ import SwiftUI
 class SwitchCellModel : ViewModelType{
    let cellId = kCellId
    let cellType = CellType.Nib
-   
+   var serverId: Any?
+    
    var title : String
    var isSwitchOn : Bool
    

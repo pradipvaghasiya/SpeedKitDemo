@@ -35,8 +35,9 @@ class SPTitleLabelCellModel : ViewModelType{
    
    var cellId = kCellIdSPTitleLabelCell
    var cellType : CellType = .Nib
-   
-   ///Cell label Title Text
+   var serverId: Any?
+    
+    ///Cell label Title Text
    var titleText:String
    init(TitleText text:String){
       self.titleText = text

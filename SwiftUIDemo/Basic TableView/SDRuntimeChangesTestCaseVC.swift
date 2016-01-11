@@ -121,7 +121,7 @@ extension SDRuntimeChangesTestCaseVC{
          return nil
       }
 
-      tableData[0].items.removeLast()
+      tableData[0].removeLast()
       
       return NSIndexPath(forRow: tableData[0].count, inSection: 0)
       
