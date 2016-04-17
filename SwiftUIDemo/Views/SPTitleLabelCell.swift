@@ -31,7 +31,7 @@ class SPTitleLabelCell: SPTableCell {
 
 // MARK: Cell Model
 ///This model contains only one title property.
-class SPTitleLabelCellModel : ViewModelType{
+class SPTitleLabelCellModel : NSObject, ViewModelType{
    
    var cellId = kCellIdSPTitleLabelCell
    var cellType : CellType = .Nib
@@ -53,9 +53,9 @@ extension SPTitleLabelCell{
    ///:param: stringArray Array of string using which SPListingData would be created.
    ///
    ///:returns: SPListingData which can be used to create TableView using SwiftUI
-   class func getBasicDefaultSPListingData(UsingStringArray stringArray: [String]) -> ListingData<TableViewSection>{
+   class func getBasicDefaultSPListingData(UsingStringArray stringArray: [String]) -> ListingData{
       
-      let section : TableViewSection = []
+      let section : ListingSection = []
       for rowTitle in stringArray{
          section.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }

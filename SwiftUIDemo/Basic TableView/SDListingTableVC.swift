@@ -12,7 +12,7 @@ import SwiftUI
 let kSegueToSDListingTableVC = "Show SDListingTableVC"
 
 class SDListingTableVC: UIViewController{
-   var tableData : ListingData<TableViewSection> = []
+   var tableData : ListingData = []
    @IBOutlet weak var tableview: SPTableView!
    
    var switchCellModel = SwitchCellModel(title: "Switch Cell", isSwitchOn: true)
@@ -29,8 +29,8 @@ class SDListingTableVC: UIViewController{
    }
 }
 
-extension SDListingTableVC : SPTableListingControllerType{
-   func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
+extension SDListingTableVC : SPListingControllerType{
+   func listingData(listingView : UIView)->ListingData {
       return tableData
    }
 }

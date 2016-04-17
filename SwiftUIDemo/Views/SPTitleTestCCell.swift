@@ -46,9 +46,9 @@ extension SPTitleTestCCell{
    ///
    ///:returns: SPListingData which can be used to create CollectionView using SwiftUI
    class func getBasicDefaultSPListingData(UsingStringArray stringArray: [String]) ->
-      ListingData<CollectionViewSection>{
+      ListingData{
       
-      let section : CollectionViewSection = []
+      let section : ListingSection = []
       
       for rowTitle in stringArray{
          section.append(SPTitleTestCCellModel(TitleText: rowTitle))
@@ -60,7 +60,7 @@ extension SPTitleTestCCell{
 
 // MARK: Cell Model
 ///This model contains only one title property.
-class SPTitleTestCCellModel : ViewModelType{
+class SPTitleTestCCellModel : NSObject, ViewModelType{
    let cellId = kCellIdSPTitleTestCCell
    let cellType = CellType.Nib
    var serverId: Any?

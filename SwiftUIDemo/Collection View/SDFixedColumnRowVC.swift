@@ -14,7 +14,7 @@ let kSegueToSDFixedColumnRowVC = "SDFixedColumnRowVC"
 class SDFixedColumnRowVC: UIViewController{
    
    @IBOutlet weak var spCollectionView: SPCollectionView!
-   var collectionData : ListingData<CollectionViewSection> = []
+   var collectionData : ListingData = []
 
    
    var isVertical : Bool = true
@@ -89,8 +89,8 @@ class SDFixedColumnRowVC: UIViewController{
    }
 }
 
-extension SDFixedColumnRowVC: SPCollectionListingControllerType{
-   func collectionListingData(collectionView: UICollectionView) -> ListingData<CollectionViewSection> {
+extension SDFixedColumnRowVC: SPListingControllerType{
+   func listingData(listingView : UIView)->ListingData {
       return collectionData
    }
 }

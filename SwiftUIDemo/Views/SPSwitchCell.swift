@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUI
 
-class SwitchCellModel : ViewModelType{
+class SwitchCellModel : NSObject, ViewModelType{
    let cellId = kCellId
    let cellType = CellType.Nib
    var serverId: Any?

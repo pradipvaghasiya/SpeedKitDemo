@@ -16,7 +16,7 @@ class SDRuntimeChangesTestCaseVC: UIViewController {
    
    @IBOutlet weak var spTableView: SPTableView!
    
-   var tableData : ListingData<TableViewSection> = []
+   var tableData : ListingData = []
 }
 
 // MARK: ViewController Delegate
@@ -34,8 +34,8 @@ extension SDRuntimeChangesTestCaseVC{
    }
 }
 
-extension SDRuntimeChangesTestCaseVC: SPTableListingControllerType{
-   func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
+extension SDRuntimeChangesTestCaseVC: SPListingControllerType{
+   func listingData(listingView : UIView)->ListingData {
       return tableData
    }
 }
@@ -53,14 +53,14 @@ extension SDRuntimeChangesTestCaseVC : UITableViewDelegate{
       let section1Array = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
       
       // CellModel Section 0
-      let section0 : TableViewSection = []
+      let section0 : ListingSection = []
       
       for rowTitle in section0Array{
          section0.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
       // CellModel Section 1
-      let section1 : TableViewSection = []
+      let section1 : ListingSection = []
       for rowTitle in section1Array{
          section1.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
@@ -98,7 +98,7 @@ extension SDRuntimeChangesTestCaseVC{
       if let indexPath = self.removeItem(){
          spTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
       }else{
-         SPUIHelper.showWarningAlert(WithMessage: "No Items", OnViewController: self)
+         print("No Items")
       }
    }
    

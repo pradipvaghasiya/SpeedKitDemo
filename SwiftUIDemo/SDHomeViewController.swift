@@ -11,7 +11,7 @@ import SwiftUI
 ///Home Controller of SwiftUI Demo Project. It contains different use cases which can be implemented using SwiftUI.
 class SDHomeViewController: UIViewController {
    
-   var tableData : ListingData<TableViewSection> = []
+   var tableData : ListingData = []
 
    ///As per SPListingTableVC description
    ///
@@ -33,8 +33,8 @@ class SDHomeViewController: UIViewController {
    }
 }
 
-extension SDHomeViewController: SPTableListingControllerType{
-   func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
+extension SDHomeViewController: SPListingControllerType{
+   func listingData(listingView : UIView)->ListingData {
       return tableData
    }
 }

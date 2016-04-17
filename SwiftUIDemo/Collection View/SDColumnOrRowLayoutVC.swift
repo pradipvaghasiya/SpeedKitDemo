@@ -12,7 +12,7 @@ import SwiftUI
 let kSegueToSDColumnOrRowLayoutVC = "SDColumnOrRowLayoutVC"
 
 class SDColumnOrRowLayoutVC: UIViewController {
-   var collectionData : ListingData<CollectionViewSection> = []
+   var collectionData : ListingData = []
 
    @IBOutlet weak var spCollectionView: SPCollectionView!
    
@@ -72,8 +72,8 @@ class SDColumnOrRowLayoutVC: UIViewController {
    }
 }
 
-extension SDColumnOrRowLayoutVC: SPCollectionListingControllerType{
-   func collectionListingData(collectionView: UICollectionView) -> ListingData<CollectionViewSection> {
+extension SDColumnOrRowLayoutVC: SPListingControllerType{
+   func listingData(listingView : UIView)->ListingData {
       return collectionData
    }
 }

@@ -31,7 +31,7 @@ private let kGroupedTableViewTestCaseString = "Grouped TableView"
 
 class SDBasicTableVC: UIViewController {
 
-   var tableData : ListingData<TableViewSection> = []
+   var tableData : ListingData = []
    
    // List of Test Cases
    private var testCases = [
@@ -64,8 +64,8 @@ extension SDBasicTableVC{
    
 }
 
-extension SDBasicTableVC: SPTableListingControllerType{
-   func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
+extension SDBasicTableVC: SPListingControllerType{
+   func listingData(listingView : UIView)->ListingData {
       return tableData
    }
 }

@@ -12,7 +12,7 @@ import SwiftUI
 let kSegueToSDColumnBasedSpaceOptimizedVerticalLayoutVC = "SDColumnBasedSpaceOptimizedVerticalLayoutVC"
 
 class SDColumnBasedSpaceOptimizedVerticalLayoutVC: UIViewController {
-   var collectionData : ListingData<CollectionViewSection> = []
+   var collectionData : ListingData = []
 
    
    @IBOutlet weak var spCollectionView: SPCollectionView!
@@ -78,8 +78,8 @@ class SDColumnBasedSpaceOptimizedVerticalLayoutVC: UIViewController {
    }
 }
 
-extension SDColumnBasedSpaceOptimizedVerticalLayoutVC: SPCollectionListingControllerType{
-   func collectionListingData(collectionView: UICollectionView) -> ListingData<CollectionViewSection> {
+extension SDColumnBasedSpaceOptimizedVerticalLayoutVC: SPListingControllerType{
+   func listingData(listingView : UIView)->ListingData {
       return collectionData
    }
 }

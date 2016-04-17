@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 class SDHeaderFooterTestCaseVC: UIViewController {
-   var tableData : ListingData<TableViewSection> = []
+   var tableData : ListingData = []
    
    override func viewDidLoad() {
       super.viewDidLoad()
@@ -27,8 +27,8 @@ class SDHeaderFooterTestCaseVC: UIViewController {
    }
 }
 
-extension SDHeaderFooterTestCaseVC : SPTableListingControllerType{
-   func tableListingData(tableView: UITableView) -> ListingData<TableViewSection> {
+extension SDHeaderFooterTestCaseVC : SPListingControllerType{
+   func listingData(listingView : UIView)->ListingData {
       return tableData
    }
 }
@@ -42,14 +42,14 @@ extension SDHeaderFooterTestCaseVC : UITableViewDelegate{
       let section1Array = ["section 1, Row 1","section 1, Row 2","section 1, Row 3"]
       
       // CellModel Section 0
-      let section0 : TableViewSection = []
+      let section0 : ListingSection = []
       
       for rowTitle in section0Array{
          section0.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }
       
       // CellModel Section 1
-      let section1 : TableViewSection = []
+      let section1 : ListingSection = []
       for rowTitle in section1Array{
          section1.append(SPTitleLabelCellModel(TitleText: rowTitle))
       }

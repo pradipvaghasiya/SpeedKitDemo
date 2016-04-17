@@ -12,7 +12,7 @@ import SwiftUI
 let kSegueToSDStraightAutoSizingVerticalLayoutVC = "SDStraightAutoSizingVerticalLayoutVC"
 
 class SDStraightAutoSizingVerticalLayoutVC: UIViewController {
-   var listingData : ListingData<CollectionViewSection> = []
+   var listingData : ListingData = []
 
    
    @IBOutlet weak var spCollectionView: SPCollectionView!
@@ -75,8 +75,8 @@ class SDStraightAutoSizingVerticalLayoutVC: UIViewController {
 }
 
 
-extension SDStraightAutoSizingVerticalLayoutVC: SPCollectionListingControllerType{
-   func collectionListingData(collectionView: UICollectionView) -> ListingData<CollectionViewSection> {
+extension SDStraightAutoSizingVerticalLayoutVC: SPListingControllerType{
+   func listingData(listingView : UIView)->ListingData {
       return listingData
    }
 }
